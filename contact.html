@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>Contact Us – Sprouting Nature World</title>
+  <meta name="description" content="Get in touch with the Sprouting Nature World team. Gardening questions, collaborations, or press inquiries — we’d love to hear from you.">
+  <link rel="canonical" href="https://sproutingnatureworld.com/contact.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #f5efe8;
+      color: #2d3e2b;
+      line-height: 1.7;
+      padding: 0 20px;
+    }
+    .container { max-width: 1280px; margin: 0 auto; background: #fcf9f5; box-shadow: 0 0 40px rgba(0,0,0,0.02); }
+    /* luxury editorial style – same as main */
+    header {
+      background: #1e3a2f;
+      color: #efe7d7;
+      padding: 2rem 2.5rem;
+      border-bottom: 4px solid #b89b7b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo h1 { font-size: 2.2rem; font-weight: 400; letter-spacing: 2px; }
+    .logo span { color: #d4b48c; font-style: italic; }
+    nav a { color: #efe7d7; text-decoration: none; margin-left: 2rem; font-size: 0.95rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: 0.2s; }
+    nav a:hover { border-bottom-color: #d4b48c; color: #fff; }
+    /* hero / page title */
+    .page-hero {
+      background: #2f4d3b;
+      background-image: linear-gradient(135deg, #1d3a2a 0%, #3a5e47 100%);
+      color: #f2ede4;
+      padding: 3rem 3rem 2.5rem;
+      border-bottom: 2px solid #b89b7b;
+    }
+    .page-hero h2 { font-size: 2.8rem; font-weight: 300; letter-spacing: 1px; margin-bottom: 0.5rem; }
+    .page-hero p { max-width: 720px; font-size: 1.2rem; opacity: 0.9; }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 300;
+      border-bottom: 2px solid #d4b48c;
+      padding-bottom: 0.5rem;
+      margin: 2.5rem 0 1.5rem;
+      color: #1e3a2f;
+      letter-spacing: 1px;
+    }
+    .grid-2 { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .card {
+      background: #fffdfa;
+      padding: 1.8rem;
+      border-radius: 4px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border-left: 4px solid #b89b7b;
+      transition: 0.2s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(0,0,0,0.04); }
+    .card h3 { font-size: 1.4rem; font-weight: 500; color: #1d3a2a; margin-bottom: 0.75rem; }
+    .card p { color: #3d4d3a; }
+    .contact-info i { margin-right: 8px; }
+    .contact-detail { margin: 0.8rem 0; }
+    /* form */
+    .form-card {
+      background: #fffdfa;
+      padding: 2rem 2.5rem;
+      border-radius: 4px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border-left: 4px solid #b89b7b;
+      margin: 2rem 0;
+    }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; font-weight: 600; color: #1d3a2a; margin-bottom: 0.3rem; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #d4cbbc;
+      background: #fcf9f5;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      border-radius: 2px;
+      transition: 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: #b89b7b;
+      outline: none;
+      background: #fffdfa;
+      box-shadow: 0 0 0 3px rgba(184, 155, 123, 0.1);
+    }
+    .form-group textarea { min-height: 160px; resize: vertical; }
+    .btn {
+      background: #1e3a2f;
+      color: #efe7d7;
+      padding: 0.9rem 2.8rem;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      letter-spacing: 1px;
+      border-radius: 2px;
+    }
+    .btn:hover { background: #b89b7b; color: #0f281f; }
+    .btn-secondary {
+      background: #b89b7b;
+      color: #1e3a2f;
+    }
+    .btn-secondary:hover { background: #d4b48c; color: #0f281f; }
+    .faq-item { border-bottom: 1px solid #ded5c7; padding: 1.2rem 0; }
+    .faq-question { font-weight: 600; font-size: 1.1rem; cursor: pointer; color: #1d3a2a; }
+    .faq-answer { margin-top: 0.5rem; color: #3d4d3a; display: none; }
+    .faq-answer.show { display: block; }
+    .map-placeholder {
+      background: #e6ddd0;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 4px;
+      color: #1d3a2a;
+      font-style: italic;
+      margin: 1.5rem 0;
+    }
+    footer {
+      background: #1e3a2f;
+      color: #cec2b0;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      border-top: 2px solid #b89b7b;
+      margin-top: 2rem;
+    }
+    footer a { color: #d4b48c; text-decoration: none; margin: 0 0.5rem; }
+    .author-box { display: flex; gap: 2rem; align-items: center; background: #f3ede6; padding: 1.8rem; border-radius: 6px; margin: 2rem 0; }
+    .author-box img { border-radius: 50%; width: 100px; height: 100px; object-fit: cover; }
+    @media (max-width: 700px) {
+      header { flex-direction: column; align-items: start; gap: 1rem; }
+      nav a { margin-left: 0; margin-right: 1.2rem; }
+      .page-hero h2 { font-size: 2.2rem; }
+      .form-card { padding: 1.5rem; }
+      .author-box { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="logo"><h1>🌱 Sprouting <span>Nature World</span></h1></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" style="border-bottom-color: #d4b48c; color: #fff;">Contact</a>
+    <a href="terms.html">Terms Of Privacy</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookies.html">Cookies Policy</a>
+  </nav>
+</header>
+
+<!-- page hero -->
+<section class="page-hero">
+  <h2>Let’s cultivate together</h2>
+  <p>Have a question about organic growing, permaculture design, or collaboration? Reach out — our team of gardening experts is here to help.</p>
+</section>
+
+<!-- main content -->
+<div style="padding: 0 2rem 2rem;">
+
+  <!-- contact info + form grid -->
+  <div class="grid-2" style="margin-top: 1rem;">
+    <!-- left: contact details -->
+    <div class="card" style="border-left-color: #1e3a2f;">
+      <h3>🌿 Get in touch</h3>
+      <div class="contact-detail"><strong>📍 Garden HQ</strong><br> 124 Evergreen Lane,<br> Somerset, UK BA5 2FN</div>
+      <div class="contact-detail"><strong>📧 Email</strong><br> <a href="mailto:hello@sproutingnatureworld.com" style="color:#1d3a2a; text-decoration:none; border-bottom:1px dotted #b89b7b;">hello@sproutingnatureworld.com</a></div>
+      <div class="contact-detail"><strong>📞 Phone</strong><br> +44 1749 123 456</div>
+      <div class="contact-detail"><strong>🕘 Office hours</strong><br> Mon – Fri, 9:00 – 17:00 GMT</div>
+      <div style="margin-top: 1.5rem; background: #f3ede6; padding: 1rem; border-radius: 4px;">
+        <p style="font-size:0.95rem;"><strong>📬 Press & collaborations:</strong><br> <a href="mailto:press@sproutingnatureworld.com" style="color:#1d3a2a; text-decoration:none; border-bottom:1px dotted #b89b7b;">press@sproutingnatureworld.com</a></p>
+      </div>
+      <!-- small map placeholder -->
+      <div class="map-placeholder" style="margin-top:1.5rem;">
+        🗺️ <span style="font-weight:400;">Find us — interactive map (coming soon)</span>
+      </div>
+    </div>
+
+    <!-- right: contact form -->
+    <div class="form-card" style="border-left-color: #1e3a2f; margin:0;">
+      <h3 style="font-weight:400; font-size:1.6rem; margin-bottom:1rem;">Send us a message</h3>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Jamie Oliver" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@garden.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="general">General inquiry</option>
+            <option value="gardening">Gardening advice</option>
+            <option value="permaculture">Permaculture design</option>
+            <option value="collaboration">Collaboration / press</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your project, question, or idea..." required></textarea>
+        </div>
+        <button type="submit" class="btn">🌱 Send message</button>
+        <p style="margin-top: 0.8rem; font-size:0.9rem; color:#4d5f4a;">We aim to reply within 48 hours. Your data is kept private.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- FAQ section (contact-specific) -->
+  <section id="faq-contact">
+    <h2 class="section-title">❓ Before you contact us</h2>
+    <div class="faq-item"><div class="faq-question">Do you offer one-on-one garden consultations?</div><div class="faq-answer">Yes — we provide virtual and on-site consultations. Please fill out the form and select “Gardening advice” and we’ll get back with details.</div></div>
+    <div class="faq-item"><div class="faq-question">Can I submit a guest post or article?</div><div class="faq-answer">Absolutely. We welcome expert contributions. Use the “Collaboration / press” option and include your pitch.</div></div>
+    <div class="faq-item"><div class="faq-question">Do you sell seeds or products?</div><div class="faq-answer">We are an educational platform. We don’t sell directly, but we recommend trusted partners. Contact us for recommendations.</div></div>
+  </section>
+
+  <!-- author / team -->
+  <section class="author-box">
+    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&auto=format&fit=crop&crop=face" alt="Dr. Sylvia Green" loading="lazy">
+    <div><h3 style="font-weight:400;">Dr. Sylvia Green &amp; team</h3><p>Our horticulture experts are ready to assist. Sylvia and her colleagues have decades of combined experience in organic farming, permaculture, and plant science. We’re passionate about helping you grow.</p></div>
+  </section>
+
+  <!-- related internal links -->
+  <div style="background: #f3ede6; padding: 1.5rem; border-radius: 6px; margin: 2rem 0;">
+    <h4 style="font-weight:400; margin-bottom:0.5rem;">📚 More from Sprouting Nature World</h4>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem;">
+      <a href="#" style="color:#1d3a2a; text-decoration:none; border-bottom:1px dotted #b89b7b;">About our mission</a>
+      <a href="#" style="color:#1d3a2a; text-decoration:none; border-bottom:1px dotted #b89b7b;">Permaculture design hub</a>
+      <a href="#" style="color:#1d3a2a; text-decoration:none; border-bottom:1px dotted #b89b7b;">Organic growing guide</a>
+      <a href="#" style="color:#1d3a2a; text-decoration:none; border-bottom:1px dotted #b89b7b;">Seed saving library</a>
+    </div>
+  </div>
+
+</div> <!-- end padding -->
+
+<footer>
+  <div>© 2026 Sprouting Nature World — premium gardening authority</div>
+  <div>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+</div> <!-- end container -->
+
+<script>
+  (function() {
+    // FAQ toggle
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        answer.classList.toggle('show');
+      });
+    });
+
+    // smooth scroll for internal links (if any)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === "#") return;
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // simple form alert (demo)
+    const form = document.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('🌱 Thank you for reaching out! Our team will respond within 48 hours. (Demo)');
+        form.reset();
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

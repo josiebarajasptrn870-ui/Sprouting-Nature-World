@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>Sprouting Nature World – Premium Gardening Authority</title>
+  <meta name="description" content="Sprouting Nature World: expert gardening guides, organic tips, permaculture designs, and in-depth plant science. Grow with authority.">
+  <link rel="canonical" href="https://sproutingnatureworld.com/">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Sprouting Nature World",
+      "url": "https://sproutingnatureworld.com/",
+      "description": "Premium gardening blog with expert guides, organic tips, and permaculture insights.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sproutingnatureworld.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #f5efe8;
+      color: #2d3e2b;
+      line-height: 1.7;
+      padding: 0 20px;
+    }
+    .container { max-width: 1280px; margin: 0 auto; background: #fcf9f5; box-shadow: 0 0 40px rgba(0,0,0,0.02); }
+    /* luxury editorial style */
+    header {
+      background: #1e3a2f;
+      color: #efe7d7;
+      padding: 2rem 2.5rem;
+      border-bottom: 4px solid #b89b7b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo h1 { font-size: 2.2rem; font-weight: 400; letter-spacing: 2px; }
+    .logo span { color: #d4b48c; font-style: italic; }
+    nav a { color: #efe7d7; text-decoration: none; margin-left: 2rem; font-size: 0.95rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: 0.2s; }
+    nav a:hover { border-bottom-color: #d4b48c; color: #fff; }
+    .hero {
+      background: #2f4d3b;
+      background-image: linear-gradient(135deg, #1d3a2a 0%, #3a5e47 100%);
+      color: #f2ede4;
+      padding: 4rem 3rem;
+      text-align: center;
+      border-bottom: 2px solid #b89b7b;
+    }
+    .hero h2 { font-size: 3.2rem; font-weight: 300; letter-spacing: 1px; margin-bottom: 1rem; }
+    .hero p { max-width: 720px; margin: 0 auto 2rem; font-size: 1.2rem; opacity: 0.9; }
+    .btn { background: #b89b7b; color: #1e3a2f; padding: 0.8rem 2.2rem; border: none; font-size: 1rem; font-weight: 600; cursor: pointer; transition: 0.2s; letter-spacing: 1px; }
+    .btn:hover { background: #d4b48c; color: #0f281f; }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 300;
+      border-bottom: 2px solid #d4b48c;
+      padding-bottom: 0.5rem;
+      margin: 2.5rem 0 1.5rem;
+      color: #1e3a2f;
+      letter-spacing: 1px;
+    }
+    .grid-2, .grid-3 { display: grid; gap: 2rem; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card {
+      background: #fffdfa;
+      padding: 1.5rem;
+      border-radius: 4px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      transition: 0.2s ease;
+      border-left: 4px solid #b89b7b;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(0,0,0,0.04); }
+    .card h3 { font-size: 1.3rem; font-weight: 500; color: #1d3a2a; margin-bottom: 0.5rem; }
+    .card p { color: #3d4d3a; font-size: 0.98rem; }
+    .card a { color: #1e3a2f; text-decoration: none; font-weight: 600; border-bottom: 1px dotted #b89b7b; }
+    .card a:hover { color: #6f4e2e; }
+    img { max-width: 100%; height: auto; border-radius: 6px; margin: 1rem 0; display: block; }
+    .img-float { float: left; margin: 0 1.5rem 1rem 0; max-width: 280px; }
+    .faq-item { border-bottom: 1px solid #ded5c7; padding: 1.2rem 0; }
+    .faq-question { font-weight: 600; font-size: 1.1rem; cursor: pointer; color: #1d3a2a; }
+    .faq-answer { margin-top: 0.5rem; color: #3d4d3a; display: none; }
+    .faq-answer.show { display: block; }
+    .newsletter {
+      background: #e6ddd0;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .newsletter input { padding: 0.8rem 1.5rem; border: none; width: 280px; max-width: 100%; font-size: 1rem; }
+    .newsletter button { background: #1e3a2f; color: #efe7d7; padding: 0.8rem 2rem; border: none; font-size: 1rem; cursor: pointer; }
+    .author-box { display: flex; gap: 2rem; align-items: center; background: #f3ede6; padding: 1.8rem; border-radius: 6px; margin: 2rem 0; }
+    .author-box img { border-radius: 50%; width: 100px; height: 100px; object-fit: cover; }
+    footer {
+      background: #1e3a2f;
+      color: #cec2b0;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      border-top: 2px solid #b89b7b;
+    }
+    footer a { color: #d4b48c; text-decoration: none; margin: 0 0.5rem; }
+    .toc { background: #f3ede6; padding: 1.5rem; border-radius: 6px; margin: 2rem 0; }
+    .toc ul { list-style: none; columns: 2; column-gap: 2rem; }
+    .toc li { margin: 0.3rem 0; }
+    .toc a { color: #1d3a2a; text-decoration: none; border-bottom: 1px dotted #b89b7b; }
+    @media (max-width: 700px) {
+      header { flex-direction: column; align-items: start; gap: 1rem; }
+      nav a { margin-left: 0; margin-right: 1.2rem; }
+      .hero h2 { font-size: 2.2rem; }
+      .img-float { float: none; margin: 0 0 1rem 0; max-width: 100%; }
+      .toc ul { columns: 1; }
+      .author-box { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="logo"><h1>🌱 Sprouting <span>Nature World</span></h1></div>
+  <nav>
+     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Where soil meets wisdom</h2>
+  <p>Authority gardening since 2012 — deep ecology, organic practices, and permaculture design. Cultivate resilience.</p>
+  <a href="#articles" class="btn">Explore the garden</a>
+</section>
+
+<div class="toc">
+  <h3 style="margin-bottom:0.5rem;">📖 Table of Contents</h3>
+  <ul>
+    <li><a href="#featured">Featured Articles</a></li>
+    <li><a href="#trending">Trending Posts</a></li>
+    <li><a href="#latest">Latest</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#guides">In-Depth Guides</a></li>
+    <li><a href="#expert">Expert Tips</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#author">Author</a></li>
+  </ul>
+</div>
+
+<!-- FEATURED ARTICLES -->
+<section id="featured">
+  <h2 class="section-title">🌟 Featured Articles</h2>
+  <div class="grid-2">
+    <div class="card"><h3><a href="#">The Soul of Soil: Regenerative Agriculture</a></h3><p>Explore the microbial universe beneath your feet. Learn how mycorrhizal networks and no-till farming can restore degraded land and sequester carbon.</p><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop" alt="rich dark soil with sprouting seedling" loading="lazy" style="margin: 0.8rem 0;"></div>
+    <div class="card"><h3><a href="#">Permaculture Zones: Design from Core to Edge</a></h3><p>How to map your homestead using zone analysis. From kitchen herbs to forest gardens — a complete blueprint for resilient food systems.</p><img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&auto=format&fit=crop" alt="permaculture garden layout" loading="lazy" style="margin: 0.8rem 0;"></div>
+  </div>
+</section>
+
+<!-- TRENDING & LATEST -->
+<section id="trending">
+  <h2 class="section-title">🔥 Trending Posts</h2>
+  <div class="grid-3">
+    <div class="card"><h3><a href="#">No-Dig Gardening: 5 Years of Data</a></h3><p>Long-term trial shows 40% higher yields, fewer weeds, and incredible soil structure. A must-read for organic growers.</p></div>
+    <div class="card"><h3><a href="#">Compost Tea Brewing Masterclass</a></h3><p>Aerated vs. non-aerated, molasses ratios, and the science of beneficial bacteria. Boost your plant immunity naturally.</p></div>
+    <div class="card"><h3><a href="#">Heirloom Tomato Varieties for Every Climate</a></h3><p>From Brandywine to Black Krim, discover 12 heirloom tomatoes that thrive in heat, cold, and humidity.</p></div>
+  </div>
+</section>
+
+<section id="latest">
+  <h2 class="section-title">📰 Latest Posts</h2>
+  <div class="grid-3">
+    <div class="card"><h3><a href="#">Building a Polytunnel: Step-by-Step</a></h3><p>Extend your growing season by 3 months. Materials, orientation, and ventilation strategies for high yields.</p></div>
+    <div class="card"><h3><a href="#">Fruit Tree Guilds: The 7-Layer System</a></h3><p>Create a self-sustaining orchard with nitrogen-fixing shrubs, dynamic accumulators, and pollinator attractors.</p></div>
+    <div class="card"><h3><a href="#">Seed Saving 101: Brassicas & Beans</a></h3><p>Preserve genetic diversity. Isolation distances, fermentation, and storage tips for long-term viability.</p></div>
+  </div>
+</section>
+
+<!-- POPULAR CATEGORIES -->
+<section id="categories">
+  <h2 class="section-title">📂 Popular Categories</h2>
+  <div class="grid-2">
+    <div class="card"><h3>🌿 Organic Growing</h3><p>Pest control, soil fertility, and certified organic practices. Over 120 in-depth articles.</p></div>
+    <div class="card"><h3>🌳 Permaculture Design</h3><p>Zone planning, water harvesting, and polycultures. 90+ case studies from around the world.</p></div>
+    <div class="card"><h3>🌱 Seed & Propagation</h3><p>From germination to grafting. Everything about plant propagation and seed biology.</p></div>
+    <div class="card"><h3>🍅 Edible Landscaping</h3><p>Beauty and yield combined. Design your garden with edible perennials, shrubs, and groundcovers.</p></div>
+  </div>
+</section>
+
+<!-- IN-DEPTH GUIDES -->
+<section id="guides">
+  <h2 class="section-title">📘 In-Depth Guides</h2>
+  <div class="grid-2">
+    <div class="card"><h3><a href="#">The Complete Guide to Soil Food Web</a></h3><p>Bacteria, fungi, nematodes, and protozoa — how they interact and why it matters for plant health. 5000+ words.</p><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e0f3?w=600&auto=format&fit=crop" alt="soil food web diagram" loading="lazy"></div>
+    <div class="card"><h3><a href="#">Water-Wise Gardening: Dryland Techniques</a></h3><p>Swales, greywater, mulching, and drought-tolerant species. A 10-part series with real-world examples.</p><img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?w=600&auto=format&fit=crop" alt="dryland garden with drip irrigation" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- EXPERT TIPS -->
+<section id="expert">
+  <h2 class="section-title">🧑‍🌾 Expert Tips</h2>
+  <div class="grid-3">
+    <div class="card"><h3>🌾 Intercropping Strategies</h3><p>Corn, beans, and squash — the Three Sisters. Plus 5 other polyculture combinations for pest suppression.</p></div>
+    <div class="card"><h3>🌿 Biochar Production at Home</h3><p>Simple kiln designs, activation with compost tea, and long-term carbon sequestration.</p></div>
+    <div class="card"><h3>🍄 Mycorrhizal Inoculants</h3><p>How to choose the right species for your crops. Increases nutrient uptake by up to 80%.</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2 class="section-title">❓ Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-question">What is the best organic fertilizer for vegetables?</div><div class="faq-answer">Compost and well-aged manure are foundational. For specific crops, blood meal (nitrogen) and bone meal (phosphorus) work well. Always test your soil first.</div></div>
+  <div class="faq-item"><div class="faq-question">How do I start a permaculture garden?</div><div class="faq-answer">Begin with observation: sun, wind, water flow. Then design zones, start small with a herb spiral, and expand gradually. Our 10-step guide covers everything.</div></div>
+  <div class="faq-item"><div class="faq-question">Can I grow vegetables in shade?</div><div class="faq-answer">Yes — leafy greens, roots, and some herbs thrive in partial shade. We have a dedicated guide on shade-tolerant crops.</div></div>
+</section>
+
+<!-- RELATED ARTICLES (internal linking) -->
+<section>
+  <h2 class="section-title">🔗 Related Articles</h2>
+  <div class="grid-2">
+    <div class="card"><a href="#">Companion Planting for Pest Control</a> — <span style="color:#4d5f4a;">Discover natural synergies between vegetables and flowers.</span></div>
+    <div class="card"><a href="#">Building a Worm Farm</a> — <span style="color:#4d5f4a;">Vermicomposting made simple — perfect for small spaces.</span></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <h3 style="font-size:1.8rem; font-weight:300; color:#1e3a2f;">🌿 Grow with us</h3>
+  <p style="margin:0.5rem 0 1.2rem;">Subscribe for weekly insights, exclusive guides, and seasonal tips.</p>
+  <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+  <button>Subscribe</button>
+</div>
+
+<!-- AUTHOR -->
+<section id="author" class="author-box">
+  <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&auto=format&fit=crop&crop=face" alt="Dr. Sylvia Green, head gardener" loading="lazy">
+  <div><h3 style="font-weight:400;">Dr. Sylvia Green</h3><p>Chief horticulturist and permaculture designer with 20+ years of experience. Sylvia holds a PhD in plant ecology and has designed over 150 regenerative landscapes across 5 continents. She believes that gardening is a radical act of hope.</p></div>
+</section>
+
+<!-- PRIVACY & TERMS -->
+<footer>
+  <div>© 2026 Sprouting Nature World — premium gardening authority</div>
+  <div>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Contact</a>
+  </div>
+</footer>
+
+</div> <!-- end container -->
+
+<script>
+  (function() {
+    // FAQ toggle
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        answer.classList.toggle('show');
+      });
+    });
+
+    // Lazy load images (browser native already supports loading="lazy")
+    // Additional small interaction: smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === "#") return;
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
