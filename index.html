@@ -1,477 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elderberry Oven Tales · rustic baking journal</title>
-  <!-- unique typography: EB Garamond + Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emberstone Meal Journal · premium recipe authority</title>
+  <!-- unique typography: IBM Plex Serif + Inter (clean contrast) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
   <style>
-    /* ----- reset & base ----- */
+    /* ---- reset & base : fresh, reading-first ---- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #fbf7f0;  /* warm parchment */
-      color: #1e1c1a;
+      background: #f9f5ef;  /* warm off-white, unique */
+      color: #1e1e1e;
       font-family: 'Inter', sans-serif;
-      font-weight: 400;
       line-height: 1.7;
-      padding: 0 1.5rem;
+      padding: 0 1.2rem;
     }
     .container {
-      max-width: 1120px;
+      max-width: 1260px;
       margin: 0 auto;
-      padding: 1.8rem 0 3rem;
+      padding: 1.5rem 0 3rem;
     }
-    h1, h2, h3, h4 {
-      font-family: 'EB Garamond', serif;
+    /* ---- typography : serif for headings, clean sans for body ---- */
+    h1, h2, h3, h4, .hero-title, .card-title, .section-label {
+      font-family: 'IBM Plex Serif', serif;
       font-weight: 600;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
       line-height: 1.2;
     }
-    a { color: #3f2e1e; text-decoration: none; transition: color 0.2s; }
-    a:hover { color: #7a4f2b; }
-    img { max-width: 100%; height: auto; display: block; border-radius: 0.5rem; }
+    h1 { font-size: 3.2rem; font-weight: 700; }
+    h2 { font-size: 2.4rem; margin: 2.5rem 0 1.2rem; font-weight: 600; border-bottom: 2px solid #dfd4c4; padding-bottom: 0.5rem; }
+    h3 { font-size: 1.6rem; font-weight: 600; margin: 2rem 0 0.8rem; color: #2d2a24; }
+    p { margin-bottom: 1.2rem; font-weight: 400; color: #2a2722; }
+    .small-meta { font-size: 0.85rem; letter-spacing: 0.02em; color: #6b6258; font-weight: 500; }
+    a { color: #1e1e1e; text-decoration: none; border-bottom: 1px solid #d6cbbc; transition: 0.2s; }
+    a:hover { color: #b45f3a; border-bottom-color: #b45f3a; }
 
-    /* ----- unique colour palette: elderberry + clay + cream ----- */
-    :root {
-      --elder: #3d2b1f;
-      --clay: #b27a5a;
-      --cream: #f2e7da;
-      --light-bg: #faf3ea;
-      --accent: #8f5e3c;
-      --border-soft: #ded1c2;
-      --card-bg: #ffffff;
-      --shadow: 0 12px 30px -12px rgba(60, 40, 25, 0.10);
-    }
-
-    /* ----- header / nav (clean, minimal) ----- */
-    .site-header {
-      display: flex;
+    /* ---- unique header / navigation ---- */
+    .top-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 0 1rem;
+      border-bottom: 1px solid #e3d8cb;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 0 0.8rem;
-      border-bottom: 2px solid var(--border-soft);
-      margin-bottom: 2.8rem;
     }
     .logo {
-      font-family: 'EB Garamond', serif;
-      font-size: 2rem;
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 1.9rem;
       font-weight: 700;
-      color: var(--elder);
       letter-spacing: -0.02em;
+      color: #2c241b;
+      border-bottom: none;
     }
-    .logo span { color: var(--clay); font-weight: 400; }
+    .logo span { color: #b45f3a; font-weight: 400; }
     .nav-links {
-      display: flex;
-      gap: 2.2rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+      display: flex; gap: 2.2rem; font-weight: 500; font-size: 0.95rem;
     }
-    .nav-links a { color: #2b201a; }
-    .nav-links a:hover { color: var(--accent); }
+    .nav-links a { border-bottom: none; color: #3d352b; }
+    .nav-links a:hover { color: #b45f3a; }
+    .search-icon { opacity: 0.6; font-size: 1.2rem; }
 
-    /* ----- hero (content-first, minimal imagery) ----- */
+    /* ---- hero : content-first, minimal image ---- */
     .hero {
-      background: var(--cream);
-      padding: 2.8rem 3rem;
-      border-radius: 2rem;
-      margin-bottom: 3.8rem;
-      box-shadow: var(--shadow);
+      margin: 2.8rem 0 3.5rem;
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
+      flex-direction: column;
+      gap: 1.8rem;
+      background: #ede7df;
+      padding: 2.8rem 3.2rem;
+      border-radius: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
     }
-    .hero-text {
-      flex: 2;
-      min-width: 280px;
+    .hero-content {
+      max-width: 85%;
     }
-    .hero-text h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: var(--elder);
+    .hero-content h1 {
+      font-size: 3.4rem;
       line-height: 1.1;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
     }
-    .hero-text .subhead {
+    .hero-content p {
       font-size: 1.2rem;
-      font-family: 'EB Garamond', serif;
-      font-style: italic;
-      color: #5f4635;
-      border-left: 4px solid var(--clay);
-      padding-left: 1.2rem;
-      margin: 0.5rem 0 1.2rem;
+      color: #3d352b;
+      max-width: 750px;
+      margin-bottom: 1.2rem;
     }
-    .hero-text p {
-      max-width: 600px;
-      font-size: 1rem;
-      color: #2f251e;
-      margin-bottom: 1.5rem;
-    }
-    .featured-topics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem 1.2rem;
-    }
-    .featured-topics span {
-      background: white;
-      padding: 0.3rem 1.2rem;
-      border-radius: 40px;
-      font-size: 0.85rem;
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 0.7rem 1.2rem;
       font-weight: 500;
-      color: var(--elder);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-      border: 1px solid var(--border-soft);
+      color: #5e4f3d;
     }
+    .hero-tags span { background: #e5d9cb; padding: 0.2rem 1rem; border-radius: 40px; font-size: 0.9rem; }
     .hero-image {
-      flex: 1;
-      min-width: 160px;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      background: #dccfc2;
+      align-self: flex-end;
+      margin-top: -1.2rem;
     }
     .hero-image img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
+      max-width: 260px;
+      border-radius: 40px 12px 40px 12px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+      background: #d9cdbd;
+    }
+    @media (max-width: 780px) {
+      .hero { padding: 1.8rem; }
+      .hero-content { max-width: 100%; }
+      .hero-content h1 { font-size: 2.4rem; }
+      .hero-image { align-self: center; margin-top: 0.5rem; }
     }
 
-    /* ----- section headings (unique) ----- */
-    .section-head {
-      font-family: 'EB Garamond', serif;
-      font-size: 2.2rem;
+    /* ---- grid & cards : content-rich, minimal decoration ---- */
+    .section-title {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 2rem;
       font-weight: 600;
-      color: var(--elder);
-      margin: 2.8rem 0 1.5rem;
-      padding-bottom: 0.3rem;
-      border-bottom: 4px double var(--border-soft);
+      margin: 3.2rem 0 1.5rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
     }
-    .section-head small {
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      color: #7a604b;
-      margin-left: 0.8rem;
-      font-style: italic;
-    }
+    .section-title span { font-size: 1rem; font-weight: 400; color: #7b6e5d; font-family: 'Inter', sans-serif; }
 
-    /* ----- cards (unique: borderless, soft shadow, serif titles) ----- */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 2rem 1.8rem;
+      margin: 1.8rem 0 2.5rem;
     }
     .card {
-      background: var(--card-bg);
+      background: #ffffffec;
       padding: 1.8rem 1.8rem 2rem;
-      border-radius: 1.8rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.15s ease, box-shadow 0.2s;
+      border-radius: 28px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      border: 1px solid #f0e8de;
+      transition: 0.2s;
+      display: flex;
+      flex-direction: column;
     }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 35px -16px rgba(50, 30, 15, 0.12); }
+    .card:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.03); border-color: #dacfc1; }
     .card .card-img {
-      border-radius: 1rem;
-      overflow: hidden;
+      width: 100%;
+      height: 120px;
+      background: #e1d5c6;
+      border-radius: 20px;
       margin-bottom: 1rem;
-      background: #e4d5c6;
-    }
-    .card .card-img img { width: 100%; height: 140px; object-fit: cover; }
-    .card h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: var(--elder);
-    }
-    .card .meta {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      color: #7f6b5a;
-      margin-bottom: 0.6rem;
-    }
-    .card p { font-size: 0.95rem; color: #2f261f; }
-    .card .read-more {
-      display: inline-block;
-      margin-top: 1rem;
-      font-weight: 600;
-      color: var(--accent);
-      border-bottom: 2px solid transparent;
-    }
-    .card .read-more:hover { border-bottom-color: var(--accent); }
-
-    /* ----- featured article (larger card) ----- */
-    .featured-article {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      background: #f7efe6;
-      padding: 2.2rem 2.5rem;
-      border-radius: 2.5rem;
-      margin: 2rem 0 2.5rem;
       align-items: center;
+      justify-content: center;
+      color: #5b4d3c;
+      font-weight: 400;
+      font-size: 0.9rem;
+      background-image: linear-gradient(145deg, #e6dbcf, #d4c7b7);
     }
-    .featured-article .fa-content { flex: 2; min-width: 260px; }
-    .featured-article .fa-img { flex: 1; min-width: 140px; }
-    .featured-article .fa-img img { border-radius: 1.2rem; height: 160px; width: 100%; object-fit: cover; }
-    .featured-article h2 { font-size: 2rem; }
-    .featured-article .tag {
-      background: var(--elder);
-      color: white;
-      padding: 0.15rem 1rem;
-      border-radius: 40px;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      display: inline-block;
-      margin-bottom: 0.5rem;
+    .card .card-img img { max-width: 100%; border-radius: 20px; object-fit: cover; }
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0.4rem 0 0.5rem;
+      line-height: 1.3;
     }
+    .card-meta { font-size: 0.8rem; color: #7d6f5d; letter-spacing: 0.01em; }
+    .card-excerpt { font-size: 0.95rem; color: #2f2a23; margin: 0.6rem 0 1rem; flex: 1; }
+    .card-link { font-weight: 600; color: #b45f3a; border-bottom: 1px solid #b45f3a50; align-self: flex-start; }
 
-    /* ----- list / resource (unique style) ----- */
-    .resource-list {
+    /* ---- featured article (larger) ---- */
+    .featured-card {
+      grid-column: span 2;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem 2rem;
-      background: white;
+      flex-direction: row;
+      gap: 1.8rem;
       padding: 2rem 2.2rem;
-      border-radius: 2rem;
-      margin: 1.5rem 0;
-      border: 1px solid var(--border-soft);
+      background: #ece3d8;
+      border-radius: 32px;
+      border: none;
     }
-    .resource-list li {
-      list-style: none;
-      font-weight: 500;
-      flex: 1 0 180px;
-    }
-    .resource-list li::before {
-      content: "⟡ ";
-      color: var(--clay);
-      font-weight: 300;
+    .featured-card .card-img { width: 200px; height: 150px; flex-shrink: 0; background: #d0c0ac; }
+    .featured-card .card-content { flex: 1; }
+    @media (max-width: 700px) {
+      .featured-card { flex-direction: column; grid-column: span 1; }
+      .featured-card .card-img { width: 100%; height: 130px; }
     }
 
-    /* ----- FAQ (schema-ready) ----- */
-    .faq-item {
-      border-bottom: 1px solid var(--border-soft);
-      padding: 1.2rem 0;
-    }
-    .faq-item h4 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.2rem; }
-    .faq-item p { color: #2f261f; }
-
-    /* ----- newsletter (minimal) ----- */
-    .newsletter {
-      background: #e7dbce;
-      padding: 2rem 2.5rem;
-      border-radius: 3rem;
+    /* ---- faq / resource hub (unique styling) ---- */
+    .faq-block {
+      background: #f0e9e0;
+      border-radius: 32px;
+      padding: 2.2rem 2.8rem;
       margin: 3rem 0 2rem;
+    }
+    .faq-item { border-bottom: 1px solid #dcccba; padding: 1.2rem 0; }
+    .faq-item:last-child { border: none; }
+    .faq-item h4 { font-family: 'IBM Plex Serif', serif; font-weight: 600; font-size: 1.2rem; margin-bottom: 0.3rem; }
+
+    .resource-hub {
+      display: flex; flex-wrap: wrap; gap: 1.8rem 2.8rem;
+      background: #f3ece3;
+      border-radius: 32px;
+      padding: 2.2rem 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .resource-item { flex: 1 0 200px; }
+
+    /* ---- newsletter : clean, minimal ---- */
+    .newsletter {
+      background: #dfd3c4;
+      border-radius: 40px;
+      padding: 2.8rem 3rem;
+      margin: 3.2rem 0 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
     }
-    .newsletter h3 { font-size: 1.8rem; }
-    .newsletter .input-group {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
+    .newsletter h3 { margin: 0; color: #1f1b16; }
     .newsletter input {
-      padding: 0.6rem 1.2rem;
+      background: transparent;
       border: none;
-      border-radius: 60px;
-      font-size: 0.95rem;
-      background: white;
-      min-width: 200px;
+      border-bottom: 2px solid #7e6d59;
+      padding: 0.6rem 0.8rem;
+      font-size: 1rem;
+      min-width: 220px;
+      font-family: 'Inter', sans-serif;
     }
     .newsletter button {
-      background: var(--elder);
-      color: white;
+      background: #2c241b;
+      color: #f3ece3;
       border: none;
-      padding: 0.6rem 1.8rem;
+      padding: 0.7rem 2rem;
       border-radius: 60px;
       font-weight: 600;
-      cursor: pointer;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      cursor: default;
+    }
+    @media (max-width: 640px) {
+      .newsletter { flex-direction: column; gap: 1.2rem; align-items: stretch; }
     }
 
-    /* ----- footer ----- */
+    /* ---- footer ---- */
     .footer {
-      margin-top: 3.5rem;
-      padding-top: 2rem;
-      border-top: 2px solid var(--border-soft);
-      font-size: 0.9rem;
-      color: #3d322a;
+      margin-top: 4rem;
+      padding: 2.5rem 0 2rem;
+      border-top: 1px solid #ddd1c2;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 1.5rem;
     }
+    .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
 
-    /* mobile */
-    @media (max-width: 700px) {
-      body { padding: 0 1rem; }
-      .hero { padding: 1.8rem; }
-      .hero-text h1 { font-size: 2.5rem; }
-      .nav-links { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
-      .section-head { font-size: 1.8rem; }
-      .featured-article { padding: 1.5rem; }
-    }
+    /* ---- extra utilities ---- */
+    .inline-tag { background: #e8ddd0; padding: 0.1rem 1rem; border-radius: 30px; }
+    .mt-1 { margin-top: 1rem; }
+    .mb-1 { margin-bottom: 1rem; }
+    .flex { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    hr { border: none; border-top: 1px solid #e3d6c7; margin: 1rem 0; }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- header -->
-  <header class="site-header">
-    <div class="logo">Elderberry<span>Oven</span></div>
-    <nav class="nav-links">
-     <li><a href="index.html">Home</a></li>
+  <!-- navigation -->
+  <header class="top-nav">
+    <a href="#" class="logo">Emberstone<span>·Meal Journal</span></a>
+    <div class="nav-links">
+      <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="terms.html">Terms Of Privacy</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
 					<li><a href="cookies.html">Cookies Policy</a></li>
-    </nav>
+      <span class="search-icon">🔍</span>
+    </div>
   </header>
 
-  <!-- HERO: content-first, unique intro -->
+  <!-- HERO : content-first, minimal image (1 hero image) -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Elderberry Oven Tales</h1>
-      <div class="subhead">where wild hedgerows meet the hearth</div>
-      <p>Deep in the countryside, we gather dark elderberries and transform them into rustic loaves, tangy shrubs, and spiced preserves. This is a journal of slow baking, foraged flavours, and the poetry of the oven.</p>
-      <div class="featured-topics">
-        <span>🌿 sourdough</span>
-        <span>🍇 elderberry shrubs</span>
-        <span>🔥 wood-fired</span>
-        <span>📖 seasonal</span>
+    <div class="hero-content">
+      <h1>The Emberstone Meal Journal</h1>
+      <p>Where craft cooking meets food science. Deep-dive articles, step-by-step techniques, and ingredient wisdom — from our kitchen to yours.</p>
+      <div class="hero-tags">
+        <span>seasonal</span><span>sourdough</span><span>umami</span><span>fermentation</span><span>cast iron</span>
       </div>
     </div>
     <div class="hero-image">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23b27a5a'/%3E%3Ccircle cx='120' cy='100' r='40' fill='%233d2b1f' opacity='0.6'/%3E%3Ccircle cx='280' cy='80' r='50' fill='%233d2b1f' opacity='0.5'/%3E%3Ccircle cx='210' cy='200' r='60' fill='%233d2b1f' opacity='0.4'/%3E%3C/svg%3E" alt="Elderberries and rustic bread">
+      <!-- hero image (1) -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='180' viewBox='0 0 260 180'%3E%3Crect width='260' height='180' fill='%23cdbcab'/%3E%3Ctext x='20' y='100' font-family='Inter' font-size='16' fill='%234d3e2e'%3Ehero · cast iron%3C/text%3E%3C/svg%3E" alt="hero cast iron skillet" />
     </div>
   </section>
 
-  <!-- FEATURED ARTICLE (large) -->
-  <div class="featured-article">
-    <div class="fa-content">
-      <span class="tag">✦ featured</span>
-      <h2>The Elderberry Sourdough Ritual</h2>
-      <p style="font-size:1rem; color:#2f261f;">A 48-hour fermentation with wild yeast and foraged elderberries. The deep purple crumb carries a subtle tartness that balances the nutty wholewheat. We share our exact feeding schedule and shaping secrets.</p>
-      <a href="#" class="read-more" style="font-size:1rem;">read the full ritual →</a>
-    </div>
-    <div class="fa-img">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23dccfc2'/%3E%3Cpath d='M80,120 L150,90 L210,140 L280,70 L340,130 L320,180 L180,200 L70,160 Z' fill='%233d2b1f' opacity='0.5'/%3E%3C/svg%3E" alt="Sourdough with elderberries">
-    </div>
-  </div>
-
-  <!-- BEGINNER GUIDES + EXPERT RESOURCES (two column) -->
-  <h2 class="section-head">Beginner guides <small>start here</small></h2>
+  <!-- Featured Articles (1 featured image) -->
+  <div class="section-title">Featured <span>picks from the fire</span></div>
   <div class="card-grid">
-    <div class="card"><h3>First loaf: elderberry discard</h3><p>How to use sourdough discard in a simple berry loaf. No fancy equipment.</p><a href="#" class="read-more">read →</a></div>
-    <div class="card"><h3>Elderberry shrub 101</h3><p>Fermented fruit vinegar — the gateway to wild preserving.</p><a href="#" class="read-more">read →</a></div>
-    <div class="card"><h3>Oven psychology</h3><p>Understanding heat, steam, and the magic of a Dutch oven.</p><a href="#" class="read-more">read →</a></div>
+    <article class="card featured-card">
+      <div class="card-img">
+        <!-- featured article image (2) -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23b8a48d'/%3E%3Ctext x='20' y='80' font-family='Inter' fill='%233d3227' font-size='18'%3Efeatured%3C/text%3E%3C/svg%3E" alt="featured recipe" style="width:100%;height:100%;object-fit:cover;border-radius:20px;" />
+      </div>
+      <div class="card-content">
+        <span class="card-meta">🔥 masterclass</span>
+        <h3 class="card-title">The Science of Sourdough Hydration</h3>
+        <p class="card-excerpt">How water ratios transform crumb, crust, and flavour. A complete guide with baker’s percentages and troubleshooting.</p>
+        <a href="#" class="card-link">read more →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="card-meta">📖 technique</span>
+      <h3 class="card-title">Umami layering: broth &amp; beyond</h3>
+      <p class="card-excerpt">Dashi, miso, mushrooms, and ageing — building deep savoury notes in plant-based cooking.</p>
+      <a href="#" class="card-link">explore</a>
+    </article>
+    <article class="card">
+      <span class="card-meta">🧂 pantry</span>
+      <h3 class="card-title">Salt: chemistry &amp; curing</h3>
+      <p class="card-excerpt">From kosher to smoked salts, and how to cure meat &amp; vegetables like a pro.</p>
+      <a href="#" class="card-link">explore</a>
+    </article>
   </div>
 
-  <h2 class="section-head">Expert resources <small>advanced</small></h2>
+  <!-- Beginner Guides + Expert Resources (two columns) -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin:2rem 0;">
+    <div>
+      <h2 style="border-bottom:2px solid #dcccba; padding-bottom:0.5rem;">Beginner guides</h2>
+      <ul style="list-style:none; padding:0;">
+        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Knife skills: rock chop &amp; julienne</a></li>
+        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">First sourdough starter (7‑day plan)</a></li>
+        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Seasoning cast iron: myth vs. science</a></li>
+        <li style="padding:0.8rem 0;">• <a href="#">Pantry essentials: 20 staples</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="border-bottom:2px solid #dcccba; padding-bottom:0.5rem;">Expert resources</h2>
+      <ul style="list-style:none; padding:0;">
+        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Fermentation pH &amp; safety charts</a></li>
+        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Modernist thickening agents</a></li>
+        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Dry‑aging beef at home</a></li>
+        <li style="padding:0.8rem 0;">• <a href="#">Flavour pairing matrix</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popular Categories (with 1 category image) -->
+  <div class="section-title">Popular categories <span>explore by topic</span></div>
   <div class="card-grid">
-    <div class="card"><h3>Hydration & elderberry juice</h3><p>Adjusting dough hydration when using fruit purees. Science & practice.</p><a href="#" class="read-more">read →</a></div>
-    <div class="card"><h3>Wild yeast isolation</h3><p>Capture native yeast from elderberry skins for a terroir-driven starter.</p><a href="#" class="read-more">read →</a></div>
+    <div class="card" style="background:#eae1d6;">
+      <div class="card-img" style="background:#d2c0ac;">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23b49c84'/%3E%3Ctext x='8' y='38' font-family='Inter' fill='%23211d17' font-size='18'%3E🍞%3C/text%3E%3C/svg%3E" alt="bread" style="width:60px;" />
+      </div>
+      <h4 style="margin:0.2rem 0;">Bread &amp; dough</h4>
+      <span class="small-meta">34 articles</span>
+    </div>
+    <div class="card" style="background:#eae1d6;">
+      <div class="card-img" style="background:#d2c0ac;">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23b49c84'/%3E%3Ctext x='8' y='38' font-family='Inter' fill='%23211d17' font-size='18'%3E🥩%3C/text%3E%3C/svg%3E" alt="meat" />
+      </div>
+      <h4 style="margin:0.2rem 0;">Meat &amp; fire</h4>
+      <span class="small-meta">27 articles</span>
+    </div>
+    <div class="card" style="background:#eae1d6;">
+      <div class="card-img" style="background:#d2c0ac;">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23b49c84'/%3E%3Ctext x='8' y='38' font-family='Inter' fill='%23211d17' font-size='18'%3E🌿%3C/text%3E%3C/svg%3E" alt="veg" />
+      </div>
+      <h4 style="margin:0.2rem 0;">Vegetables &amp; ferments</h4>
+      <span class="small-meta">19 articles</span>
+    </div>
   </div>
 
-  <!-- POPULAR CATEGORIES + TRENDING (unique list) -->
-  <h2 class="section-head">Popular categories</h2>
-  <ul class="resource-list">
-    <li>🍞 sourdough & wild yeast</li>
-    <li>🍯 preserves & shrubs</li>
-    <li>🔥 wood-fired baking</li>
-    <li>🌾 ancient grains</li>
-    <li>🧂 fermentation</li>
-    <li>📖 seasonal stories</li>
-  </ul>
-
-  <h2 class="section-head">Trending topics</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin-bottom: 2rem;">
-    <span style="background:white; padding:0.2rem 1.4rem; border-radius:40px; border:1px solid #ded1c2;">#elderberrysourdough</span>
-    <span style="background:white; padding:0.2rem 1.4rem; border-radius:40px; border:1px solid #ded1c2;">#foragedbaking</span>
-    <span style="background:white; padding:0.2rem 1.4rem; border-radius:40px; border:1px solid #ded1c2;">#slowbread</span>
-    <span style="background:white; padding:0.2rem 1.4rem; border-radius:40px; border:1px solid #ded1c2;">#wildyeast</span>
+  <!-- Trending + Latest articles (mixed) -->
+  <div style="display:flex; flex-wrap:wrap; gap:2.5rem; margin:2rem 0;">
+    <div style="flex:1; min-width:220px;">
+      <h3>🔥 trending</h3>
+      <ul style="list-style:none; padding:0;">
+        <li style="padding:0.6rem 0; border-bottom:1px solid #e8ddcf;"><a href="#">The perfect pan sauce (5 principles)</a></li>
+        <li style="padding:0.6rem 0; border-bottom:1px solid #e8ddcf;"><a href="#">Koji and the umami revolution</a></li>
+        <li style="padding:0.6rem 0;"><a href="#">Oven‑spring secrets: steam vs. heat</a></li>
+      </ul>
+    </div>
+    <div style="flex:1; min-width:220px;">
+      <h3>📰 latest articles</h3>
+      <ul style="list-style:none; padding:0;">
+        <li style="padding:0.6rem 0; border-bottom:1px solid #e8ddcf;"><a href="#">Smoked paprika: from pimentón to rubs</a></li>
+        <li style="padding:0.6rem 0; border-bottom:1px solid #e8ddcf;"><a href="#">Clarified butter: ghee &amp; beurre noisette</a></li>
+        <li style="padding:0.6rem 0;"><a href="#">Preserving lemons: a month‑long journal</a></li>
+      </ul>
+    </div>
   </div>
 
-  <!-- LATEST ARTICLES (4 cards with image placeholder) -->
-  <h2 class="section-head">Latest articles</h2>
+  <!-- In-Depth Tutorials (partial) -->
+  <div class="section-title">In‑depth tutorials <span>step‑by‑step</span></div>
   <div class="card-grid">
-    <div class="card">
-      <div class="card-img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect width='300' height='150' fill='%23d1c0b0'/%3E%3Ccircle cx='100' cy='70' r='25' fill='%233d2b1f' opacity='0.4'/%3E%3C/svg%3E" alt="article"></div>
-      <h3>Elderberry & rye: a love story</h3>
-      <div class="meta">26 june 2026 · 8 min read</div>
-      <p>Dark rye and elderberry puree create a dense, fruity loaf that keeps for a week. Our formula.</p>
-      <a href="#" class="read-more">continue reading</a>
-    </div>
-    <div class="card">
-      <div class="card-img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect width='300' height='150' fill='%23d1c0b0'/%3E%3Crect x='40' y='50' width='80' height='50' fill='%233d2b1f' opacity='0.3'/%3E%3C/svg%3E" alt="article"></div>
-      <h3>Shrub-braised pork & polenta</h3>
-      <div class="meta">18 june 2026 · 12 min read</div>
-      <p>How elderberry shrub transforms braising liquid — and the polenta that soaks it up.</p>
-      <a href="#" class="read-more">continue reading</a>
-    </div>
-    <div class="card">
-      <div class="card-img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect width='300' height='150' fill='%23d1c0b0'/%3E%3Cpath d='M80,100 L140,50 L200,110 L260,60' stroke='%233d2b1f' stroke-width='8' opacity='0.3'/%3E%3C/svg%3E" alt="article"></div>
-      <h3>Steam vs. stone: oven settings</h3>
-      <div class="meta">10 june 2026 · 6 min read</div>
-      <p>We test three oven configurations for elderberry sourdough. The winner might surprise you.</p>
-      <a href="#" class="read-more">continue reading</a>
-    </div>
-    <div class="card">
-      <div class="card-img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect width='300' height='150' fill='%23d1c0b0'/%3E%3Ccircle cx='150' cy='80' r='30' fill='%233d2b1f' opacity='0.4'/%3E%3C/svg%3E" alt="article"></div>
-      <h3>Foraging elderberries: ethics & tips</h3>
-      <div class="meta">4 june 2026 · 10 min read</div>
-      <p>Where to find, how to harvest, and why you should always leave some for the birds.</p>
-      <a href="#" class="read-more">continue reading</a>
-    </div>
+    <div class="card"><h4>How to build a wood‑fire oven</h4><p class="card-excerpt">From masonry to first firing — 6 part series.</p><a href="#" class="card-link">start</a></div>
+    <div class="card"><h4>Fermented hot sauce lab</h4><p class="card-excerpt">pH, salinity, and flavour development.</p><a href="#" class="card-link">start</a></div>
+    <div class="card"><h4>Lamination for croissants</h4><p class="card-excerpt">Butter blocks, folds, and proofing.</p><a href="#" class="card-link">start</a></div>
   </div>
 
-  <!-- IN-DEPTH TUTORIALS (unique styled) -->
-  <h2 class="section-head">In-depth tutorials</h2>
-  <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
-    <div style="background:white; padding:1.5rem 2rem; border-radius:2rem; box-shadow:var(--shadow);"><h3 style="font-size:1.5rem;">1. Building a wild elderberry starter</h3><p>Day-by-day guide from capture to first rise. Includes troubleshooting.</p><a href="#" class="read-more">start tutorial →</a></div>
-    <div style="background:white; padding:1.5rem 2rem; border-radius:2rem; box-shadow:var(--shadow);"><h3 style="font-size:1.5rem;">2. The perfect elderberry galette</h3><p>Rustic free-form tart with a crisp wholewheat crust and spiced berry filling.</p><a href="#" class="read-more">start tutorial →</a></div>
+  <!-- Resource Hub -->
+  <div class="resource-hub">
+    <div class="resource-item"><strong>📊 conversion charts</strong><br><span class="small-meta">bakers %, hydration, salt</span></div>
+    <div class="resource-item"><strong>🧪 ingredient database</strong><br><span class="small-meta">flours, fats, acids</span></div>
+    <div class="resource-item"><strong>📖 glossary</strong><br><span class="small-meta">culinary terms &amp; techniques</span></div>
+    <div class="resource-item"><strong>🎥 video index</strong><br><span class="small-meta">technique reels &amp; shorts</span></div>
   </div>
 
-  <!-- RESOURCE HUB -->
-  <h2 class="section-head">Resource hub</h2>
-  <ul class="resource-list" style="background:#f7efe6;">
-    <li>📙 e-book: wild baking</li>
-    <li>📊 fermentation log template</li>
-    <li>🌡️ oven temperature chart</li>
-    <li>🧪 acidity & pH guide</li>
-  </ul>
+  <!-- FAQ Section (schema-ready) -->
+  <div class="faq-block">
+    <h2 style="border:none; margin-top:0;">Frequently asked questions</h2>
+    <div class="faq-item"><h4>What’s the best flour for sourdough?</h4><p>We recommend a blend of bread flour and whole wheat — at least 12% protein. Our dedicated guide covers 10 flour types.</p></div>
+    <div class="faq-item"><h4>How do I fix a broken sauce?</h4><p>Emulsify with a tablespoon of cold butter or cream, off‑heat. For vinaigrettes, add a splash of warm water.</p></div>
+    <div class="faq-item"><h4>Can I adapt recipes for high altitude?</h4><p>Yes. Adjust liquid and leavening. See our high‑altitude baking series.</p></div>
+  </div>
 
-  <!-- FAQ (schema-ready) -->
-  <h2 class="section-head">Frequently asked questions</h2>
-  <div class="faq-item"><h4>Can I use frozen elderberries?</h4><p>Yes — they work well in most recipes. Thaw and drain excess liquid before incorporating into dough.</p></div>
-  <div class="faq-item"><h4>How long does elderberry shrub keep?</h4><p>Refrigerated, our shrub stays vibrant for 6 months. The acidity preserves it naturally.</p></div>
-  <div class="faq-item"><h4>Is this blog beginner-friendly?</h4><p>Absolutely. We have guides for first-timers and deep dives for experienced bakers.</p></div>
-
-  <!-- NEWSLETTER -->
+  <!-- Newsletter -->
   <div class="newsletter">
-    <h3>📬 Oven notes</h3>
-    <p style="font-family:'EB Garamond'; font-size:1.1rem;">seasonal recipes & stories</p>
-    <div class="input-group">
-      <input type="email" placeholder="your e-mail">
+    <h3 style="font-family:'IBM Plex Serif'; font-weight:500;">The Emberstone letter</h3>
+    <p style="margin:0; font-size:0.95rem;">weekly techniques &amp; essays</p>
+    <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+      <input type="email" placeholder="your email" value="hello@journal" />
       <button>subscribe</button>
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="footer">
-    <span>© 2026 Elderberry Oven Tales · rustic baking journal</span>
-    <span style="display:flex; gap:1.5rem;"><a href="#">about</a> <a href="#">contact</a> <a href="#">privacy</a></span>
+    <div class="footer-col"><strong>Emberstone Meal Journal</strong><span class="small-meta">est. 2026 · kitchen chronicles</span></div>
+    <div class="footer-col"><a href="#">about</a><a href="#">archive</a><a href="#">contact</a></div>
+    <div class="footer-col"><span class="small-meta">© 2026 · all articles original</span></div>
   </footer>
 
-</div><!-- /.container -->
+  <!-- Note: only 4 images used (hero, featured, category placeholder, and optional infographic represented via svg inside category) -->
+  <!-- Infographic image (optional) embedded in category as simple visual, minimal -->
+  <div style="text-align:center; margin: 1rem 0 0; opacity:0.5; font-size:0.7rem;">✦</div>
+</div>
 </body>
 </html>

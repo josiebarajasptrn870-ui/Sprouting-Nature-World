@@ -1,313 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About · Elderberry Oven Tales</title>
-  <!-- EB Garamond + Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Emberstone Meal Journal</title>
+  <!-- unique typography: IBM Plex Serif + Inter (clean contrast) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
   <style>
-    /* ----- reset & base (mirror) ----- */
+    /* ---- reset & base : fresh, reading-first ---- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #fbf7f0;
-      color: #1e1c1a;
+      background: #f9f5ef;  /* warm off-white */
+      color: #1e1e1e;
       font-family: 'Inter', sans-serif;
-      font-weight: 400;
       line-height: 1.7;
-      padding: 0 1.5rem;
+      padding: 0 1.2rem;
     }
     .container {
-      max-width: 1120px;
+      max-width: 1260px;
       margin: 0 auto;
-      padding: 1.8rem 0 3rem;
+      padding: 1.5rem 0 3rem;
     }
-    h1, h2, h3, h4 {
-      font-family: 'EB Garamond', serif;
+    /* ---- typography : serif for headings, clean sans for body ---- */
+    h1, h2, h3, h4, .hero-title, .card-title, .section-label {
+      font-family: 'IBM Plex Serif', serif;
       font-weight: 600;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
       line-height: 1.2;
     }
-    a { color: #3f2e1e; text-decoration: none; transition: color 0.2s; }
-    a:hover { color: #7a4f2b; }
-    img { max-width: 100%; height: auto; display: block; border-radius: 0.5rem; }
+    h1 { font-size: 3.2rem; font-weight: 700; }
+    h2 { font-size: 2.4rem; margin: 2.5rem 0 1.2rem; font-weight: 600; border-bottom: 2px solid #dfd4c4; padding-bottom: 0.5rem; }
+    h3 { font-size: 1.6rem; font-weight: 600; margin: 2rem 0 0.8rem; color: #2d2a24; }
+    p { margin-bottom: 1.2rem; font-weight: 400; color: #2a2722; }
+    .small-meta { font-size: 0.85rem; letter-spacing: 0.02em; color: #6b6258; font-weight: 500; }
+    a { color: #1e1e1e; text-decoration: none; border-bottom: 1px solid #d6cbbc; transition: 0.2s; }
+    a:hover { color: #b45f3a; border-bottom-color: #b45f3a; }
 
-    :root {
-      --elder: #3d2b1f;
-      --clay: #b27a5a;
-      --cream: #f2e7da;
-      --light-bg: #faf3ea;
-      --accent: #8f5e3c;
-      --border-soft: #ded1c2;
-      --card-bg: #ffffff;
-      --shadow: 0 12px 30px -12px rgba(60, 40, 25, 0.10);
-    }
-
-    /* ----- header (exact) ----- */
-    .site-header {
-      display: flex;
+    /* ---- unique header / navigation ---- */
+    .top-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 0 1rem;
+      border-bottom: 1px solid #e3d8cb;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 0 0.8rem;
-      border-bottom: 2px solid var(--border-soft);
-      margin-bottom: 2.8rem;
     }
     .logo {
-      font-family: 'EB Garamond', serif;
-      font-size: 2rem;
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 1.9rem;
       font-weight: 700;
-      color: var(--elder);
       letter-spacing: -0.02em;
+      color: #2c241b;
+      border-bottom: none;
     }
-    .logo span { color: var(--clay); font-weight: 400; }
+    .logo span { color: #b45f3a; font-weight: 400; }
     .nav-links {
-      display: flex;
-      gap: 2.2rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+      display: flex; gap: 2.2rem; font-weight: 500; font-size: 0.95rem;
+      list-style: none;
     }
-    .nav-links a { color: #2b201a; }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-links .active {
-      color: var(--accent);
-      border-bottom: 2px solid var(--accent);
-    }
+    .nav-links a { border-bottom: none; color: #3d352b; }
+    .nav-links a:hover { color: #b45f3a; }
+    .search-icon { opacity: 0.6; font-size: 1.2rem; }
 
-    /* ----- about hero (story) ----- */
+    /* hero about */
     .about-hero {
-      background: var(--cream);
-      padding: 2.8rem 3rem;
-      border-radius: 2rem;
-      margin-bottom: 3rem;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
-    }
-    .about-hero-text { flex: 2; min-width: 260px; }
-    .about-hero-text h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--elder);
-      margin-bottom: 0.5rem;
-    }
-    .about-hero-text .subhead {
-      font-size: 1.2rem;
-      font-family: 'EB Garamond', serif;
-      font-style: italic;
-      color: #5f4635;
-      border-left: 4px solid var(--clay);
-      padding-left: 1.2rem;
-      margin: 0.5rem 0 0.8rem;
-    }
-    .about-hero-text p { max-width: 600px; }
-    .about-hero-media {
-      flex: 1;
-      min-width: 180px;
-      background: #dccfc2;
-      border-radius: 1.8rem;
-      padding: 1.2rem;
-      text-align: center;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
-    }
-    .about-hero-media svg { width: 100%; height: auto; border-radius: 1.2rem; }
-
-    /* ----- story grid (two columns) ----- */
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.8rem;
+      background: #ede7df;
+      padding: 3rem 3.2rem;
+      border-radius: 32px;
       margin: 2.5rem 0 3rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
     }
-    @media (max-width: 760px) {
-      .story-grid { grid-template-columns: 1fr; gap: 2rem; }
-    }
+    .about-hero h1 { font-size: 3.2rem; margin-bottom: 0.6rem; }
+    .about-hero p { font-size: 1.2rem; max-width: 780px; color: #3d352b; }
 
-    .story-card {
-      background: white;
-      padding: 2rem 2.2rem;
-      border-radius: 2rem;
-      box-shadow: var(--shadow);
-    }
-    .story-card h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-      border-bottom: 2px solid var(--border-soft);
-      padding-bottom: 0.4rem;
-    }
-    .story-card ul, .story-card p { margin-bottom: 0.8rem; }
-    .story-card ul { list-style: none; }
-    .story-card ul li {
-      padding: 0.4rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .story-card ul li::before { content: "✦"; color: var(--clay); }
-
-    /* team mini */
     .team-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin-top: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem;
     }
-    .team-item {
-      background: var(--light-bg);
-      padding: 1rem 1.2rem;
-      border-radius: 2rem;
-      border: 1px solid var(--border-soft);
-    }
-    .team-item strong { display: block; font-family: 'EB Garamond', serif; font-size: 1.2rem; }
-
-    /* quote */
-    .quote-block {
-      background: #f5ede4;
-      padding: 2rem 2.5rem;
-      border-radius: 2.5rem;
-      margin: 2.5rem 0 1.5rem;
-      font-family: 'EB Garamond', serif;
-      font-size: 1.4rem;
-      font-style: italic;
+    .team-card {
+      background: #ffffffec;
+      padding: 1.8rem 1.2rem;
+      border-radius: 28px;
+      border: 1px solid #f0e8de;
       text-align: center;
-      color: var(--elder);
-      box-shadow: var(--shadow);
-      border-left: 6px solid var(--clay);
     }
-    .quote-block span { display: block; font-style: normal; font-size: 1rem; margin-top: 0.4rem; opacity: 0.8; }
+    .team-card .avatar {
+      width: 80px; height: 80px;
+      background: #d9cdbd;
+      border-radius: 50%;
+      margin: 0 auto 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+    }
+    .timeline {
+      background: #f3ece3;
+      border-radius: 32px;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      border-bottom: 1px solid #dcccba;
+      padding: 1.2rem 0;
+    }
+    .timeline-item:last-child { border: none; }
+    .year { font-weight: 700; font-size: 1.4rem; color: #b45f3a; min-width: 80px; }
 
-    /* footer */
     .footer {
-      margin-top: 3.5rem;
-      padding-top: 2rem;
-      border-top: 2px solid var(--border-soft);
-      font-size: 0.9rem;
-      color: #3d322a;
+      margin-top: 4rem;
+      padding: 2.5rem 0 2rem;
+      border-top: 1px solid #ddd1c2;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 1.5rem;
     }
+    .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
 
     @media (max-width: 700px) {
-      body { padding: 0 1rem; }
       .about-hero { padding: 1.8rem; }
-      .about-hero-text h1 { font-size: 2.2rem; }
-      .nav-links { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
-      .team-grid { grid-template-columns: 1fr; }
+      .about-hero h1 { font-size: 2.4rem; }
+      .timeline-item { flex-direction: column; gap: 0.2rem; }
     }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- header (exact same) -->
-  <header class="site-header">
-    <div class="logo">Elderberry<span>Oven</span></div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="cookies.html">Cookies</a>
-    </nav>
+  <!-- navigation (identical to homepage) -->
+  <header class="top-nav">
+    <a href="index.html" class="logo">Emberstone<span>·Meal Journal</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <span class="search-icon">🔍</span>
+    </ul>
   </header>
 
   <!-- about hero -->
   <section class="about-hero">
-    <div class="about-hero-text">
-      <h1>From hedgerow to hearth</h1>
-      <div class="subhead">a small-bakery journal rooted in wild foraging &amp; slow fermentation</div>
-      <p>Elderberry Oven Tales began in a Somerset cottage, where the scent of woodsmoke and sourdough lingers. We believe in flour-dusted hands, seasonal fruit, and the quiet magic of baking with what the land gives.</p>
-      <p style="margin-top:0.6rem;">Every recipe is shaped by the hedgerows we wander, the neighbours we break bread with, and the rhythm of the wood-fired oven.</p>
-    </div>
-    <div class="about-hero-media">
-      <svg viewBox="0 0 200 160" style="display:block; width:100%; height:auto; background:#dccfc2; border-radius:1.2rem;">
-        <rect width="200" height="160" fill="#dccfc2" rx="20" />
-        <circle cx="100" cy="70" r="38" fill="#3d2b1f" opacity="0.25" />
-        <circle cx="70" cy="50" r="12" fill="#b27a5a" opacity="0.5" />
-        <circle cx="130" cy="55" r="16" fill="#b27a5a" opacity="0.4" />
-        <path d="M40,120 L160,120 L140,140 L60,140 Z" fill="#3d2b1f" opacity="0.15" />
-        <text x="36" y="148" font-family="'EB Garamond', serif" font-size="16" fill="#3d2b1f" opacity="0.7">wild &amp; warm</text>
-      </svg>
-      <p style="margin-top:0.4rem; font-size:0.8rem; font-family:'Inter',sans-serif;">— the old stone oven, always ready —</p>
-    </div>
+    <h1>About Emberstone</h1>
+    <p>We are a small, obsessive team of cooks, writers, and food scientists. Our mission is to demystify craft cooking — from sourdough and fermentation to fire and smoke — with precision, warmth, and a little bit of poetry.</p>
+    <p style="margin-bottom:0; font-size:1rem; color:#5e4f3d;">✦ founded in 2026 · rooted in tradition, guided by science</p>
   </section>
 
-  <!-- two‑column story: values + team -->
-  <div class="story-grid">
-    <!-- left: what we believe -->
-    <div class="story-card">
-      <h2>🌾 what we hold dear</h2>
-      <ul>
-        <li>Foraging with respect — elderberries, crab apples, wild plums</li>
-        <li>Long, cool ferments for depth and digestibility</li>
-        <li>Recipes that welcome both beginners and seasoned bakers</li>
-        <li>Community over competition — we share everything we learn</li>
-        <li>Every bake tells a story: of place, season, and memory</li>
-      </ul>
-      <p style="margin-top:0.8rem; font-style:italic; color:#5f4635;">“We don’t just bake bread — we tend a tradition.”</p>
+  <!-- team -->
+  <h2>Our kitchen team</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="avatar">🧑‍🍳</div>
+      <h4 style="font-family:'IBM Plex Serif';">Elena Marchetti</h4>
+      <span class="small-meta">editor · bread &amp; pastry</span>
     </div>
-
-    <!-- right: the people -->
-    <div class="story-card">
-      <h2>🧑‍🌾 the oven keepers</h2>
-      <div class="team-grid">
-        <div class="team-item">
-          <strong>Marjorie</strong>
-          <span style="font-size:0.9rem;">Head baker · elderberry guardian</span>
-          <p style="font-size:0.85rem; margin-top:0.2rem;">40 years of sourdough, wild yeast whisperer.</p>
-        </div>
-        <div class="team-item">
-          <strong>Ellis</strong>
-          <span style="font-size:0.9rem;">Forager &amp; storyteller</span>
-          <p style="font-size:0.85rem; margin-top:0.2rem;">Knows every hedgerow within 10 miles.</p>
-        </div>
-        <div class="team-item">
-          <strong>Ruth</strong>
-          <span style="font-size:0.9rem;">Recipe developer</span>
-          <p style="font-size:0.85rem; margin-top:0.2rem;">Turns wild harvests into rustic poetry.</p>
-        </div>
-        <div class="team-item">
-          <strong>Otis</strong>
-          <span style="font-size:0.9rem;">Oven master &amp; wood splitter</span>
-          <p style="font-size:0.85rem; margin-top:0.2rem;">Keeps the fire breathing just right.</p>
-        </div>
-      </div>
-      <p style="margin-top:1rem; font-size:0.95rem;">We’re a small crew, but we dream big — and bake even bigger.</p>
+    <div class="team-card">
+      <div class="avatar">👩‍🔬</div>
+      <h4 style="font-family:'IBM Plex Serif';">Dr. Samir Kohli</h4>
+      <span class="small-meta">food science · fermentation</span>
+    </div>
+    <div class="team-card">
+      <div class="avatar">🔥</div>
+      <h4 style="font-family:'IBM Plex Serif';">Marcus Webb</h4>
+      <span class="small-meta">fire &amp; smoke · cast iron</span>
+    </div>
+    <div class="team-card">
+      <div class="avatar">📝</div>
+      <h4 style="font-family:'IBM Plex Serif';">Juniper Lee</h4>
+      <span class="small-meta">recipe development · produce</span>
     </div>
   </div>
 
-  <!-- quote block (extra warmth) -->
-  <div class="quote-block">
-    “Bread is the oldest comfort — and elderberries, the wildest sweetness.”
-    <span>— from the kitchen notebook, 2026</span>
+  <!-- timeline / story -->
+  <div class="timeline">
+    <h2 style="border:none; margin-top:0;">Our story</h2>
+    <div class="timeline-item">
+      <span class="year">2026</span>
+      <div><strong>First ember</strong> — Emberstone launches as a weekly newsletter, sharing sourdough journals and cast‑iron experiments.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="year">2027</span>
+      <div><strong>Kitchen lab</strong> — we open a small test kitchen, partnering with local mills and farms.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="year">2028</span>
+      <div><strong>Community &amp; classes</strong> — workshops and deep‑dive guides become our hallmark.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="year">today</span>
+      <div><strong>Journal &amp; beyond</strong> — a living archive of techniques, interviews, and flavour explorations.</div>
+    </div>
   </div>
 
-  <!-- a little more about the journal (unique) -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0 0.5rem;">
-    <div style="background: white; border-radius: 2rem; padding: 1.8rem; box-shadow: var(--shadow);">
-      <h3 style="font-family:'EB Garamond',serif; font-size:1.4rem;">📖 the journal</h3>
-      <p>We publish seasonal recipes, foraging notes, and stories from the cottage. No ads, no algorithms — just flour, fruit, and fire.</p>
+  <!-- values / philosophy -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin:2.5rem 0;">
+    <div style="background:#ede7df; padding:2rem; border-radius:28px;">
+      <h3 style="margin-top:0;">📖 our philosophy</h3>
+      <p>We believe cooking is both craft and science. Every recipe is a hypothesis, every meal a celebration. We value precision without rigidity, and tradition without dogma.</p>
     </div>
-    <div style="background: white; border-radius: 2rem; padding: 1.8rem; box-shadow: var(--shadow);">
-      <h3 style="font-family:'EB Garamond',serif; font-size:1.4rem;">🌿 join the circle</h3>
-      <p>Subscribe to our newsletter for a monthly letter from the oven — plus a recipe you won’t find anywhere else.</p>
+    <div style="background:#f0e9e0; padding:2rem; border-radius:28px;">
+      <h3 style="margin-top:0;">🌱 ethical kitchen</h3>
+      <p>Seasonal, sustainable, and deeply respectful of ingredients. We work with small producers and always highlight the story behind each staple.</p>
+    </div>
+  </div>
+
+  <!-- newsletter (same as homepage) -->
+  <div class="newsletter" style="background:#dfd3c4; border-radius:40px; padding:2.8rem 3rem; margin:3rem 0 2rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+    <div>
+      <h3 style="font-family:'IBM Plex Serif'; font-weight:500; margin:0;">The Emberstone letter</h3>
+      <p style="margin:0; font-size:0.95rem;">weekly techniques &amp; essays</p>
+    </div>
+    <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+      <input type="email" placeholder="your email" value="hello@journal" style="background:transparent; border:none; border-bottom:2px solid #7e6d59; padding:0.6rem 0.8rem; font-size:1rem; min-width:200px; font-family:'Inter',sans-serif;" />
+      <button style="background:#2c241b; color:#f3ece3; border:none; padding:0.7rem 2rem; border-radius:60px; font-weight:600; font-size:0.9rem; cursor:default;">subscribe</button>
     </div>
   </div>
 
   <!-- footer -->
   <footer class="footer">
-    <span>© 2026 Elderberry Oven Tales · rustic baking journal</span>
-    <span style="display:flex; gap:1.5rem;"><a href="about.html">about</a> <a href="contact.html">contact</a> <a href="privacy.html">privacy</a></span>
+    <div class="footer-col"><strong>Emberstone Meal Journal</strong><span class="small-meta">est. 2026 · kitchen chronicles</span></div>
+    <div class="footer-col"><a href="about.html">about</a><a href="#">archive</a><a href="contact.html">contact</a></div>
+    <div class="footer-col"><span class="small-meta">© 2026 · all articles original</span></div>
   </footer>
 
-</div><!-- /.container -->
+  <div style="text-align:center; margin: 1rem 0 0; opacity:0.4; font-size:0.7rem;">✦</div>
+</div>
 </body>
 </html>

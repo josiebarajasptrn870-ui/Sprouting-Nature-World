@@ -3,241 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy · Elderberry Oven Tales</title>
-  <!-- EB Garamond + Inter -->
+  <title>Cookies · Emberstone Meal Journal</title>
+  <!-- unique typography: IBM Plex Serif + Inter (mirroring main) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
   <style>
-    /* ----- reset & base (same as main) ----- */
+    /* ---- reset & base (exactly as contact / privacy) ---- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #fbf7f0;
-      color: #1e1c1a;
+      background: #f9f5ef;
+      color: #1e1e1e;
       font-family: 'Inter', sans-serif;
-      font-weight: 400;
       line-height: 1.7;
-      padding: 0 1.5rem;
+      padding: 0 1.2rem;
     }
     .container {
-      max-width: 1120px;
+      max-width: 1260px;
       margin: 0 auto;
-      padding: 1.8rem 0 3rem;
+      padding: 1.5rem 0 3rem;
     }
-    h1, h2, h3, h4 {
-      font-family: 'EB Garamond', serif;
+    h1, h2, h3, h4, .hero-title, .card-title, .section-label {
+      font-family: 'IBM Plex Serif', serif;
       font-weight: 600;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
       line-height: 1.2;
     }
-    a { color: #3f2e1e; text-decoration: none; transition: color 0.2s; }
-    a:hover { color: #7a4f2b; }
-    img { max-width: 100%; height: auto; display: block; border-radius: 0.5rem; }
+    h1 { font-size: 3.2rem; font-weight: 700; }
+    h2 { font-size: 2.4rem; margin: 2.5rem 0 1.2rem; font-weight: 600; border-bottom: 2px solid #dfd4c4; padding-bottom: 0.5rem; }
+    h3 { font-size: 1.6rem; font-weight: 600; margin: 2rem 0 0.8rem; color: #2d2a24; }
+    p { margin-bottom: 1.2rem; font-weight: 400; color: #2a2722; }
+    .small-meta { font-size: 0.85rem; letter-spacing: 0.02em; color: #6b6258; font-weight: 500; }
+    a { color: #1e1e1e; text-decoration: none; border-bottom: 1px solid #d6cbbc; transition: 0.2s; }
+    a:hover { color: #b45f3a; border-bottom-color: #b45f3a; }
 
-    :root {
-      --elder: #3d2b1f;
-      --clay: #b27a5a;
-      --cream: #f2e7da;
-      --light-bg: #faf3ea;
-      --accent: #8f5e3c;
-      --border-soft: #ded1c2;
-      --card-bg: #ffffff;
-      --shadow: 0 12px 30px -12px rgba(60, 40, 25, 0.10);
-    }
-
-    /* ----- header (mirror) ----- */
-    .site-header {
-      display: flex;
+    /* ---- navigation (exactly as main / contact / privacy) ---- */
+    .top-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 0 1rem;
+      border-bottom: 1px solid #e3d8cb;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 0 0.8rem;
-      border-bottom: 2px solid var(--border-soft);
-      margin-bottom: 2.8rem;
     }
     .logo {
-      font-family: 'EB Garamond', serif;
-      font-size: 2rem;
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 1.9rem;
       font-weight: 700;
-      color: var(--elder);
       letter-spacing: -0.02em;
+      color: #2c241b;
+      border-bottom: none;
     }
-    .logo span { color: var(--clay); font-weight: 400; }
+    .logo span { color: #b45f3a; font-weight: 400; }
     .nav-links {
-      display: flex;
-      gap: 2.2rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+      display: flex; gap: 2.2rem; font-weight: 500; font-size: 0.95rem;
+      list-style: none;
+      align-items: center;
     }
-    .nav-links a { color: #2b201a; }
-    .nav-links a:hover { color: var(--accent); }
+    .nav-links a { border-bottom: none; color: #3d352b; }
+    .nav-links a:hover { color: #b45f3a; }
+    .search-icon { opacity: 0.6; font-size: 1.2rem; }
 
-    /* ----- privacy hero (content-first) ----- */
-    .privacy-hero {
-      background: var(--cream);
-      padding: 2.2rem 3rem;
-      border-radius: 2rem;
-      margin-bottom: 2.8rem;
-      box-shadow: var(--shadow);
+    /* ---- cookies hero (soft variant, like contact / privacy) ---- */
+    .cookies-hero {
+      background: #ede7df;
+      padding: 2.8rem 3.2rem;
+      border-radius: 28px;
+      margin: 2.2rem 0 2.8rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
     }
-    .privacy-hero h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--elder);
-    }
-    .privacy-hero .subhead {
-      font-size: 1.2rem;
-      font-family: 'EB Garamond', serif;
-      font-style: italic;
-      color: #5f4635;
-      border-left: 4px solid var(--clay);
-      padding-left: 1.2rem;
-      margin: 0.5rem 0 0.2rem;
-    }
-
-    /* ----- privacy content (card style) ----- */
-    .privacy-card {
-      background: white;
-      padding: 2.2rem 2.8rem;
-      border-radius: 2rem;
-      box-shadow: var(--shadow);
-      margin-bottom: 2.5rem;
-    }
-    .privacy-card h2 {
-      font-size: 1.8rem;
-      margin-top: 1.8rem;
+    .cookies-hero h1 {
+      font-size: 3rem;
       margin-bottom: 0.6rem;
-      border-bottom: 2px solid var(--border-soft);
-      padding-bottom: 0.3rem;
     }
-    .privacy-card h2:first-of-type { margin-top: 0; }
-    .privacy-card p {
-      margin: 0.8rem 0;
-      color: #2b221c;
-    }
-    .privacy-card ul {
-      margin: 0.8rem 0 1.2rem 1.8rem;
-    }
-    .privacy-card li {
-      margin-bottom: 0.3rem;
-    }
-    .privacy-card .highlight {
-      background: #faf3ea;
-      padding: 0.4rem 1.2rem;
-      border-radius: 40px;
-      display: inline-block;
-      font-size: 0.9rem;
-      border: 1px solid var(--border-soft);
-    }
-    .privacy-card .update-date {
-      margin-top: 2rem;
-      font-style: italic;
-      color: #5f4d3b;
-      border-top: 1px solid var(--border-soft);
-      padding-top: 1.2rem;
+    .cookies-hero p {
+      font-size: 1.2rem;
+      color: #3d352b;
+      max-width: 720px;
     }
 
-    /* footer */
+    /* ---- cookies content cards (mirror privacy) ---- */
+    .cookies-card {
+      background: #f0e9e0;
+      border-radius: 28px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e3d6c7;
+    }
+    .cookies-card h2 {
+      border-bottom: 2px solid #dfd4c4;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+    .cookies-card h3 {
+      margin-top: 1.8rem;
+      font-size: 1.4rem;
+    }
+    .cookies-card ul, .cookies-card ol {
+      margin: 0.8rem 0 1.2rem 1.6rem;
+      color: #2a2722;
+    }
+    .cookies-card li {
+      margin-bottom: 0.5rem;
+    }
+    .highlight-box {
+      background: #eae1d6;
+      padding: 1.2rem 2rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin: 0.5rem 0 0.2rem;
+      font-weight: 500;
+    }
+    .badge {
+      background: #ddd0be;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1e1e1e;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.6rem 0.4rem 0.6rem 0;
+      font-weight: 600;
+      border-bottom: 2px solid #d6cbbc;
+    }
+    td {
+      padding: 0.6rem 0.4rem 0.6rem 0;
+      border-bottom: 1px solid #dfd4c4;
+    }
+    .chip {
+      background: #e3d6c7;
+      border-radius: 40px;
+      padding: 0.1rem 0.8rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    /* ---- footer (reuse) ---- */
     .footer {
-      margin-top: 3.5rem;
-      padding-top: 2rem;
-      border-top: 2px solid var(--border-soft);
-      font-size: 0.9rem;
-      color: #3d322a;
+      margin-top: 4rem;
+      padding: 2.5rem 0 2rem;
+      border-top: 1px solid #ddd1c2;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 1.5rem;
     }
+    .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
 
-    @media (max-width: 700px) {
-      body { padding: 0 1rem; }
-      .privacy-hero { padding: 1.8rem; }
-      .privacy-hero h1 { font-size: 2.2rem; }
-      .nav-links { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
-      .privacy-card { padding: 1.8rem; }
+    /* utilities */
+    .inline-tag { background: #e8ddd0; padding: 0.1rem 1rem; border-radius: 30px; }
+    .mt-1 { margin-top: 1rem; }
+    .mb-1 { margin-bottom: 1rem; }
+    .flex { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    hr { border: none; border-top: 1px solid #e3d6c7; margin: 1rem 0; }
+
+    /* small responsive */
+    @media (max-width: 640px) {
+      .cookies-hero { padding: 1.8rem; }
+      .cookies-hero h1 { font-size: 2.4rem; }
+      .cookies-card { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- header (exactly as main) -->
-  <header class="site-header">
-    <div class="logo">Elderberry<span>Oven</span></div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html" style="color:var(--accent); border-bottom:2px solid var(--accent);">Privacy</a>
-      <a href="cookies.html">Cookies</a>
-    </nav>
+  <!-- navigation (exactly as main/contact/privacy) -->
+  <header class="top-nav">
+    <a href="#" class="logo">Emberstone<span>·Meal Journal</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html" style="color:#b45f3a; border-bottom:1px solid #b45f3a;">Cookies Policy</a></li>
+      <span class="search-icon">🔍</span>
+    </ul>
   </header>
 
-  <!-- privacy hero -->
-  <section class="privacy-hero">
-    <h1>Your privacy matters</h1>
-    <div class="subhead">how we handle your data with the same care as a slow‑rise sourdough</div>
-    <p style="margin-top:0.8rem; max-width:650px;">We believe in transparency, warmth, and never over‑proofing your trust. This policy explains what information we collect, why we collect it, and how we keep it safe.</p>
+  <!-- cookies hero -->
+  <section class="cookies-hero">
+    <h1>Cookies Policy</h1>
+    <p>We keep it light and transparent. Here’s how we use cookies to make your experience better — and how you stay in control.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:0.7rem 1.2rem; margin-top:1rem;">
+      <span class="inline-tag">🍪 updated May 2026</span>
+      <span class="inline-tag">📬 privacy@emberstone.me</span>
+      <span class="inline-tag">📍 Brooklyn · NY</span>
+    </div>
   </section>
 
-  <!-- privacy content (cards) -->
-  <div class="privacy-card">
-    <h2>🍞 Information we collect</h2>
-    <p>We collect only the information you voluntarily share with us, such as:</p>
+  <!-- cookies content cards -->
+  <div class="cookies-card">
+    <h2>What are cookies?</h2>
+    <p>Cookies are small text files placed on your device when you visit a website. They help us remember your preferences, understand how you interact with our content, and keep the site running smoothly.</p>
+    <p>We use first‑party cookies (set by us) and minimal third‑party cookies (for analytics). We never use intrusive tracking or cross‑site profiling.</p>
+  </div>
+
+  <div class="cookies-card">
+    <h2>Types of cookies we use</h2>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Purpose</th><th>Duration</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="chip">essential</span></td><td>Session management, security, and basic functionality.</td><td>session / persistent</td></tr>
+        <tr><td><span class="chip">preferences</span></td><td>Remember your settings (e.g., dark mode, language).</td><td>up to 12 months</td></tr>
+        <tr><td><span class="chip">analytics</span></td><td>Aggregate, anonymized usage stats to improve content.</td><td>up to 24 months</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box">🔹 No marketing, tracking, or third‑party ad cookies.</div>
+  </div>
+
+  <div class="cookies-card">
+    <h2>How you can manage cookies</h2>
+    <p>You can change your cookie preferences at any time through your browser settings. Most browsers allow you to block or delete cookies — though disabling essential ones may affect site functionality.</p>
     <ul>
-      <li><strong>Contact details</strong> — name, email address, and any message you send via our contact form.</li>
-      <li><strong>Newsletter sign‑ups</strong> — if you subscribe, we store your email to send you our occasional baking notes.</li>
-      <li><strong>Usage data</strong> — basic analytics (like page views) to help us understand what our readers enjoy most. We use anonymised data only.</li>
+      <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies and other site data.</li>
+      <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies and Site Data.</li>
+      <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data.</li>
     </ul>
-    <p>We never sell, rent, or trade your personal information. It stays between us, like a secret family recipe.</p>
+    <p>You can also opt out of analytics cookies by adjusting your preferences <a href="#">here</a> (cookie consent tool).</p>
+  </div>
 
-    <h2>🕊️ How we use your data</h2>
-    <ul>
-      <li>To reply to your messages and inquiries.</li>
-      <li>To send you our newsletter (only if you’ve opted in).</li>
-      <li>To improve our website and content.</li>
-    </ul>
-    <p>We process your data on the lawful basis of <strong>legitimate interest</strong> — we want to bake a better experience for you. You can opt out anytime.</p>
+  <div class="cookies-card" style="background:#eae1d6;">
+    <h2>Third‑party cookies</h2>
+    <p>We use a self‑hosted analytics tool that does not set third‑party cookies. No data is shared with Google, Facebook, or any ad network. Our hosting provider may set a server‑side session cookie for security, but that is strictly necessary.</p>
+    <p><span class="inline-tag">🛡️</span> We do not use fingerprinting, cross‑site tracking, or persistent identifiers for marketing.</p>
+  </div>
 
-    <h2>🔒 Data security & retention</h2>
-    <p>We take security seriously. All data is stored on secure servers and accessed only by the Elderberry Oven team. We keep your information only as long as needed to provide our services or as required by law. If you’d like us to delete your data, just drop us a line.</p>
+  <div class="cookies-card">
+    <h2>Your consent</h2>
+    <p>By continuing to use Emberstone Meal Journal, you agree to our use of cookies as described in this policy. You can withdraw consent at any time by clearing your cookies or using the consent management tool (available on our homepage).</p>
+    <p>If you have questions, contact us at <a href="mailto:privacy@emberstone.me">privacy@emberstone.me</a>.</p>
+  </div>
 
-    <h2>🍪 Cookies? Just a light dusting</h2>
-    <p>We use minimal cookies — only essential ones for functionality and a tiny pinch of analytics. We don’t use tracking cookies for advertising. You can manage your preferences in your browser settings. For more details, see our <a href="cookies.html" style="border-bottom:1px solid var(--clay);">Cookie Policy</a>.</p>
-
-    <h2>📬 Your rights</h2>
-    <p>Under UK and EU data protection law, you have the right to:</p>
-    <ul>
-      <li>Access the data we hold about you.</li>
-      <li>Correct any inaccuracies.</li>
-      <li>Request deletion of your data.</li>
-      <li>Withdraw consent at any time.</li>
-    </ul>
-    <p>To exercise these rights, simply email us at <a href="mailto:hello@elderberryoven.com" style="border-bottom:1px solid var(--clay);">hello@elderberryoven.com</a> — we’ll respond within 30 days.</p>
-
-    <h2>🌿 Updates to this policy</h2>
-    <p>We may update this page occasionally to reflect changes in our practices or for legal reasons. We’ll always post the latest version here, and if changes are significant, we’ll highlight them.</p>
-
-    <div class="update-date">
-      <span class="highlight">📅 Last updated: 30 June 2026</span>
-      <p style="margin-top:0.6rem;">This policy applies to all visitors and users of the Elderberry Oven Tales website.</p>
+  <!-- subtle newsletter (same as privacy / contact) -->
+  <div style="background:#dfd3c4; border-radius:40px; padding:1.8rem 2.5rem; margin:2.8rem 0 1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+    <div>
+      <h3 style="font-family:'IBM Plex Serif', serif; margin:0; font-weight:500;">The Emberstone letter</h3>
+      <span class="small-meta">weekly techniques &amp; essays</span>
+    </div>
+    <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-top:0.5rem;">
+      <input type="email" placeholder="your email" value="hello@journal" style="background:transparent; border:none; border-bottom:2px solid #7e6d59; padding:0.6rem 0.8rem; font-size:1rem; min-width:200px; font-family:'Inter', sans-serif;" />
+      <button style="background:#2c241b; color:#f3ece3; border:none; padding:0.7rem 2rem; border-radius:60px; font-weight:600; font-size:0.9rem; cursor:default;">subscribe</button>
     </div>
   </div>
 
-  <!-- extra: contact nudge -->
-  <div style="background: #f2e7da; padding: 1.5rem 2.2rem; border-radius: 2rem; margin: 1.2rem 0 0.5rem; text-align:center; box-shadow: var(--shadow);">
-    <p style="font-family:'EB Garamond',serif; font-size:1.3rem;">🍂 Have a question about privacy? <a href="contact.html" style="border-bottom:2px solid var(--clay); font-weight:600;">Reach out — we’re here to help.</a></p>
-  </div>
-
-  <!-- footer -->
+  <!-- Footer (exactly as contact / privacy) -->
   <footer class="footer">
-    <span>© 2026 Elderberry Oven Tales · rustic baking journal</span>
-    <span style="display:flex; gap:1.5rem;"><a href="about.html">about</a> <a href="contact.html">contact</a> <a href="privacy.html">privacy</a></span>
+    <div class="footer-col"><strong>Emberstone Meal Journal</strong><span class="small-meta">est. 2026 · kitchen chronicles</span></div>
+    <div class="footer-col"><a href="#">about</a><a href="#">archive</a><a href="contact.html">contact</a></div>
+    <div class="footer-col"><span class="small-meta">© 2026 · all articles original</span></div>
   </footer>
 
-</div><!-- /.container -->
+  <div style="text-align:center; margin: 1rem 0 0; opacity:0.4; font-size:0.7rem;">✦</div>
+</div>
 </body>
 </html>
