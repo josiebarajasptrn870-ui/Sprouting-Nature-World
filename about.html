@@ -2,220 +2,538 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
-  <title>About – Sprouting Nature World · Premium Gardening Authority</title>
-  <meta name="description" content="Learn about Sprouting Nature World – our mission, values, and the experts behind our premium gardening content.">
-  <link rel="canonical" href="https://sproutingnatureworld.com/about.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Eastwind Kitchen Press</title>
+  <!-- fonts & reset -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&family=EB+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Georgia', 'Times New Roman', serif;
-      background: #f5efe8;
-      color: #2d3e2b;
+      background: #faf7f2;
+      color: #1e1b18;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       line-height: 1.7;
-      padding: 0 20px;
+      font-weight: 400;
+      padding: 0 1rem;
     }
-    .container { max-width: 1280px; margin: 0 auto; background: #fcf9f5; box-shadow: 0 0 40px rgba(0,0,0,0.02); }
-    /* header identical to homepage */
-    header {
-      background: #1e3a2f;
-      color: #efe7d7;
-      padding: 2rem 2.5rem;
-      border-bottom: 4px solid #b89b7b;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
-    .logo h1 { font-size: 2.2rem; font-weight: 400; letter-spacing: 2px; }
-    .logo span { color: #d4b48c; font-style: italic; }
-    nav a { color: #efe7d7; text-decoration: none; margin-left: 2rem; font-size: 0.95rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: 0.2s; }
-    nav a:hover { border-bottom-color: #d4b48c; color: #fff; }
-    /* about hero */
-    .about-hero {
-      background: #2f4d3b;
-      background-image: linear-gradient(145deg, #1d3a2a 0%, #3a5e47 100%);
-      color: #f2ede4;
-      padding: 4rem 3rem;
-      text-align: center;
-      border-bottom: 2px solid #b89b7b;
+
+    a {
+      color: #1e1b18;
+      text-decoration: none;
+      transition: color 0.15s ease;
     }
-    .about-hero h2 { font-size: 3.2rem; font-weight: 300; letter-spacing: 1px; margin-bottom: 0.75rem; }
-    .about-hero p { max-width: 720px; margin: 0 auto; font-size: 1.2rem; opacity: 0.9; }
-    .section-title {
-      font-size: 2rem;
-      font-weight: 300;
-      border-bottom: 2px solid #d4b48c;
-      padding-bottom: 0.5rem;
-      margin: 2.5rem 0 1.5rem;
-      color: #1e3a2f;
-      letter-spacing: 1px;
+    a:hover {
+      color: #b45f3b;
     }
-    .grid-2 { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .card {
-      background: #fffdfa;
-      padding: 1.5rem;
-      border-radius: 4px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-      border-left: 4px solid #b89b7b;
-      transition: 0.2s ease;
-    }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(0,0,0,0.04); }
-    .card h3 { font-size: 1.3rem; font-weight: 500; color: #1d3a2a; margin-bottom: 0.5rem; }
-    .card p { color: #3d4d3a; font-size: 0.98rem; }
-    .author-box {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      background: #f3ede6;
-      padding: 1.8rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
       border-radius: 6px;
-      margin: 2rem 0;
     }
-    .author-box img { border-radius: 50%; width: 100px; height: 100px; object-fit: cover; }
-    .timeline-item {
-      display: flex;
-      gap: 1.5rem;
-      border-bottom: 1px solid #ded5c7;
-      padding: 1.2rem 0;
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-top: 0;
     }
-    .timeline-year { font-weight: 600; color: #1e3a2f; min-width: 80px; }
-    .newsletter {
-      background: #e6ddd0;
-      padding: 3rem 2rem;
-      text-align: center;
+
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 2.8rem 0 1.2rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin: 2rem 0 0.8rem;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+    }
+
+    /* ===== UNIQUE TYPOGRAPHY & SPACING ===== */
+    .serif-italic {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .small-caps {
+      font-variant: small-caps;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, #d9cdc0, #c0a48a, #d9cdc0);
       margin: 3rem 0;
     }
-    .newsletter input { padding: 0.8rem 1.5rem; border: none; width: 280px; max-width: 100%; font-size: 1rem; }
-    .newsletter button { background: #1e3a2f; color: #efe7d7; padding: 0.8rem 2rem; border: none; font-size: 1rem; cursor: pointer; }
-    footer {
-      background: #1e3a2f;
-      color: #cec2b0;
-      padding: 2rem 2.5rem;
+
+    /* ===== HEADER / NAV ===== */
+    .top-bar {
+      padding: 1.5rem 0 0.8rem;
+      border-bottom: 1px solid #e3d7cc;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      font-size: 0.9rem;
-      border-top: 2px solid #b89b7b;
+      align-items: center;
+      margin-bottom: 2.5rem;
     }
-    footer a { color: #d4b48c; text-decoration: none; margin: 0 0.5rem; }
-    .img-float { float: left; margin: 0 1.5rem 1rem 0; max-width: 260px; border-radius: 8px; }
-    @media (max-width: 700px) {
-      header { flex-direction: column; align-items: start; gap: 1rem; }
-      nav a { margin-left: 0; margin-right: 1.2rem; }
-      .about-hero h2 { font-size: 2.2rem; }
-      .author-box { flex-direction: column; text-align: center; }
-      .img-float { float: none; margin: 0 0 1rem 0; max-width: 100%; }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .logo span {
+      color: #b45f3b;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .nav-links a {
+      padding: 0.4rem 0;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #b45f3b;
+      color: #1e1b18;
+    }
+
+    /* ===== HERO (about) ===== */
+    .about-hero {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: center;
+      margin: 1rem 0 3.5rem;
+    }
+
+    .about-hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 650;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .about-hero-content .subhead {
+      font-size: 1.2rem;
+      color: #3f352e;
+      max-width: 90%;
+      margin-bottom: 1.8rem;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      color: #5e4b3c;
+      border-top: 1px solid #ddd0c2;
+      padding-top: 1.4rem;
+      margin-top: 0.5rem;
+    }
+    .hero-tags span {
+      background: #ede6de;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-weight: 450;
+    }
+
+    .about-hero-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.12);
+    }
+
+    /* ===== MISSION / VALUES ===== */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+    .mission-card {
+      background: white;
+      padding: 1.8rem 1.5rem;
+      border-radius: 28px;
+      border: 1px solid #ece2d9;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .mission-card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .mission-card p {
+      font-size: 0.98rem;
+      color: #2d2823;
+      margin-bottom: 0;
+    }
+
+    /* ===== TEAM ===== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 2.2rem;
+      margin: 2rem 0 1rem;
+    }
+    .team-card {
+      background: white;
+      border-radius: 28px;
+      padding: 1.8rem 1.5rem 1.5rem;
+      border: 1px solid #ece2d9;
+      text-align: center;
+    }
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      background: #ede6de;
+    }
+    .team-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+    .team-card .role {
+      font-size: 0.85rem;
+      color: #b45f3b;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .team-card p {
+      font-size: 0.95rem;
+      color: #3f352e;
+      margin: 0.8rem 0 0;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      margin: 2rem 0 1rem;
+      padding-left: 0.5rem;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 1.8rem;
+      border-left: 3px solid #cbb7a6;
+      padding: 0 0 1.8rem 1.8rem;
+      position: relative;
+    }
+    .timeline-item:last-child {
+      border-left-color: transparent;
+      padding-bottom: 0;
+    }
+    .timeline-item .year {
+      font-weight: 700;
+      font-size: 1.2rem;
+      min-width: 70px;
+      color: #b45f3b;
+    }
+    .timeline-item .desc {
+      font-size: 0.98rem;
+    }
+
+    /* ===== STATS / BADGE ===== */
+    .badge {
+      background: #b45f3b10;
+      color: #b45f3b;
+      font-weight: 600;
+      padding: 0.1rem 1rem;
+      border-radius: 40px;
+      border: 1px solid #b45f3b30;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+      gap: 1.5rem;
+      background: #f3ede7;
+      padding: 2rem 2.2rem;
+      border-radius: 40px;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .stat-grid .stat-number {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #1e1b18;
+    }
+    .stat-grid .stat-label {
+      font-size: 0.85rem;
+      color: #5e4b3c;
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter {
+      background: #1e1b18;
+      color: #f0ebe5;
+      padding: 3rem 2.5rem;
+      border-radius: 40px;
+      margin: 3.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .newsletter h3 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: #f0ebe5;
+    }
+    .newsletter p {
+      margin: 0.2rem 0 0;
+      opacity: 0.8;
+      max-width: 400px;
+    }
+    .newsletter form {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .newsletter input {
+      padding: 0.9rem 1.4rem;
+      border-radius: 60px;
+      border: none;
+      background: #2f2a25;
+      color: #f0ebe5;
+      min-width: 220px;
+      font-size: 0.95rem;
+    }
+    .newsletter input::placeholder {
+      color: #a59586;
+    }
+    .newsletter button {
+      background: #b45f3b;
+      border: none;
+      padding: 0 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      color: white;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .newsletter button:hover {
+      background: #9f4f30;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      border-top: 1px solid #ddd0c2;
+      padding: 2.5rem 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      color: #3f352e;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2.5rem;
+      font-weight: 450;
+    }
+    .footer small {
+      opacity: 0.7;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 860px) {
+      .about-hero {
+        grid-template-columns: 1fr;
+      }
+      .top-bar {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 1.2rem;
+      }
+      h1 { font-size: 2.4rem; }
+      .about-hero-content h1 { font-size: 2.5rem; }
+    }
+    @media (max-width: 500px) {
+      .container { padding: 0 0.8rem; }
+      .team-grid { grid-template-columns: 1fr; }
+      .newsletter { flex-direction: column; align-items: start; gap: 1.2rem; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 <div class="container">
 
-<header>
-  <div class="logo"><h1>🌱 Sprouting <span>Nature World</span></h1></div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="terms.html">Terms Of Privacy</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="cookies.html">Cookies Policy</a>
-  </nav>
-</header>
+  <!-- header (same as main) -->
+  <header class="top-bar">
+    <div class="logo">Eastwind <span>Kitchen Press</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" style="border-bottom-color:#b45f3b;">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
 
-<section class="about-hero">
-  <h2>Rooted in purpose</h2>
-  <p>We are a collective of ecologists, designers, and lifelong gardeners — dedicated to deepening your connection with the living world.</p>
-</section>
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>More than a cookbook.<br><span class="serif-italic">We’re a kitchen library.</span></h1>
+      <p class="subhead">Eastwind Kitchen Press was founded to preserve, interpret, and celebrate the deep culinary traditions of Asia — with rigour, curiosity, and a sense of wonder.</p>
+      <div class="hero-tags">
+        <span>📖 Since 2018</span>
+        <span>🌏 12 regions</span>
+        <span>🧑‍🍳 45+ contributors</span>
+        <span>🔥 300+ recipes</span>
+      </div>
+    </div>
+    <div class="about-hero-img">
+      <img src="https://images.unsplash.com/photo-1507048331197-13d4aae23dc2?w=600&h=400&fit=crop&crop=center&auto=format" alt="cooking scene">
+    </div>
+  </section>
 
-<!-- OUR STORY -->
-<section style="padding: 0 2rem;">
-  <h2 class="section-title">🌿 Our story</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop" alt="hands holding soil with seedling" class="img-float" style="max-width: 280px; border-radius: 8px; margin:0 1.5rem 1rem 0;">
-    <div>
-      <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Sprouting Nature World</strong> was born in 2012 from a simple belief: that gardening is not a hobby, but a profound act of stewardship. What began as a small local blog has grown into a globally recognized platform for evidence-based, regenerative horticulture.</p>
-      <p>We’ve worked with universities, organic farms, and permaculture institutes to bring you content that blends ancient wisdom with modern soil science. Our team has designed over 200 regenerative landscapes across five continents — from rooftop gardens in London to food forests in the tropics.</p>
+  <!-- MISSION & VALUES -->
+  <div style="margin: 2rem 0 0.5rem;">
+    <h2>Our mission</h2>
+    <p style="font-size:1.1rem; max-width: 80%;">To bring authentic Asian cooking into every kitchen — not through shortcuts, but through understanding. We believe that technique, ingredient knowledge, and cultural context are the true foundations of flavour.</p>
+  </div>
+
+  <div class="mission-grid">
+    <div class="mission-card">
+      <h3>🌾 Ingredient-first</h3>
+      <p>We explore the why behind each ingredient — from heirloom rice to fermented bean pastes.</p>
+    </div>
+    <div class="mission-card">
+      <h3>🔥 Technique matters</h3>
+      <p>Knife skills, wok heat, steaming, braising — we break down every method with clarity.</p>
+    </div>
+    <div class="mission-card">
+      <h3>🌏 Regional depth</h3>
+      <p>We map flavours across China, Japan, Korea, Southeast Asia, and beyond.</p>
+    </div>
+    <div class="mission-card">
+      <h3>📚 Always learning</h3>
+      <p>Our library grows with each article, guided by chefs, farmers, and home cooks.</p>
     </div>
   </div>
-</section>
 
-<!-- MISSION & VALUES -->
-<section style="padding: 0 2rem;">
-  <h2 class="section-title">🎯 Mission & values</h2>
-  <div class="grid-2">
-    <div class="card"><h3>🌍 Regenerate ecosystems</h3><p>We promote practices that restore soil health, increase biodiversity, and sequester carbon. Every article is rooted in ecological integrity.</p></div>
-    <div class="card"><h3>📚 Evidence-based wisdom</h3><p>We bridge indigenous knowledge and peer-reviewed research. Our content is reviewed by agronomists and permaculture designers.</p></div>
-    <div class="card"><h3>🤝 Inclusive community</h3><p>Gardening is for everyone. We uplift urban growers, small-scale farmers, and anyone who wants to grow food in harmony with nature.</p></div>
-    <div class="card"><h3>🌱 Lifelong learning</h3><p>We are constantly experimenting, documenting, and sharing. Our guides evolve as we learn from nature and from you.</p></div>
+  <!-- STATS -->
+  <div class="stat-grid">
+    <div><div class="stat-number">312</div><div class="stat-label">Recipes</div></div>
+    <div><div class="stat-number">46</div><div class="stat-label">Contributors</div></div>
+    <div><div class="stat-number">14</div><div class="stat-label">Regions covered</div></div>
+    <div><div class="stat-number">8.2k</div><div class="stat-label">Newsletter readers</div></div>
   </div>
-</section>
 
-<!-- TEAM / AUTHORS -->
-<section style="padding: 0 2rem;">
-  <h2 class="section-title">👩‍🌾 Meet the team</h2>
-  <div class="grid-2">
-    <div class="card"><h3>Dr. Sylvia Green</h3><p><em>Chief horticulturist & permaculture designer</em> — PhD in plant ecology, 20+ years of experience. Sylvia leads our research and design projects.</p></div>
-    <div class="card"><h3>Marcus Rivera</h3><p><em>Soil scientist & compost specialist</em> — expert in mycorrhizal networks and biochar. Marcus runs our long-term soil trials.</p></div>
-    <div class="card"><h3>Dr. Linh Nguyen</h3><p><em>Agroecology researcher</em> — focuses on polycultures and seed saving. Linh has documented over 300 heirloom varieties.</p></div>
-    <div class="card"><h3>Elena Petrov</h3><p><em>Water systems designer</em> — specialist in greywater, swales, and dryland techniques. Elena has implemented water-harvesting systems in 12 countries.</p></div>
+  <!-- TEAM -->
+  <h2>🧑‍🍳 The team</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=200&h=200&fit=crop&crop=face&auto=format" alt="Maya Chen">
+      <h4>Maya Chen</h4>
+      <div class="role">Editor-in-Chief</div>
+      <p>Former restaurant chef, now devoted to documenting regional Chinese cooking.</p>
+    </div>
+    <div class="team-card">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&auto=format" alt="Hiro Tanaka">
+      <h4>Hiro Tanaka</h4>
+      <div class="role">Fermentation Lead</div>
+      <p>Koji, miso, and shoyu specialist. Trained in Japan and California.</p>
+    </div>
+    <div class="team-card">
+      <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&h=200&fit=crop&crop=face&auto=format" alt="Leila Okafor">
+      <h4>Leila Okafor</h4>
+      <div class="role">Regional Editor</div>
+      <p>Explores the intersection of West African and Southeast Asian flavours.</p>
+    </div>
+    <div class="team-card">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face&auto=format" alt="David Kim">
+      <h4>David Kim</h4>
+      <div class="role">Kitchen Director</div>
+      <p>Recipe tester and knife skills instructor with a passion for Korean banchan.</p>
+    </div>
   </div>
-</section>
 
-<!-- TIMELINE -->
-<section style="padding: 0 2rem;">
-  <h2 class="section-title">⏳ Our journey</h2>
-  <div class="timeline-item"><span class="timeline-year">2012</span><span>Founded as a small blog with 5 articles about organic tomato growing.</span></div>
-  <div class="timeline-item"><span class="timeline-year">2015</span><span>Launched our first permaculture design course — 200+ students enrolled worldwide.</span></div>
-  <div class="timeline-item"><span class="timeline-year">2018</span><span>Collaborated with the Soil Food Web Institute to develop our soil health framework.</span></div>
-  <div class="timeline-item"><span class="timeline-year">2021</span><span>Reached 1 million readers annually; published our first book, <em>“The Regenerative Garden”</em>.</span></div>
-  <div class="timeline-item"><span class="timeline-year">2026</span><span>Continuing our mission — now with 400+ in-depth guides and a global community of growers.</span></div>
-</section>
-
-<!-- TESTIMONIALS / SOCIAL PROOF -->
-<section style="padding: 0 2rem;">
-  <h2 class="section-title">💬 What our community says</h2>
-  <div class="grid-2">
-    <div class="card"><p>“Sprouting Nature World completely changed how I approach my garden. The no-dig guides alone saved my soil. I recommend this site to every grower I know.”</p><p style="margin-top: 0.5rem;">— <strong>Ravi K.</strong>, organic farmer, India</p></div>
-    <div class="card"><p>“The permaculture zone planning articles are gold. I designed my entire 5-acre homestead using their principles. It’s a living library of ecological wisdom.”</p><p style="margin-top: 0.5rem;">— <strong>Anna M.</strong>, permaculture designer, UK</p></div>
+  <!-- TIMELINE -->
+  <h2 style="margin-top:3rem;">📅 Our journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">2018</div>
+      <div class="desc"><strong>Eastwind launched</strong> — a small newsletter sharing family recipes from Shanghai and Seoul.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2020</div>
+      <div class="desc"><strong>The library grew</strong> — we added regional deep-dives, fermentation guides, and a knife skills series.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2022</div>
+      <div class="desc"><strong>First print edition</strong> — a limited-run zine on wok technique, sold out in 3 weeks.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2024</div>
+      <div class="desc"><strong>Eastwind Kitchen Press</strong> becomes a full‑time publication with a global contributor network.</div>
+    </div>
   </div>
-</section>
 
-<!-- NEWSLETTER -->
-<div class="newsletter">
-  <h3 style="font-size:1.8rem; font-weight:300; color:#1e3a2f;">🌿 Grow with us</h3>
-  <p style="margin:0.5rem 0 1.2rem;">Subscribe for weekly insights, exclusive guides, and seasonal tips.</p>
-  <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-  <button>Subscribe</button>
+  <!-- NEWSLETTER (same as main) -->
+  <div class="newsletter">
+    <div>
+      <h3>📬 The Eastwind Dispatch</h3>
+      <p>Weekly insights, seasonal recipes, and fermentation logs — straight to your inbox.</p>
+    </div>
+    <form>
+      <input type="email" placeholder="your email" aria-label="email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <div class="logo" style="font-size:1.2rem;">Eastwind <span>Kitchen Press</span></div>
+      <small>© 2026 · content‑first kitchen library</small>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
 </div>
-
-<!-- PRIVACY & TERMS (footer identical) -->
-<footer>
-  <div>© 2026 Sprouting Nature World — premium gardening authority</div>
-  <div>
-    <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a> | <a href="contact.html">Contact</a>
-  </div>
-</footer>
-
-</div> <!-- end container -->
-
-<script>
-  (function() {
-    // smooth scroll for any internal anchor (if any)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === "#") return;
-        const targetEl = document.querySelector(targetId);
-        if (targetEl) {
-          e.preventDefault();
-          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-  })();
-</script>
-
 </body>
 </html>
