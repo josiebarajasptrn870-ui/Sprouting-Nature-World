@@ -1,436 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emberstone Meal Journal · premium recipe authority</title>
-  <!-- unique typography: IBM Plex Serif + Inter (clean contrast) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zelvora Plant Mosaic • Gardening Authority</title>
+  <!-- Font & minimal icons (Font Awesome for subtle accents) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ---- reset & base : fresh, reading-first ---- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #f9f5ef;  /* warm off-white, unique */
-      color: #1e1e1e;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.7;
-      padding: 0 1.2rem;
+    /* ----- RESET & VARIABLES (unique identity) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .container {
-      max-width: 1260px;
-      margin: 0 auto;
-      padding: 1.5rem 0 3rem;
-    }
-    /* ---- typography : serif for headings, clean sans for body ---- */
-    h1, h2, h3, h4, .hero-title, .card-title, .section-label {
-      font-family: 'IBM Plex Serif', serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    h1 { font-size: 3.2rem; font-weight: 700; }
-    h2 { font-size: 2.4rem; margin: 2.5rem 0 1.2rem; font-weight: 600; border-bottom: 2px solid #dfd4c4; padding-bottom: 0.5rem; }
-    h3 { font-size: 1.6rem; font-weight: 600; margin: 2rem 0 0.8rem; color: #2d2a24; }
-    p { margin-bottom: 1.2rem; font-weight: 400; color: #2a2722; }
-    .small-meta { font-size: 0.85rem; letter-spacing: 0.02em; color: #6b6258; font-weight: 500; }
-    a { color: #1e1e1e; text-decoration: none; border-bottom: 1px solid #d6cbbc; transition: 0.2s; }
-    a:hover { color: #b45f3a; border-bottom-color: #b45f3a; }
 
-    /* ---- unique header / navigation ---- */
-    .top-nav {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.2rem 0 1rem;
-      border-bottom: 1px solid #e3d8cb;
+    body {
+      background: #f7f4ed;  /* warm stone */
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      color: #2a2b26;
+      line-height: 1.7;
+    }
+
+    :root {
+      --primary: #3a5e4c;      /* deep sage */
+      --primary-light: #5a7e6a;
+      --accent: #b68b6b;       · /* terracotta */
+      --accent-light: #dac2ab;
+      --bg-soft: #f7f4ed;
+      --card-bg: #ffffff;
+      --text-dark: #1e2a24;
+      --text-muted: #4f5c54;
+      --border-light: #e2ddd4;
+      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02);
+      --shadow-card: 0 12px 28px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+      --radius-card: 20px;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+    }
+
+    /* ----- TYPOGRAPHY (unique, reading-first) ----- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
+      margin-top: 2.8rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+      color: #2d332e;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ----- HEADER (minimal, clean) ----- */
+    .site-header {
+      padding: 1.8rem 0 1.2rem;
+      border-bottom: 1px solid var(--border-light);
+      background: #fffcf8;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
       flex-wrap: wrap;
     }
-    .logo {
-      font-family: 'IBM Plex Serif', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #2c241b;
-      border-bottom: none;
-    }
-    .logo span { color: #b45f3a; font-weight: 400; }
-    .nav-links {
-      display: flex; gap: 2.2rem; font-weight: 500; font-size: 0.95rem;
-    }
-    .nav-links a { border-bottom: none; color: #3d352b; }
-    .nav-links a:hover { color: #b45f3a; }
-    .search-icon { opacity: 0.6; font-size: 1.2rem; }
 
-    /* ---- hero : content-first, minimal image ---- */
-    .hero {
-      margin: 2.8rem 0 3.5rem;
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span {
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .nav-links {
       display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-      background: #ede7df;
-      padding: 2.8rem 3.2rem;
-      border-radius: 28px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      gap: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 450;
+      letter-spacing: 0.3px;
     }
+
+    .nav-links a {
+      border-bottom: none;
+      color: var(--text-dark);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      border-bottom: 1px solid var(--primary);
+    }
+
+    /* ----- HERO (content dense, one image) ----- */
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+    }
+
     .hero-content {
-      max-width: 85%;
+      flex: 2;
+      min-width: 280px;
     }
+
     .hero-content h1 {
-      font-size: 3.4rem;
-      line-height: 1.1;
-      margin-bottom: 0.8rem;
-    }
-    .hero-content p {
-      font-size: 1.2rem;
-      color: #3d352b;
-      max-width: 750px;
+      font-size: 3.2rem;
+      line-height: 1.15;
       margin-bottom: 1.2rem;
     }
-    .hero-tags {
-      display: flex; flex-wrap: wrap; gap: 0.7rem 1.2rem;
-      font-weight: 500;
-      color: #5e4f3d;
-    }
-    .hero-tags span { background: #e5d9cb; padding: 0.2rem 1rem; border-radius: 40px; font-size: 0.9rem; }
-    .hero-image {
-      align-self: flex-end;
-      margin-top: -1.2rem;
-    }
-    .hero-image img {
-      max-width: 260px;
-      border-radius: 40px 12px 40px 12px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
-      background: #d9cdbd;
-    }
-    @media (max-width: 780px) {
-      .hero { padding: 1.8rem; }
-      .hero-content { max-width: 100%; }
-      .hero-content h1 { font-size: 2.4rem; }
-      .hero-image { align-self: center; margin-top: 0.5rem; }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
     }
 
-    /* ---- grid & cards : content-rich, minimal decoration ---- */
-    .section-title {
-      font-family: 'IBM Plex Serif', serif;
-      font-size: 2rem;
-      font-weight: 600;
-      margin: 3.2rem 0 1.5rem;
+    .hero-highlights {
       display: flex;
-      align-items: baseline;
-      gap: 1rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0 0.5rem;
+      padding: 1rem 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
     }
-    .section-title span { font-size: 1rem; font-weight: 400; color: #7b6e5d; font-family: 'Inter', sans-serif; }
+
+    .hero-highlights span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--primary-light);
+    }
+
+    .hero-highlights i {
+      margin-right: 0.4rem;
+      color: var(--accent);
+    }
+
+    .hero-image {
+      flex: 1.2;
+      min-width: 220px;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ----- GRID & CARDS (unique card design) ----- */
+    .section-title {
+      font-size: 2.2rem;
+      margin: 3.5rem 0 1.5rem;
+      font-family: var(--font-serif);
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 0.4rem;
+    }
 
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 2rem 1.8rem;
-      margin: 1.8rem 0 2.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 1.5rem 0 2.5rem;
     }
-    .card {
-      background: #ffffffec;
-      padding: 1.8rem 1.8rem 2rem;
-      border-radius: 28px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-      border: 1px solid #f0e8de;
-      transition: 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
-    .card:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.03); border-color: #dacfc1; }
-    .card .card-img {
-      width: 100%;
-      height: 120px;
-      background: #e1d5c6;
-      border-radius: 20px;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #5b4d3c;
-      font-weight: 400;
-      font-size: 0.9rem;
-      background-image: linear-gradient(145deg, #e6dbcf, #d4c7b7);
-    }
-    .card .card-img img { max-width: 100%; border-radius: 20px; object-fit: cover; }
-    .card-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin: 0.4rem 0 0.5rem;
-      line-height: 1.3;
-    }
-    .card-meta { font-size: 0.8rem; color: #7d6f5d; letter-spacing: 0.01em; }
-    .card-excerpt { font-size: 0.95rem; color: #2f2a23; margin: 0.6rem 0 1rem; flex: 1; }
-    .card-link { font-weight: 600; color: #b45f3a; border-bottom: 1px solid #b45f3a50; align-self: flex-start; }
 
-    /* ---- featured article (larger) ---- */
-    .featured-card {
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      padding: 1.8rem 1.8rem 1.5rem;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.15s, box-shadow 0.2s;
+      border: 1px solid #f0ece4;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 32px rgba(0, 0, 0, 0.04), 0 6px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .card .card-category {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .card .meta {
+      font-size: 0.85rem;
+      color: #7b877d;
+      border-top: 1px solid var(--border-light);
+      padding-top: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card .meta i {
+      margin-right: 0.3rem;
+    }
+
+    /* featured card (larger) */
+    .card-featured {
       grid-column: span 2;
       display: flex;
-      flex-direction: row;
-      gap: 1.8rem;
-      padding: 2rem 2.2rem;
-      background: #ece3d8;
-      border-radius: 32px;
-      border: none;
-    }
-    .featured-card .card-img { width: 200px; height: 150px; flex-shrink: 0; background: #d0c0ac; }
-    .featured-card .card-content { flex: 1; }
-    @media (max-width: 700px) {
-      .featured-card { flex-direction: column; grid-column: span 1; }
-      .featured-card .card-img { width: 100%; height: 130px; }
-    }
-
-    /* ---- faq / resource hub (unique styling) ---- */
-    .faq-block {
-      background: #f0e9e0;
-      border-radius: 32px;
-      padding: 2.2rem 2.8rem;
-      margin: 3rem 0 2rem;
-    }
-    .faq-item { border-bottom: 1px solid #dcccba; padding: 1.2rem 0; }
-    .faq-item:last-child { border: none; }
-    .faq-item h4 { font-family: 'IBM Plex Serif', serif; font-weight: 600; font-size: 1.2rem; margin-bottom: 0.3rem; }
-
-    .resource-hub {
-      display: flex; flex-wrap: wrap; gap: 1.8rem 2.8rem;
-      background: #f3ece3;
-      border-radius: 32px;
-      padding: 2.2rem 2.5rem;
-      margin: 2.5rem 0;
-    }
-    .resource-item { flex: 1 0 200px; }
-
-    /* ---- newsletter : clean, minimal ---- */
-    .newsletter {
-      background: #dfd3c4;
-      border-radius: 40px;
-      padding: 2.8rem 3rem;
-      margin: 3.2rem 0 2rem;
-      display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      gap: 1.5rem;
       align-items: center;
+      padding: 1.8rem;
     }
-    .newsletter h3 { margin: 0; color: #1f1b16; }
-    .newsletter input {
-      background: transparent;
-      border: none;
-      border-bottom: 2px solid #7e6d59;
-      padding: 0.6rem 0.8rem;
-      font-size: 1rem;
-      min-width: 220px;
-      font-family: 'Inter', sans-serif;
+
+    .card-featured .card-img {
+      flex: 1;
+      min-width: 140px;
+      border-radius: 12px;
+      overflow: hidden;
     }
-    .newsletter button {
-      background: #2c241b;
-      color: #f3ece3;
-      border: none;
-      padding: 0.7rem 2rem;
-      border-radius: 60px;
+
+    .card-featured .card-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-featured .card-body {
+      flex: 2;
+    }
+
+    /* ----- LISTS, TABLES, CHECKLISTS (content rich) ----- */
+    .checklist {
+      background: #f1efe9;
+      padding: 1.5rem 2rem;
+      border-radius: 18px;
+      margin: 2rem 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      padding: 0.4rem 0;
+      font-weight: 450;
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border-radius: 18px;
+      border: 1px solid var(--border-light);
+      background: white;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.98rem;
+    }
+
+    th {
+      background: #eae7df;
+      padding: 0.9rem 1rem;
+      text-align: left;
       font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
+      color: var(--text-dark);
+    }
+
+    td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid #eae7df;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* faq accordion style (schema ready) */
+    .faq-item {
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+    }
+
+    .faq-item h4 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 0 0 0.2rem;
       cursor: default;
     }
-    @media (max-width: 640px) {
-      .newsletter { flex-direction: column; gap: 1.2rem; align-items: stretch; }
+
+    .faq-item p {
+      margin: 0.4rem 0 0;
+      color: var(--text-muted);
+      font-size: 1rem;
     }
 
-    /* ---- footer ---- */
-    .footer {
-      margin-top: 4rem;
-      padding: 2.5rem 0 2rem;
-      border-top: 1px solid #ddd1c2;
+    /* newsletter */
+    .newsletter {
+      background: #eae7df;
+      border-radius: 40px;
+      padding: 3rem 2.5rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      border-left: none;
+      margin-top: 0;
+    }
+
+    .newsletter input {
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px;
+      border: 1px solid #ccc;
+      min-width: 260px;
+      font-size: 1rem;
+      background: white;
+    }
+
+    .newsletter button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.8rem 2.2rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .newsletter button:hover {
+      background: var(--primary-light);
+    }
+
+    /* footer */
+    .site-footer {
+      border-top: 1px solid var(--border-light);
+      padding: 2.8rem 0 2rem;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 1.5rem;
     }
-    .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
 
-    /* ---- extra utilities ---- */
-    .inline-tag { background: #e8ddd0; padding: 0.1rem 1rem; border-radius: 30px; }
-    .mt-1 { margin-top: 1rem; }
-    .mb-1 { margin-bottom: 1rem; }
-    .flex { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-    hr { border: none; border-top: 1px solid #e3d6c7; margin: 1rem 0; }
+    .footer-links a {
+      margin-right: 1.8rem;
+      border-bottom: none;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      h1 { font-size: 2.4rem; }
+      .header-inner { flex-direction: column; gap: 0.8rem; }
+      .nav-links { flex-wrap: wrap; gap: 1.2rem; }
+      .hero { flex-direction: column; }
+      .card-featured { grid-column: span 1; flex-direction: column; }
+      .newsletter input { min-width: auto; width: 100%; margin-bottom: 0.8rem; }
+      .newsletter button { width: 100%; margin-left: 0; }
+    }
   </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- navigation -->
-  <header class="top-nav">
-    <a href="#" class="logo">Emberstone<span>·Meal Journal</span></a>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">Zelvora Plant <span>✦</span> Mosaic</div>
     <div class="nav-links">
-      <li><a href="index.html">Home</a></li>
+       <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="terms.html">Terms Of Privacy</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
 					<li><a href="cookies.html">Cookies Policy</a></li>
-      <span class="search-icon">🔍</span>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- HERO : content-first, minimal image (1 hero image) -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>The Emberstone Meal Journal</h1>
-      <p>Where craft cooking meets food science. Deep-dive articles, step-by-step techniques, and ingredient wisdom — from our kitchen to yours.</p>
-      <div class="hero-tags">
-        <span>seasonal</span><span>sourdough</span><span>umami</span><span>fermentation</span><span>cast iron</span>
-      </div>
+<!-- HERO (1 hero image) -->
+<section class="container hero">
+  <div class="hero-content">
+    <h1>Where plants tell stories,<br>and soil holds memory.</h1>
+    <p>Zelvora Plant Mosaic is a living library for the thoughtful gardener. We blend botanical science, seasonal wisdom, and hands-on craft — from seed to compost, from plot to plate.</p>
+    <div class="hero-highlights">
+      <span><i class="fas fa-seedling"></i> 200+ perennial guides</span>
+      <span><i class="fas fa-leaf"></i> zone‑specific advice</span>
+      <span><i class="fas fa-hand-sparkles"></i> organic methods</span>
     </div>
-    <div class="hero-image">
-      <!-- hero image (1) -->
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='180' viewBox='0 0 260 180'%3E%3Crect width='260' height='180' fill='%23cdbcab'/%3E%3Ctext x='20' y='100' font-family='Inter' font-size='16' fill='%234d3e2e'%3Ehero · cast iron%3C/text%3E%3C/svg%3E" alt="hero cast iron skillet" />
-    </div>
-  </section>
+  </div>
+  <div class="hero-image">
+    <!-- Hero image: only one -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%233a5e4c'/%3E%3Ccircle cx='180' cy='140' r='48' fill='%23b68b6b' opacity='0.7'/%3E%3Ccircle cx='420' cy='200' r='70' fill='%23dac2ab' opacity='0.6'/%3E%3Ccircle cx='300' cy='280' r='90' fill='%235a7e6a' opacity='0.5'/%3E%3Cpath d='M120 320 L480 320 L450 360 L150 360 Z' fill='%23b68b6b' opacity='0.4'/%3E%3C/svg%3E"
+         alt="Abstract garden mosaic – Zelvora identity">
+  </div>
+</section>
 
-  <!-- Featured Articles (1 featured image) -->
-  <div class="section-title">Featured <span>picks from the fire</span></div>
+<!-- MAIN CONTENT: BLOG ARTICLES (content-first, 90/10) -->
+<div class="container">
+
+  <!-- FEATURED ARTICLE (1 image) -->
+  <h2 class="section-title">✦ Featured long read</h2>
   <div class="card-grid">
-    <article class="card featured-card">
+    <div class="card card-featured">
       <div class="card-img">
-        <!-- featured article image (2) -->
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23b8a48d'/%3E%3Ctext x='20' y='80' font-family='Inter' fill='%233d3227' font-size='18'%3Efeatured%3C/text%3E%3C/svg%3E" alt="featured recipe" style="width:100%;height:100%;object-fit:cover;border-radius:20px;" />
+        <!-- featured article image -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='220' viewBox='0 0 300 220'%3E%3Crect width='300' height='220' fill='%23eae7df'/%3E%3Cpath d='M40 180 L260 180 L240 200 L60 200 Z' fill='%23b68b6b' opacity='0.6'/%3E%3Ccircle cx='90' cy='80' r='30' fill='%233a5e4c' opacity='0.7'/%3E%3Ccircle cx='200' cy='100' r='22' fill='%235a7e6a' opacity='0.7'/%3E%3C/svg%3E"
+             alt="featured article visual">
       </div>
-      <div class="card-content">
-        <span class="card-meta">🔥 masterclass</span>
-        <h3 class="card-title">The Science of Sourdough Hydration</h3>
-        <p class="card-excerpt">How water ratios transform crumb, crust, and flavour. A complete guide with baker’s percentages and troubleshooting.</p>
-        <a href="#" class="card-link">read more →</a>
+      <div class="card-body">
+        <div class="card-category"><i class="fas fa-pen-fancy"></i> soil & soul</div>
+        <h3>Building living soil: the fungal network and your garden</h3>
+        <p>Mycorrhizal relationships, carbon farming, and no‑dig principles — a deep walk through underground ecology. With practical steps to regenerate your plot in 6 weeks.</p>
+        <div class="meta"><span><i class="far fa-calendar-alt"></i> 12 min read</span> <span><i class="far fa-comment"></i> 34</span></div>
       </div>
-    </article>
-
-    <article class="card">
-      <span class="card-meta">📖 technique</span>
-      <h3 class="card-title">Umami layering: broth &amp; beyond</h3>
-      <p class="card-excerpt">Dashi, miso, mushrooms, and ageing — building deep savoury notes in plant-based cooking.</p>
-      <a href="#" class="card-link">explore</a>
-    </article>
-    <article class="card">
-      <span class="card-meta">🧂 pantry</span>
-      <h3 class="card-title">Salt: chemistry &amp; curing</h3>
-      <p class="card-excerpt">From kosher to smoked salts, and how to cure meat &amp; vegetables like a pro.</p>
-      <a href="#" class="card-link">explore</a>
-    </article>
-  </div>
-
-  <!-- Beginner Guides + Expert Resources (two columns) -->
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin:2rem 0;">
-    <div>
-      <h2 style="border-bottom:2px solid #dcccba; padding-bottom:0.5rem;">Beginner guides</h2>
-      <ul style="list-style:none; padding:0;">
-        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Knife skills: rock chop &amp; julienne</a></li>
-        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">First sourdough starter (7‑day plan)</a></li>
-        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Seasoning cast iron: myth vs. science</a></li>
-        <li style="padding:0.8rem 0;">• <a href="#">Pantry essentials: 20 staples</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2 style="border-bottom:2px solid #dcccba; padding-bottom:0.5rem;">Expert resources</h2>
-      <ul style="list-style:none; padding:0;">
-        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Fermentation pH &amp; safety charts</a></li>
-        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Modernist thickening agents</a></li>
-        <li style="padding:0.8rem 0; border-bottom:1px solid #e5dacd;">• <a href="#">Dry‑aging beef at home</a></li>
-        <li style="padding:0.8rem 0;">• <a href="#">Flavour pairing matrix</a></li>
-      </ul>
     </div>
   </div>
 
-  <!-- Popular Categories (with 1 category image) -->
-  <div class="section-title">Popular categories <span>explore by topic</span></div>
+  <!-- BEGINNER GUIDES + EXPERT RESOURCES (cards) -->
   <div class="card-grid">
-    <div class="card" style="background:#eae1d6;">
-      <div class="card-img" style="background:#d2c0ac;">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23b49c84'/%3E%3Ctext x='8' y='38' font-family='Inter' fill='%23211d17' font-size='18'%3E🍞%3C/text%3E%3C/svg%3E" alt="bread" style="width:60px;" />
-      </div>
-      <h4 style="margin:0.2rem 0;">Bread &amp; dough</h4>
-      <span class="small-meta">34 articles</span>
+    <div class="card"><div class="card-category"><i class="fas fa-sprout"></i> beginner</div><h3>First‑year vegetable garden</h3><p>Zone‑by‑zone planting calendar, crop rotation for small spaces, and the 5 easiest varieties for new hands.</p><div class="meta"><span><i class="far fa-clock"></i> 8 min</span></div></div>
+    <div class="card"><div class="card-category"><i class="fas fa-tree"></i> expert</div><h3>Grafting & scion wood</h3><p>Advanced propagation techniques for fruit trees, with a compatibility table and aftercare checklist.</p><div class="meta"><span><i class="far fa-clock"></i> 15 min</span></div></div>
+  </div>
+
+  <!-- CATEGORY IMAGE (one) + popular categories -->
+  <h2 class="section-title">🌿 Explore by category</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 1.8rem; align-items: center; margin: 1rem 0 2rem;">
+    <div style="flex: 1; min-width: 120px;">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='120' viewBox='0 0 200 120'%3E%3Crect width='200' height='120' fill='%23dac2ab' opacity='0.4'/%3E%3Ccircle cx='60' cy='60' r='30' fill='%233a5e4c' opacity='0.6'/%3E%3Ccircle cx='140' cy='50' r='20' fill='%23b68b6b' opacity='0.7'/%3E%3C/svg%3E"
+           alt="category illustration" style="border-radius: 30px; width: 100%;">
     </div>
-    <div class="card" style="background:#eae1d6;">
-      <div class="card-img" style="background:#d2c0ac;">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23b49c84'/%3E%3Ctext x='8' y='38' font-family='Inter' fill='%23211d17' font-size='18'%3E🥩%3C/text%3E%3C/svg%3E" alt="meat" />
-      </div>
-      <h4 style="margin:0.2rem 0;">Meat &amp; fire</h4>
-      <span class="small-meta">27 articles</span>
-    </div>
-    <div class="card" style="background:#eae1d6;">
-      <div class="card-img" style="background:#d2c0ac;">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23b49c84'/%3E%3Ctext x='8' y='38' font-family='Inter' fill='%23211d17' font-size='18'%3E🌿%3C/text%3E%3C/svg%3E" alt="veg" />
-      </div>
-      <h4 style="margin:0.2rem 0;">Vegetables &amp; ferments</h4>
-      <span class="small-meta">19 articles</span>
+    <div style="flex: 2; display: flex; flex-wrap: wrap; gap: 1rem;">
+      <span style="background: white; padding: 0.5rem 1.2rem; border-radius: 50px; box-shadow: var(--shadow-sm);">🌱 Edible perennials</span>
+      <span style="background: white; padding: 0.5rem 1.2rem; border-radius: 50px; box-shadow: var(--shadow-sm);">🌻 Pollinator sanctuaries</span>
+      <span style="background: white; padding: 0.5rem 1.2rem; border-radius: 50px; box-shadow: var(--shadow-sm);">🍂 Compost alchemy</span>
+      <span style="background: white; padding: 0.5rem 1.2rem; border-radius: 50px; box-shadow: var(--shadow-sm);">🌧 Rainwater systems</span>
+      <span style="background: white; padding: 0.5rem 1.2rem; border-radius: 50px; box-shadow: var(--shadow-sm);">🧑‍🌾 Heirloom seeds</span>
     </div>
   </div>
 
-  <!-- Trending + Latest articles (mixed) -->
-  <div style="display:flex; flex-wrap:wrap; gap:2.5rem; margin:2rem 0;">
-    <div style="flex:1; min-width:220px;">
-      <h3>🔥 trending</h3>
-      <ul style="list-style:none; padding:0;">
-        <li style="padding:0.6rem 0; border-bottom:1px solid #e8ddcf;"><a href="#">The perfect pan sauce (5 principles)</a></li>
-        <li style="padding:0.6rem 0; border-bottom:1px solid #e8ddcf;"><a href="#">Koji and the umami revolution</a></li>
-        <li style="padding:0.6rem 0;"><a href="#">Oven‑spring secrets: steam vs. heat</a></li>
-      </ul>
-    </div>
-    <div style="flex:1; min-width:220px;">
-      <h3>📰 latest articles</h3>
-      <ul style="list-style:none; padding:0;">
-        <li style="padding:0.6rem 0; border-bottom:1px solid #e8ddcf;"><a href="#">Smoked paprika: from pimentón to rubs</a></li>
-        <li style="padding:0.6rem 0; border-bottom:1px solid #e8ddcf;"><a href="#">Clarified butter: ghee &amp; beurre noisette</a></li>
-        <li style="padding:0.6rem 0;"><a href="#">Preserving lemons: a month‑long journal</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- In-Depth Tutorials (partial) -->
-  <div class="section-title">In‑depth tutorials <span>step‑by‑step</span></div>
+  <!-- TRENDING + LATEST ARTICLES (mix) -->
+  <h2 class="section-title">📈 Trending & latest</h2>
   <div class="card-grid">
-    <div class="card"><h4>How to build a wood‑fire oven</h4><p class="card-excerpt">From masonry to first firing — 6 part series.</p><a href="#" class="card-link">start</a></div>
-    <div class="card"><h4>Fermented hot sauce lab</h4><p class="card-excerpt">pH, salinity, and flavour development.</p><a href="#" class="card-link">start</a></div>
-    <div class="card"><h4>Lamination for croissants</h4><p class="card-excerpt">Butter blocks, folds, and proofing.</p><a href="#" class="card-link">start</a></div>
+    <div class="card"><div class="card-category"><i class="fas fa-fire"></i> trending</div><h3>No‑till raised beds: 3‑year results</h3><p>Data from our trial garden: organic matter increase, water retention, and earthworm counts.</p><div class="meta"><span><i class="far fa-calendar"></i> 20 May 2026</span></div></div>
+    <div class="card"><div class="card-category"><i class="fas fa-clock"></i> latest</div><h3>Summer pruning for espalier</h3><p>Step‑by‑step with diagrams — restore vigor and shape for apples and pears.</p><div class="meta"><span><i class="far fa-calendar"></i> 18 Jun 2026</span></div></div>
+    <div class="card"><div class="card-category"><i class="fas fa-seedling"></i> deep dive</div><h3>Biochar in the home garden</h3><p>Activation, application rates, and the microbiome response — a comprehensive review.</p><div class="meta"><span><i class="far fa-calendar"></i> 12 Jun 2026</span></div></div>
   </div>
 
-  <!-- Resource Hub -->
-  <div class="resource-hub">
-    <div class="resource-item"><strong>📊 conversion charts</strong><br><span class="small-meta">bakers %, hydration, salt</span></div>
-    <div class="resource-item"><strong>🧪 ingredient database</strong><br><span class="small-meta">flours, fats, acids</span></div>
-    <div class="resource-item"><strong>📖 glossary</strong><br><span class="small-meta">culinary terms &amp; techniques</span></div>
-    <div class="resource-item"><strong>🎥 video index</strong><br><span class="small-meta">technique reels &amp; shorts</span></div>
+  <!-- IN-DEPTH TUTORIAL (with checklist & table) -->
+  <h2 class="section-title">🛠 In‑depth tutorial: seed starting mix</h2>
+  <div style="background: #faf8f4; padding: 1.8rem 2rem; border-radius: 28px; margin: 1rem 0 2rem;">
+    <h3>Custom blend for vigorous seedlings</h3>
+    <p>A professional recipe that balances aeration, moisture, and nutrition — without peat.</p>
+    <div class="checklist">
+      <li> 1 part coco coir (hydrated)</li>
+      <li> 1 part perlite (coarse)</li>
+      <li> ½ part high‑quality compost (screened)</li>
+      <li> 2 tbsp basalt dust per gallon</li>
+      <li> 1 tsp kelp meal per gallon</li>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Ingredient</th><th>Function</th><th>Alternative</th></tr>
+        <tr><td>Coco coir</td><td>Water retention</td><td>Leaf mould</td></tr>
+        <tr><td>Perlite</td><td>Drainage</td><td>Pumice</td></tr>
+        <tr><td>Compost</td><td>Nutrient base</td><td>Worm castings</td></tr>
+        <tr><td>Basalt</td><td>Trace minerals</td><td>Glacial rock dust</td></tr>
+      </table>
+    </div>
+    <p><strong>Common mistake:</strong> over‑compacting the mix. Keep it fluffy, water from below.</p>
   </div>
 
-  <!-- FAQ Section (schema-ready) -->
-  <div class="faq-block">
-    <h2 style="border:none; margin-top:0;">Frequently asked questions</h2>
-    <div class="faq-item"><h4>What’s the best flour for sourdough?</h4><p>We recommend a blend of bread flour and whole wheat — at least 12% protein. Our dedicated guide covers 10 flour types.</p></div>
-    <div class="faq-item"><h4>How do I fix a broken sauce?</h4><p>Emulsify with a tablespoon of cold butter or cream, off‑heat. For vinaigrettes, add a splash of warm water.</p></div>
-    <div class="faq-item"><h4>Can I adapt recipes for high altitude?</h4><p>Yes. Adjust liquid and leavening. See our high‑altitude baking series.</p></div>
+  <!-- RESOURCE HUB (compact) -->
+  <h2 class="section-title">📚 Resource hub</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-map"></i> Hardiness map</span>
+    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-tools"></i> Tool guide</span>
+    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-calendar-alt"></i> Planting calendar</span>
+    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-flask"></i> Soil test kit</span>
   </div>
 
-  <!-- Newsletter -->
+  <!-- FAQ (schema-ready) -->
+  <h2 class="section-title">❓ Frequently asked questions</h2>
+  <div class="faq-item"><h4>Can I use this mix for all vegetables?</h4><p>Yes, but adjust perlite for heavy feeders like tomatoes (add 10% more compost).</p></div>
+  <div class="faq-item"><h4>How often should I water seedlings?</h4><p>Check daily; water when the top ½″ feels dry. Bottom watering is preferred.</p></div>
+  <div class="faq-item"><h4>Is this mix organic?</h4><p>Absolutely — all ingredients are OMRI‑listed or natural.</p></div>
+
+  <!-- NEWSLETTER -->
   <div class="newsletter">
-    <h3 style="font-family:'IBM Plex Serif'; font-weight:500;">The Emberstone letter</h3>
-    <p style="margin:0; font-size:0.95rem;">weekly techniques &amp; essays</p>
-    <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
-      <input type="email" placeholder="your email" value="hello@journal" />
-      <button>subscribe</button>
-    </div>
+    <h2>🌱 The weekly mosaic</h2>
+    <p style="max-width: 600px; margin: 0 auto 1.5rem;">Seasonal insights, cultivar spotlights, and soil science — free in your inbox.</p>
+    <input type="email" placeholder="gardener@example.com" aria-label="email">
+    <button>Subscribe</button>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-col"><strong>Emberstone Meal Journal</strong><span class="small-meta">est. 2026 · kitchen chronicles</span></div>
-    <div class="footer-col"><a href="#">about</a><a href="#">archive</a><a href="#">contact</a></div>
-    <div class="footer-col"><span class="small-meta">© 2026 · all articles original</span></div>
-  </footer>
+</div><!-- end container -->
 
-  <!-- Note: only 4 images used (hero, featured, category placeholder, and optional infographic represented via svg inside category) -->
-  <!-- Infographic image (optional) embedded in category as simple visual, minimal -->
-  <div style="text-align:center; margin: 1rem 0 0; opacity:0.5; font-size:0.7rem;">✦</div>
-</div>
+<!-- FOOTER -->
+<footer class="container site-footer">
+  <div>© 2026 Zelvora Plant Mosaic · crafted with soil & spirit</div>
+  <div class="footer-links">
+    <a href="#">Journal</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">RSS</a>
+  </div>
+</footer>
+
+<!-- minimal extra content: internal linking opportunities naturally included -->
 </body>
 </html>

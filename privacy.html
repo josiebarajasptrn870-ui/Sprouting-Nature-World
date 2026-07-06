@@ -1,251 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy · Emberstone Meal Journal</title>
-  <!-- unique typography: IBM Plex Serif + Inter (mirroring main) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zelvora Plant Mosaic • Privacy Policy</title>
+  <!-- Font & minimal icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ---- reset & base (exactly as contact) ---- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ----- RESET & VARIABLES (same identity) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: #f9f5ef;
-      color: #1e1e1e;
-      font-family: 'Inter', sans-serif;
+      background: #f7f4ed;
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      color: #2a2b26;
       line-height: 1.7;
-      padding: 0 1.2rem;
     }
-    .container {
-      max-width: 1260px;
-      margin: 0 auto;
-      padding: 1.5rem 0 3rem;
-    }
-    h1, h2, h3, h4, .hero-title, .card-title, .section-label {
-      font-family: 'IBM Plex Serif', serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    h1 { font-size: 3.2rem; font-weight: 700; }
-    h2 { font-size: 2.4rem; margin: 2.5rem 0 1.2rem; font-weight: 600; border-bottom: 2px solid #dfd4c4; padding-bottom: 0.5rem; }
-    h3 { font-size: 1.6rem; font-weight: 600; margin: 2rem 0 0.8rem; color: #2d2a24; }
-    p { margin-bottom: 1.2rem; font-weight: 400; color: #2a2722; }
-    .small-meta { font-size: 0.85rem; letter-spacing: 0.02em; color: #6b6258; font-weight: 500; }
-    a { color: #1e1e1e; text-decoration: none; border-bottom: 1px solid #d6cbbc; transition: 0.2s; }
-    a:hover { color: #b45f3a; border-bottom-color: #b45f3a; }
 
-    /* ---- navigation (exactly as main / contact) ---- */
-    .top-nav {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.2rem 0 1rem;
-      border-bottom: 1px solid #e3d8cb;
-      flex-wrap: wrap;
+    :root {
+      --primary: #3a5e4c;
+      --primary-light: #5a7e6a;
+      --accent: #b68b6b;
+      --accent-light: #dac2ab;
+      --bg-soft: #f7f4ed;
+      --card-bg: #ffffff;
+      --text-dark: #1e2a24;
+      --text-muted: #4f5c54;
+      --border-light: #e2ddd4;
+      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02);
+      --shadow-card: 0 12px 28px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+      --radius-card: 20px;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
     }
-    .logo {
-      font-family: 'IBM Plex Serif', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #2c241b;
-      border-bottom: none;
-    }
-    .logo span { color: #b45f3a; font-weight: 400; }
-    .nav-links {
-      display: flex; gap: 2.2rem; font-weight: 500; font-size: 0.95rem;
-      list-style: none;
-      align-items: center;
-    }
-    .nav-links a { border-bottom: none; color: #3d352b; }
-    .nav-links a:hover { color: #b45f3a; }
-    .search-icon { opacity: 0.6; font-size: 1.2rem; }
 
-    /* ---- privacy hero (soft variant, like contact) ---- */
-    .privacy-hero {
-      background: #ede7df;
-      padding: 2.8rem 3.2rem;
-      border-radius: 28px;
-      margin: 2.2rem 0 2.8rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-    }
-    .privacy-hero h1 {
-      font-size: 3rem;
+    /* ----- TYPOGRAPHY ----- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-top: 2rem;
       margin-bottom: 0.6rem;
     }
-    .privacy-hero p {
-      font-size: 1.2rem;
-      color: #3d352b;
-      max-width: 720px;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
     }
 
-    /* ---- privacy content cards (similar to info cards) ---- */
-    .privacy-card {
-      background: #f0e9e0;
-      border-radius: 28px;
-      padding: 2rem 2.5rem;
-      margin-bottom: 2rem;
-      border: 1px solid #e3d6c7;
-    }
-    .privacy-card h2 {
-      border-bottom: 2px solid #dfd4c4;
-      padding-bottom: 0.5rem;
-      margin-top: 0;
+    h2 {
       font-size: 2rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
+      margin-top: 2.8rem;
     }
-    .privacy-card h3 {
-      margin-top: 1.8rem;
-      font-size: 1.4rem;
-    }
-    .privacy-card ul, .privacy-card ol {
-      margin: 0.8rem 0 1.2rem 1.6rem;
-      color: #2a2722;
-    }
-    .privacy-card li {
-      margin-bottom: 0.5rem;
-    }
-    .highlight-box {
-      background: #eae1d6;
-      padding: 1.2rem 2rem;
-      border-radius: 60px;
-      display: inline-block;
-      margin: 0.5rem 0 0.2rem;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
       font-weight: 500;
     }
 
-    /* ---- footer (reuse) ---- */
-    .footer {
-      margin-top: 4rem;
-      padding: 2.5rem 0 2rem;
-      border-top: 1px solid #ddd1c2;
+    p {
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+      color: #2d332e;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ----- HEADER (minimal, clean) ----- */
+    .site-header {
+      padding: 1.8rem 0 1.2rem;
+      border-bottom: 1px solid var(--border-light);
+      background: #fffcf8;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span {
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 450;
+      letter-spacing: 0.3px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      border-bottom: none;
+      color: var(--text-dark);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      border-bottom: 1px solid var(--primary);
+    }
+
+    /* ----- HERO (privacy page adaptation) ----- */
+    .hero {
+      padding: 3rem 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      flex: 2;
+      min-width: 280px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
+    }
+
+    .hero-image {
+      flex: 1.2;
+      min-width: 220px;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ----- PRIVACY CONTENT (card + sections) ----- */
+    .privacy-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      padding: 2.5rem 3rem;
+      margin: 2rem 0 3rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid #f0ece4;
+    }
+
+    .privacy-card h2 {
+      border-left-color: var(--primary-light);
+      margin-top: 2rem;
+    }
+
+    .privacy-card h2:first-of-type {
+      margin-top: 0.5rem;
+    }
+
+    .privacy-card ul, .privacy-card ol {
+      margin: 0.8rem 0 1.8rem 2rem;
+      color: #2d332e;
+    }
+
+    .privacy-card li {
+      margin-bottom: 0.5rem;
+      font-size: 1.02rem;
+    }
+
+    .privacy-card .highlight-box {
+      background: #f4f1ea;
+      padding: 1.2rem 1.8rem;
+      border-radius: 16px;
+      border-left: 6px solid var(--accent);
+      margin: 1.8rem 0;
+    }
+
+    .privacy-card .highlight-box i {
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+
+    .update-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--text-dark);
+      font-size: 0.8rem;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      letter-spacing: 0.3px;
+      margin-top: 0.2rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-weight: 500;
+    }
+
+    .back-link i {
+      margin-right: 0.4rem;
+    }
+
+    /* ----- FOOTER ----- */
+    .site-footer {
+      border-top: 1px solid var(--border-light);
+      padding: 2.8rem 0 2rem;
+      margin-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 1.5rem;
     }
-    .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
 
-    /* utilities */
-    .inline-tag { background: #e8ddd0; padding: 0.1rem 1rem; border-radius: 30px; }
-    .mt-1 { margin-top: 1rem; }
-    .mb-1 { margin-bottom: 1rem; }
-    .flex { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-    hr { border: none; border-top: 1px solid #e3d6c7; margin: 1rem 0; }
+    .footer-links a {
+      margin-right: 1.8rem;
+      border-bottom: none;
+    }
 
-    /* small responsive */
-    @media (max-width: 640px) {
-      .privacy-hero { padding: 1.8rem; }
-      .privacy-hero h1 { font-size: 2.4rem; }
-      .privacy-card { padding: 1.5rem; }
+    /* responsive */
+    @media (max-width: 700px) {
+      h1 { font-size: 2.4rem; }
+      .header-inner { flex-direction: column; gap: 0.8rem; }
+      .nav-links { flex-wrap: wrap; gap: 1.2rem; }
+      .hero { flex-direction: column; }
+      .privacy-card { padding: 1.8rem; }
     }
   </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- navigation (exactly as main/contact) -->
-  <header class="top-nav">
-    <a href="#" class="logo">Emberstone<span>·Meal Journal</span></a>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">Zelvora Plant <span>✦</span> Mosaic</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="terms.html">Terms Of Privacy</a></li>
-      <li><a href="privacy.html" style="color:#b45f3a; border-bottom:1px solid #b45f3a;">Privacy Policy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="cookies.html">Cookies Policy</a></li>
-      <span class="search-icon">🔍</span>
     </ul>
-  </header>
+  </div>
+</header>
 
-  <!-- privacy hero -->
-  <section class="privacy-hero">
+<!-- HERO (privacy page) -->
+<section class="container hero">
+  <div class="hero-content">
     <h1>Privacy Policy</h1>
-    <p>Your data, your kitchen. We believe in transparency, minimal collection, and zero clutter. Here’s how we handle information at Emberstone.</p>
-    <div style="display:flex; flex-wrap:wrap; gap:0.7rem 1.2rem; margin-top:1rem;">
-      <span class="inline-tag">🔒 updated May 2026</span>
-      <span class="inline-tag">📬 privacy@emberstone.me</span>
-      <span class="inline-tag">📍 Brooklyn · NY</span>
-    </div>
-  </section>
-
-  <!-- privacy content (cards) -->
-  <div class="privacy-card">
-    <h2>Information we collect</h2>
-    <p>We collect minimal data to improve your experience and to communicate with you. This includes:</p>
-    <ul>
-      <li><strong>Contact form submissions</strong> — name, email address, and message content (only when you voluntarily reach out).</li>
-      <li><strong>Newsletter signups</strong> — email address and preferred topics (if you opt in).</li>
-      <li><strong>Analytics</strong> — anonymized usage data (page visits, referral sources) via privacy‑first tools; no personal identifiers.</li>
-      <li><strong>Cookies</strong> — we use only essential cookies for functionality and a small number of performance cookies. See our <a href="cookies.html">Cookies Policy</a>.</li>
-    </ul>
-    <div class="highlight-box">📦 We never sell, rent, or trade your data.</div>
-  </div>
-
-  <div class="privacy-card">
-    <h2>How we use your information</h2>
-    <ul>
-      <li>To respond to your inquiries and provide customer support.</li>
-      <li>To send you occasional updates, recipes, or journal posts if you’ve subscribed.</li>
-      <li>To improve our website and content based on aggregate trends.</li>
-      <li>To comply with legal obligations (e.g., GDPR, CCPA).</li>
-    </ul>
-    <p style="margin-top:0.6rem;"><strong>Data retention:</strong> We keep your data only as long as necessary. You can request deletion anytime at <a href="mailto:privacy@emberstone.me">privacy@emberstone.me</a>.</p>
-  </div>
-
-  <div class="privacy-card">
-    <h2>Data sharing &amp; third parties</h2>
-    <p>We share data only with trusted processors that help us operate:</p>
-    <ul>
-      <li><strong>Email delivery</strong> (via a secure platform) for newsletters and replies.</li>
-      <li><strong>Hosting provider</strong> — server logs are retained for security, but are not analyzed for personal tracking.</li>
-      <li><strong>Analytics</strong> — we use a self‑hosted, cookieless analytics tool that does not fingerprint users.</li>
-    </ul>
-    <p>We do not share your data with advertisers, social media platforms, or data brokers.</p>
-  </div>
-
-  <div class="privacy-card">
-    <h2>Your rights</h2>
-    <p>Depending on your location, you may have the right to:</p>
-    <ul>
-      <li>Access, correct, or delete your personal data.</li>
-      <li>Withdraw consent at any time (e.g., unsubscribe from emails).</li>
-      <li>Object to processing or request data portability.</li>
-    </ul>
-    <p>To exercise these rights, email <a href="mailto:privacy@emberstone.me">privacy@emberstone.me</a> or use the <a href="contact.html">contact form</a>. We’ll respond within 30 days.</p>
-  </div>
-
-  <div class="privacy-card" style="background:#eae1d6;">
-    <h2>Security &amp; integrity</h2>
-    <p>We take reasonable measures to protect your data:</p>
-    <ul>
-      <li>All connections are encrypted via HTTPS.</li>
-      <li>Access to stored data is restricted to essential personnel.</li>
-      <li>We regularly review our security practices.</li>
-    </ul>
-    <p><span class="inline-tag">🔐</span> If you have a security concern, please reach out immediately.</p>
-  </div>
-
-  <!-- subtle newsletter (optional, same as contact) -->
-  <div style="background:#dfd3c4; border-radius:40px; padding:1.8rem 2.5rem; margin:2.8rem 0 1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
-    <div>
-      <h3 style="font-family:'IBM Plex Serif', serif; margin:0; font-weight:500;">The Emberstone letter</h3>
-      <span class="small-meta">weekly techniques &amp; essays</span>
-    </div>
-    <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-top:0.5rem;">
-      <input type="email" placeholder="your email" value="hello@journal" style="background:transparent; border:none; border-bottom:2px solid #7e6d59; padding:0.6rem 0.8rem; font-size:1rem; min-width:200px; font-family:'Inter', sans-serif;" />
-      <button style="background:#2c241b; color:#f3ece3; border:none; padding:0.7rem 2rem; border-radius:60px; font-weight:600; font-size:0.9rem; cursor:default;">subscribe</button>
+    <p>Your data, like a well-tended garden, is handled with care, transparency, and respect.</p>
+    <div style="margin-top: 1rem; display: flex; gap: 1.2rem; flex-wrap: wrap;">
+      <span class="update-badge"><i class="far fa-calendar-alt"></i> Last updated: June 2026</span>
+      <span class="update-badge"><i class="fas fa-shield-alt"></i> GDPR & CCPA compliant</span>
     </div>
   </div>
+  <div class="hero-image">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%233a5e4c'/%3E%3Ccircle cx='180' cy='140' r='48' fill='%23b68b6b' opacity='0.7'/%3E%3Ccircle cx='420' cy='200' r='70' fill='%23dac2ab' opacity='0.6'/%3E%3Ccircle cx='300' cy='280' r='90' fill='%235a7e6a' opacity='0.5'/%3E%3Cpath d='M120 320 L480 320 L450 360 L150 360 Z' fill='%23b68b6b' opacity='0.4'/%3E%3C/svg%3E"
+         alt="Privacy policy abstract garden mosaic">
+  </div>
+</section>
 
-  <!-- Footer (exactly as contact) -->
-  <footer class="footer">
-    <div class="footer-col"><strong>Emberstone Meal Journal</strong><span class="small-meta">est. 2026 · kitchen chronicles</span></div>
-    <div class="footer-col"><a href="#">about</a><a href="#">archive</a><a href="contact.html">contact</a></div>
-    <div class="footer-col"><span class="small-meta">© 2026 · all articles original</span></div>
-  </footer>
+<!-- MAIN PRIVACY CONTENT -->
+<div class="container">
 
-  <div style="text-align:center; margin: 1rem 0 0; opacity:0.4; font-size:0.7rem;">✦</div>
+  <div class="privacy-card">
+    <h2><i class="fas fa-seedling" style="color: var(--accent); margin-right: 0.6rem;"></i> Our commitment</h2>
+    <p>At Zelvora Plant Mosaic, we believe that your personal information is as precious as the biodiversity we nurture. This policy explains what data we collect, why we collect it, and how we protect it. We are committed to being transparent and giving you control over your information.</p>
+
+    <div class="highlight-box">
+      <i class="fas fa-hand-holding-heart"></i> <strong>Our promise:</strong> We never sell your data to third parties. We use your information only to improve your experience and to connect you with the plant world.
+    </div>
+
+    <h2><i class="fas fa-database" style="color: var(--accent); margin-right: 0.6rem;"></i> What we collect</h2>
+    <p>We collect information that you voluntarily provide to us, as well as anonymous usage data to help us improve our website and services.</p>
+    <ul>
+      <li><strong>Personal identification:</strong> name, email address, phone number, and any details you share via our contact forms, newsletter sign-up, or workshop registrations.</li>
+      <li><strong>Usage data:</strong> anonymized information about how you interact with our site (pages visited, time spent, clicks) through cookies and similar technologies. We use this to understand what our community finds most valuable.</li>
+      <li><strong>Communication preferences:</strong> your choices regarding newsletters, event notifications, and other updates.</li>
+    </ul>
+
+    <h2><i class="fas fa-cog" style="color: var(--accent); margin-right: 0.6rem;"></i> How we use your data</h2>
+    <p>We use your data to cultivate a better experience for you and our community. Specifically, we use it to:</p>
+    <ul>
+      <li>Respond to your inquiries and provide the information or support you request.</li>
+      <li>Send you relevant updates, educational content, and event invitations (you can opt out at any time).</li>
+      <li>Improve our website, content, and services by analyzing usage patterns.</li>
+      <li>Administer workshops, competitions, or promotions you participate in.</li>
+    </ul>
+
+    <h2><i class="fas fa-cookie-bite" style="color: var(--accent); margin-right: 0.6rem;"></i> Cookies & tracking</h2>
+    <p>We use minimal cookies — just enough to remember your preferences and to gather anonymous analytics. You can manage your cookie settings at any time via our <a href="cookies.html">Cookies Policy</a> page. We do not use intrusive third-party tracking.</p>
+
+    <h2><i class="fas fa-shield" style="color: var(--accent); margin-right: 0.6rem;"></i> Data security</h2>
+    <p>We implement appropriate technical and organizational measures to protect your data against unauthorized access, loss, or alteration. Our website uses secure protocols (HTTPS) and we regularly review our security practices.</p>
+
+    <h2><i class="fas fa-user-check" style="color: var(--accent); margin-right: 0.6rem;"></i> Your rights</h2>
+    <p>You have the right to access, correct, or delete your personal data at any time. You can also withdraw your consent for marketing communications. To exercise these rights, simply <a href="contact.html">contact us</a> — we're here to help.</p>
+    <ul>
+      <li><strong>Access:</strong> request a copy of the data we hold about you.</li>
+      <li><strong>Rectification:</strong> update or correct any inaccurate information.</li>
+      <li><strong>Erasure:</strong> ask us to delete your personal data (subject to legal obligations).</li>
+      <li><strong>Object:</strong> opt out of processing for direct marketing purposes.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <i class="fas fa-tree"></i> <strong>Data retention:</strong> We keep your data only as long as necessary to fulfill the purposes outlined in this policy, or as required by law. When no longer needed, we securely delete or anonymize it.
+    </div>
+
+    <h2><i class="fas fa-globe" style="color: var(--accent); margin-right: 0.6rem;"></i> Third-party links</h2>
+    <p>Our website may contain links to other sites (e.g., partner organizations, resources). This privacy policy applies only to Zelvora Plant Mosaic. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+    <h2><i class="fas fa-gavel" style="color: var(--accent); margin-right: 0.6rem;"></i> Changes to this policy</h2>
+    <p>We may update this privacy policy from time to time to reflect changes in our practices or for legal reasons. We will always post the updated version on this page, with a revised "last updated" date. We encourage you to review it periodically.</p>
+
+    <p style="margin-top: 2rem;"><strong>Questions or concerns?</strong> We're all ears. Reach out to our data protection lead via our <a href="contact.html">contact page</a> or email us directly at <a href="mailto:privacy@zelvora.com">privacy@zelvora.com</a>.</p>
+
+    <a href="contact.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Contact</a>
+  </div>
+
+  <!-- subtle footer note -->
+  <div style="text-align: center; padding: 1rem 0; color: var(--text-muted); border-top: 1px solid var(--border-light); margin-top: 1rem;">
+    <i class="fas fa-leaf" style="color: var(--accent);"></i> Cultivated with care • transparency • respect
+  </div>
+
 </div>
+
+<!-- FOOTER -->
+<footer class="container site-footer">
+  <div>© 2026 Zelvora Plant Mosaic · rooted in transparency</div>
+  <div class="footer-links">
+    <a href="#">Journal</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="#">RSS</a>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -3,191 +3,340 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service · Emberstone Meal Journal</title>
-  <!-- unique typography: IBM Plex Serif + Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <title>Terms of Service · Zelvora Plant Mosaic</title>
+  <!-- Font Awesome (subtle accents) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    /* ---- reset & base ---- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ----- RESET & VARIABLES (same as main/about) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: #f9f5ef;
-      color: #1e1e1e;
-      font-family: 'Inter', sans-serif;
+      background: #f7f4ed;
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      color: #2a2b26;
       line-height: 1.7;
-      padding: 0 1.2rem;
     }
-    .container {
-      max-width: 1260px;
-      margin: 0 auto;
-      padding: 1.5rem 0 3rem;
-    }
-    h1, h2, h3, h4, .hero-title, .card-title, .section-label {
-      font-family: 'IBM Plex Serif', serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    h1 { font-size: 3.2rem; font-weight: 700; }
-    h2 { font-size: 2.4rem; margin: 2.5rem 0 1.2rem; font-weight: 600; border-bottom: 2px solid #dfd4c4; padding-bottom: 0.5rem; }
-    h3 { font-size: 1.6rem; font-weight: 600; margin: 2rem 0 0.8rem; color: #2d2a24; }
-    p { margin-bottom: 1.2rem; font-weight: 400; color: #2a2722; }
-    .small-meta { font-size: 0.85rem; letter-spacing: 0.02em; color: #6b6258; font-weight: 500; }
-    a { color: #1e1e1e; text-decoration: none; border-bottom: 1px solid #d6cbbc; transition: 0.2s; }
-    a:hover { color: #b45f3a; border-bottom-color: #b45f3a; }
 
-    /* ---- header / navigation ---- */
-    .top-nav {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.2rem 0 1rem;
-      border-bottom: 1px solid #e3d8cb;
-      flex-wrap: wrap;
+    :root {
+      --primary: #3a5e4c;
+      --primary-light: #5a7e6a;
+      --accent: #b68b6b;
+      --accent-light: #dac2ab;
+      --bg-soft: #f7f4ed;
+      --card-bg: #ffffff;
+      --text-dark: #1e2a24;
+      --text-muted: #4f5c54;
+      --border-light: #e2ddd4;
+      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02);
+      --shadow-card: 0 12px 28px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+      --radius-card: 20px;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
     }
-    .logo {
-      font-family: 'IBM Plex Serif', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #2c241b;
-      border-bottom: none;
-    }
-    .logo span { color: #b45f3a; font-weight: 400; }
-    .nav-links {
-      display: flex; gap: 2.2rem; font-weight: 500; font-size: 0.95rem;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-    .nav-links a { border-bottom: none; color: #3d352b; }
-    .nav-links a:hover { color: #b45f3a; }
-    .search-icon { opacity: 0.6; font-size: 1.2rem; }
 
-    /* ---- terms content card ---- */
-    .terms-card {
-      background: #fcf8f3;
-      border-radius: 32px;
-      padding: 2.8rem 3.2rem;
-      margin: 2.5rem 0 3rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-      border: 1px solid #ede7df;
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
     }
-    .terms-card h1 {
-      margin-bottom: 0.25rem;
+
+    h1 {
       font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
     }
-    .terms-card .lede {
-      font-size: 1.15rem;
-      color: #4d453a;
-      margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
+      margin-top: 2.8rem;
     }
-    .terms-card ul, .terms-card ol {
-      padding-left: 1.8rem;
-      margin-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      font-weight: 500;
     }
+
+    p {
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+      color: #2d332e;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ----- HEADER (identical) ----- */
+    .site-header {
+      padding: 1.8rem 0 1.2rem;
+      border-bottom: 1px solid var(--border-light);
+      background: #fffcf8;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span {
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 450;
+      letter-spacing: 0.3px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      border-bottom: none;
+      color: var(--text-dark);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      border-bottom: 1px solid var(--primary);
+    }
+
+    /* ----- TERMS SPECIFIC ----- */
+    .terms-hero {
+      padding: 2.5rem 0 0.5rem;
+    }
+
+    .terms-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .terms-hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    .terms-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      padding: 2.5rem 2.8rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid #f0ece4;
+      margin: 2rem 0 3rem;
+    }
+
+    .terms-card h2 {
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
+      margin-top: 2.2rem;
+    }
+
+    .terms-card h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .terms-card p {
+      color: #2d332e;
+    }
+
+    .terms-card ul {
+      margin: 0.8rem 0 1.8rem 1.8rem;
+    }
+
     .terms-card li {
       margin-bottom: 0.5rem;
+      font-size: 1.02rem;
+      color: #2d332e;
     }
-    .terms-card .highlight-box {
-      background: #ede7df;
-      border-radius: 28px;
-      padding: 1.8rem 2rem;
-      margin: 1.8rem 0;
-      border-left: 6px solid #b45f3a;
-    }
-    .terms-card .highlight-box p:last-child { margin-bottom: 0; }
 
-    .footer {
-      margin-top: 4rem;
-      padding: 2.5rem 0 2rem;
-      border-top: 1px solid #ddd1c2;
+    .terms-card li i {
+      color: var(--accent);
+      margin-right: 0.6rem;
+      width: 1.2rem;
+    }
+
+    .highlight-box {
+      background: #f3efe8;
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0 0.5rem;
+      border-left: 6px solid var(--primary);
+    }
+
+    .highlight-box p {
+      margin-bottom: 0.2rem;
+    }
+
+    .small-meta {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--border-light);
+      padding-top: 1.8rem;
+    }
+
+    /* footer */
+    .site-footer {
+      border-top: 1px solid var(--border-light);
+      padding: 2.8rem 0 2rem;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 1.5rem;
     }
-    .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
 
+    .footer-links a {
+      margin-right: 1.8rem;
+      border-bottom: none;
+    }
+
+    /* responsive */
     @media (max-width: 700px) {
+      h1 { font-size: 2.4rem; }
+      .header-inner { flex-direction: column; gap: 0.8rem; }
+      .nav-links { flex-wrap: wrap; gap: 1.2rem; }
       .terms-card { padding: 1.8rem; }
-      .terms-card h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- navigation -->
-  <header class="top-nav">
-    <a href="index.html" class="logo">Emberstone<span>·Meal Journal</span></a>
+<!-- HEADER (active "Terms" – adjust highlight) -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">Zelvora Plant <span>✦</span> Mosaic</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="terms.html" style="color:#b45f3a; font-weight:600;">Terms Of Privacy</a></li>
+      <li><a href="terms.html" style="color: var(--primary); border-bottom: 1px solid var(--primary);">Terms Of Privacy</a></li>
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="cookies.html">Cookies Policy</a></li>
-      <span class="search-icon">🔍</span>
     </ul>
-  </header>
+  </div>
+</header>
 
-  <!-- terms content -->
-  <section class="terms-card">
-    <h1>Terms of Service</h1>
-    <p class="lede"><strong>Last updated:</strong> 30 June 2026 · Emberstone Meal Journal</p>
+<!-- TERMS HERO -->
+<section class="container terms-hero">
+  <h1>Terms of Service</h1>
+  <p><i class="fas fa-seedling" style="color: var(--accent); margin-right: 0.5rem;"></i> Last updated: June 30, 2026 — this agreement governs your use of the Zelvora Plant Mosaic website and community.</p>
+</section>
 
-    <p>Welcome to Emberstone Meal Journal. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+<!-- MAIN TERMS CONTENT (card) -->
+<div class="container">
+  <div class="terms-card">
 
-    <h2>1. Acceptance of terms</h2>
-    <p>By using this website, you agree to these Terms of Service, our Privacy Policy, and our Cookies Policy. If you do not agree, please discontinue use immediately.</p>
+    <h2><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.6rem;"></i> Acceptance of Terms</h2>
+    <p>By accessing or using the Zelvora Plant Mosaic website (“we”, “us”, “our”), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any part of these terms, you must not use our site or services. We reserve the right to update these terms at any time; your continued use constitutes acceptance of the changes.</p>
 
+    <h2><i class="fas fa-leaf" style="color: var(--accent); margin-right: 0.6rem;"></i> Use of Content</h2>
+    <p>All content on this site — including articles, images, graphics, logos, and guides — is the property of Zelvora Plant Mosaic or its content suppliers and is protected by copyright and intellectual property laws. You may:</p>
+    <ul>
+      <li><i class="fas fa-check"></i> Access and read content for personal, non-commercial use.</li>
+      <li><i class="fas fa-check"></i> Share links to our content with proper attribution.</li>
+      <li><i class="fas fa-check"></i> Print or save a single copy for personal reference.</li>
+    </ul>
+    <p>You may <strong>not</strong> republish, distribute, or exploit any content for commercial purposes without our explicit written consent. For permissions, please <a href="contact.html">contact us</a>.</p>
+
+    <h2><i class="fas fa-users" style="color: var(--accent); margin-right: 0.6rem;"></i> User Accounts & Community</h2>
+    <p>Some areas of our site may allow you to create an account, post comments, or participate in forums. When you do so, you agree to:</p>
+    <ul>
+      <li><i class="fas fa-check"></i> Provide accurate and current information.</li>
+      <li><i class="fas fa-check"></i> Maintain the security of your password and account.</li>
+      <li><i class="fas fa-check"></i> Not use the community to harass, abuse, or impersonate others.</li>
+      <li><i class="fas fa-check"></i> Not post spam, malware, or offensive material.</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate accounts that violate these guidelines or our values of respectful, inclusive gardening discussion.</p>
+
+    <h2><i class="fas fa-seedling" style="color: var(--accent); margin-right: 0.6rem;"></i> Gardening Advice & Disclaimer</h2>
+    <p>All information, guides, and recommendations provided on Zelvora Plant Mosaic are for educational and informational purposes only. Gardening involves variables such as climate, soil, and plant health that are beyond our control. We make no guarantees about the success of any specific technique or product. Always consult with a local horticulture expert or agricultural extension service for advice tailored to your region.</p>
     <div class="highlight-box">
-      <strong>✦ quick summary</strong>
-      <p>We provide culinary content for personal, non‑commercial use. You are welcome to share our articles with attribution, but may not republish or sell them without permission.</p>
+      <p><i class="fas fa-exclamation-triangle" style="color: var(--accent); margin-right: 0.8rem;"></i> <strong>No liability:</strong> To the fullest extent permitted by law, we are not liable for any damages arising from the use of our content, including but not limited to crop loss, property damage, or personal injury.</p>
     </div>
 
-    <h2>2. Intellectual property</h2>
-    <p>All content — including recipes, articles, photographs, illustrations, and design — is the property of Emberstone Meal Journal or our contributors, and is protected by copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works without explicit written consent, except for brief excerpts for non‑commercial review or discussion.</p>
+    <h2><i class="fas fa-handshake" style="color: var(--accent); margin-right: 0.6rem;"></i> Third-Party Links & Affiliates</h2>
+    <p>Our site may contain links to external websites, seed suppliers, or affiliate partners. We do not endorse or assume responsibility for the content, privacy practices, or products of any third-party sites. Your interactions with these sites are governed by their own terms and policies.</p>
 
-    <h2>3. User contributions</h2>
-    <p>We welcome comments and feedback. By submitting content (e.g., comments, suggestions, or guest recipes), you grant Emberstone a perpetual, royalty‑free license to publish, edit, and moderate such contributions, with attribution where possible. We reserve the right to remove any content that is unlawful, offensive, or inappropriate.</p>
+    <h2><i class="fas fa-gavel" style="color: var(--accent); margin-right: 0.6rem;"></i> Governing Law</h2>
+    <p>These Terms are governed by the laws of the state of [Your State/Country], without regard to its conflict of law provisions. Any dispute arising from or relating to these Terms or your use of the site shall be resolved exclusively in the courts of [Your County/Region].</p>
 
-    <h2>4. Accuracy &amp; liability</h2>
-    <p>We strive to ensure all information is accurate and up‑to‑date. However, cooking times, temperatures, and ingredient substitutions can vary. We are not liable for any results from following our recipes or advice. Always use your judgment and consider dietary restrictions and allergies.</p>
+    <h2><i class="fas fa-envelope" style="color: var(--accent); margin-right: 0.6rem;"></i> Contact & Questions</h2>
+    <p>If you have any questions about these Terms, please reach out to us via our <a href="contact.html">Contact page</a> or email us at <a href="mailto:legal@zelvora.com">legal@zelvora.com</a>. We aim to respond within 3 business days.</p>
 
-    <h2>5. Third‑party links</h2>
-    <p>Our site may contain links to external websites. We do not endorse or assume responsibility for the content or practices of these third‑party sites. Please review their policies before engaging with them.</p>
-
-    <h2>6. Changes to terms</h2>
-    <p>We may update these terms periodically. The date at the top indicates the latest revision. Continued use of the site constitutes acceptance of any changes.</p>
-
-    <h2>7. Governing law</h2>
-    <p>These terms are governed by and construed in accordance with the laws of the state of California, without regard to conflict of law principles.</p>
-
-    <div class="highlight-box" style="border-left-color:#2c241b; background:#f3ece3;">
-      <p style="margin-bottom:0;"><strong>Contact us</strong> if you have any questions about these terms: <a href="contact.html">hello@emberstone.journal</a></p>
+    <div class="small-meta">
+      <i class="far fa-calendar-alt" style="margin-right: 0.5rem;"></i> Version 2.1 – effective June 30, 2026
     </div>
-  </section>
 
-  <!-- newsletter (same as homepage) -->
-  <div class="newsletter" style="background:#dfd3c4; border-radius:40px; padding:2.8rem 3rem; margin:3rem 0 2rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
-    <div>
-      <h3 style="font-family:'IBM Plex Serif'; font-weight:500; margin:0;">The Emberstone letter</h3>
-      <p style="margin:0; font-size:0.95rem;">weekly techniques &amp; essays</p>
-    </div>
-    <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
-      <input type="email" placeholder="your email" value="hello@journal" style="background:transparent; border:none; border-bottom:2px solid #7e6d59; padding:0.6rem 0.8rem; font-size:1rem; min-width:200px; font-family:'Inter',sans-serif;" />
-      <button style="background:#2c241b; color:#f3ece3; border:none; padding:0.7rem 2rem; border-radius:60px; font-weight:600; font-size:0.9rem; cursor:default;">subscribe</button>
-    </div>
+  </div> <!-- /terms-card -->
+
+  <!-- optional consistent newsletter block (like about) -->
+  <div class="newsletter" style="background: #eae7df; border-radius: 40px; padding: 3rem 2.5rem; margin: 2.5rem 0; text-align: center;">
+    <h2 style="border-left: none; margin-top: 0;">🌱 The weekly mosaic</h2>
+    <p style="max-width: 600px; margin: 0 auto 1.5rem;">Seasonal insights, cultivar spotlights, and soil science — free in your inbox.</p>
+    <input type="email" placeholder="gardener@example.com" aria-label="email" style="padding: 0.8rem 1.2rem; border-radius: 40px; border: 1px solid #ccc; min-width: 260px; font-size: 1rem; background: white;" />
+    <button style="background: var(--primary); color: white; border: none; padding: 0.8rem 2.2rem; border-radius: 40px; font-size: 1rem; font-weight: 500; margin-left: 0.5rem; cursor: pointer; transition: 0.15s;">Subscribe</button>
   </div>
 
-  <!-- footer -->
-  <footer class="footer">
-    <div class="footer-col"><strong>Emberstone Meal Journal</strong><span class="small-meta">est. 2026 · kitchen chronicles</span></div>
-    <div class="footer-col"><a href="about.html">about</a><a href="#">archive</a><a href="contact.html">contact</a></div>
-    <div class="footer-col"><span class="small-meta">© 2026 · all articles original</span></div>
-  </footer>
+  <!-- resource hub (same as about) -->
+  <h2>📚 Connect with our work</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-leaf"></i> Journal</span>
+    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-seedling"></i> Guides</span>
+    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-hand-sparkles"></i> Workshops</span>
+    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-envelope"></i> Newsletter</span>
+  </div>
 
-  <div style="text-align:center; margin: 1rem 0 0; opacity:0.4; font-size:0.7rem;">✦</div>
-</div>
+</div> <!-- /container -->
+
+<!-- FOOTER (identical) -->
+<footer class="container site-footer">
+  <div>© 2026 Zelvora Plant Mosaic · crafted with soil & spirit</div>
+  <div class="footer-links">
+    <a href="#">Journal</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="#">RSS</a>
+  </div>
+</footer>
+
 </body>
 </html>
