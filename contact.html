@@ -3,513 +3,346 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact · Eastwind Kitchen Press</title>
-  <!-- fonts & reset -->
+  <title>Contact · Elderberry Oven Tales</title>
+  <!-- EB Garamond + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&family=EB+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
-    /* ===== RESET & BASE (same as main) ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* ----- reset & base (same as main) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #faf7f2;
-      color: #1e1b18;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
+      background: #fbf7f0;
+      color: #1e1c1a;
+      font-family: 'Inter', sans-serif;
       font-weight: 400;
-      padding: 0 1rem;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
+      line-height: 1.7;
       padding: 0 1.5rem;
     }
-
-    a {
-      color: #1e1b18;
-      text-decoration: none;
-      transition: color 0.15s ease;
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.8rem 0 3rem;
     }
-    a:hover {
-      color: #b45f3b;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 6px;
-    }
-
     h1, h2, h3, h4 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-    }
-    h2 {
-      font-size: 2rem;
-      margin: 2.8rem 0 1.2rem;
-    }
-    h3 {
-      font-size: 1.4rem;
-      margin: 2rem 0 0.8rem;
-    }
-
-    p {
-      margin-bottom: 1.4rem;
-    }
-
-    /* ===== UNIQUE TYPOGRAPHY ===== */
-    .serif-italic {
       font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-    }
-
-    .small-caps {
-      font-variant: small-caps;
-      letter-spacing: 0.04em;
       font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    a { color: #3f2e1e; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #7a4f2b; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 0.5rem; }
+
+    :root {
+      --elder: #3d2b1f;
+      --clay: #b27a5a;
+      --cream: #f2e7da;
+      --light-bg: #faf3ea;
+      --accent: #8f5e3c;
+      --border-soft: #ded1c2;
+      --card-bg: #ffffff;
+      --shadow: 0 12px 30px -12px rgba(60, 40, 25, 0.10);
     }
 
-    hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(90deg, #d9cdc0, #c0a48a, #d9cdc0);
-      margin: 3rem 0;
-    }
-
-    /* ===== HEADER / NAV ===== */
-    .top-bar {
-      padding: 1.5rem 0 0.8rem;
-      border-bottom: 1px solid #e3d7cc;
+    /* ----- header (mirror) ----- */
+    .site-header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2.5rem;
+      padding: 1.2rem 0 0.8rem;
+      border-bottom: 2px solid var(--border-soft);
+      margin-bottom: 2.8rem;
     }
-
     .logo {
-      font-size: 1.6rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: -0.03em;
+      color: var(--elder);
+      letter-spacing: -0.02em;
     }
-    .logo span {
-      color: #b45f3b;
-      font-weight: 300;
-    }
-
+    .logo span { color: var(--clay); font-weight: 400; }
     .nav-links {
       display: flex;
       gap: 2.2rem;
       font-size: 0.95rem;
       font-weight: 500;
-      list-style: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
-    .nav-links a {
-      padding: 0.4rem 0;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-links a:hover {
-      border-bottom-color: #b45f3b;
-      color: #1e1b18;
-    }
+    .nav-links a { color: #2b201a; }
+    .nav-links a:hover { color: var(--accent); }
 
-    /* ===== CONTACT HERO ===== */
+    /* ----- contact hero (smaller, content-first) ----- */
     .contact-hero {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
-      align-items: center;
-      margin: 1rem 0 3rem;
+      background: var(--cream);
+      padding: 2.2rem 3rem;
+      border-radius: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow);
     }
-
     .contact-hero h1 {
-      font-size: 3.2rem;
-      font-weight: 650;
-      margin-bottom: 1rem;
-      line-height: 1.1;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--elder);
     }
     .contact-hero .subhead {
       font-size: 1.2rem;
-      color: #3f352e;
-      max-width: 90%;
-      margin-bottom: 1.8rem;
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      color: #5f4635;
+      border-left: 4px solid var(--clay);
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 0.2rem;
     }
 
-    .contact-hero img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 18px;
-      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.12);
-    }
-
-    /* ===== CONTACT GRID ===== */
+    /* ----- two-column contact layout ----- */
     .contact-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.8rem;
       margin: 2.5rem 0 3rem;
     }
+    @media (max-width: 760px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
 
-    .contact-form {
+    .contact-card {
       background: white;
-      padding: 2.2rem 2.5rem;
-      border-radius: 32px;
-      border: 1px solid #ece2d9;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      padding: 2rem 2.2rem;
+      border-radius: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .contact-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid var(--border-soft);
+      padding-bottom: 0.4rem;
     }
 
+    /* form */
     .contact-form label {
-      font-weight: 600;
-      font-size: 0.9rem;
       display: block;
-      margin-bottom: 0.2rem;
       margin-top: 1.2rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--elder);
     }
-    .contact-form label:first-of-type {
-      margin-top: 0;
-    }
-
     .contact-form input,
     .contact-form textarea {
       width: 100%;
-      padding: 0.9rem 1.2rem;
-      border: 1px solid #ddd0c2;
-      border-radius: 40px;
-      background: #faf7f2;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border-soft);
+      border-radius: 2rem;
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      transition: border 0.15s;
+      font-size: 1rem;
+      background: #fcf8f3;
+      margin-top: 0.2rem;
     }
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: #b45f3b;
-      background: white;
-    }
-    .contact-form textarea {
-      border-radius: 24px;
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    .contact-form .submit-btn {
-      background: #b45f3b;
+    .contact-form textarea { min-height: 120px; border-radius: 1.5rem; }
+    .contact-form button {
+      background: var(--elder);
+      color: white;
       border: none;
-      padding: 0.9rem 2.4rem;
+      padding: 0.7rem 2.5rem;
       border-radius: 60px;
       font-weight: 600;
-      color: white;
       font-size: 1rem;
+      margin-top: 1.8rem;
       cursor: pointer;
       transition: background 0.2s;
-      margin-top: 1.8rem;
-      width: 100%;
     }
-    .contact-form .submit-btn:hover {
-      background: #9f4f30;
+    .contact-form button:hover { background: #5a3f2d; }
+
+    /* info list */
+    .info-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .info-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #eee7de;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-icon {
+      font-size: 1.4rem;
+      width: 2rem;
+      text-align: center;
     }
 
-    .contact-info {
-      background: #f3ede7;
-      padding: 2rem 2.2rem;
-      border-radius: 32px;
-      align-self: start;
-    }
-    .contact-info h3 {
-      margin-top: 0;
-      font-size: 1.6rem;
-    }
-    .contact-info .info-item {
-      margin: 1.8rem 0;
-    }
-    .contact-info .info-item strong {
-      display: block;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-      color: #5e4b3c;
-    }
-    .contact-info .info-item span {
-      font-size: 1.05rem;
-    }
-    .contact-info .social-links {
+    .social-links {
       display: flex;
-      gap: 1.2rem;
-      margin-top: 1.5rem;
+      gap: 1.5rem;
+      margin: 1.8rem 0 0.5rem;
       flex-wrap: wrap;
     }
-    .contact-info .social-links a {
-      background: white;
+    .social-links a {
+      background: #f2e7da;
       padding: 0.3rem 1.2rem;
-      border-radius: 60px;
+      border-radius: 40px;
       font-weight: 500;
       font-size: 0.9rem;
-      border: 1px solid #d9cdc0;
-      transition: all 0.15s;
-    }
-    .contact-info .social-links a:hover {
-      background: #b45f3b;
-      color: white;
-      border-color: #b45f3b;
+      border: 1px solid var(--border-soft);
     }
 
-    /* ===== FAQ / ADDITIONAL ===== */
-    .faq-item {
-      padding: 1.2rem 0;
-      border-bottom: 1px solid #ddd0c2;
+    /* map placeholder (unique) */
+    .map-placeholder {
+      background: #dccfc2;
+      border-radius: 2rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      margin: 2rem 0 0;
+      color: var(--elder);
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2rem;
     }
-    .faq-item h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
+    .map-placeholder svg { width: 100%; max-height: 200px; border-radius: 1.2rem; }
 
-    /* ===== NEWSLETTER ===== */
-    .newsletter {
-      background: #1e1b18;
-      color: #f0ebe5;
-      padding: 3rem 2.5rem;
-      border-radius: 40px;
-      margin: 3.5rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+    /* FAQ – compact */
+    .faq-compact {
+      margin: 2.8rem 0 1rem;
     }
-    .newsletter h3 {
-      font-size: 1.8rem;
-      margin: 0;
-      color: #f0ebe5;
+    .faq-compact details {
+      background: white;
+      padding: 1rem 1.8rem;
+      border-radius: 2rem;
+      margin-bottom: 0.8rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-soft);
     }
-    .newsletter p {
-      margin: 0.2rem 0 0;
-      opacity: 0.8;
-      max-width: 400px;
-    }
-    .newsletter form {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-    .newsletter input {
-      padding: 0.9rem 1.4rem;
-      border-radius: 60px;
-      border: none;
-      background: #2f2a25;
-      color: #f0ebe5;
-      min-width: 220px;
-      font-size: 0.95rem;
-    }
-    .newsletter input::placeholder {
-      color: #a59586;
-    }
-    .newsletter button {
-      background: #b45f3b;
-      border: none;
-      padding: 0 2rem;
-      border-radius: 60px;
+    .faq-compact summary {
       font-weight: 600;
-      color: white;
-      font-size: 0.95rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2rem;
       cursor: pointer;
-      transition: background 0.2s;
+      color: var(--elder);
     }
-    .newsletter button:hover {
-      background: #9f4f30;
-    }
+    .faq-compact p { margin-top: 0.6rem; color: #2f261f; }
 
-    /* ===== FOOTER ===== */
+    /* footer */
     .footer {
-      border-top: 1px solid #ddd0c2;
-      padding: 2.5rem 0 1.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--border-soft);
+      font-size: 0.9rem;
+      color: #3d322a;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 2rem;
-      color: #3f352e;
-    }
-    .footer-links {
-      display: flex;
-      gap: 2.5rem;
-      font-weight: 450;
-    }
-    .footer small {
-      opacity: 0.7;
     }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 860px) {
-      .contact-hero {
-        grid-template-columns: 1fr;
-      }
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-      .top-bar {
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 1.2rem;
-      }
-      h1 { font-size: 2.4rem; }
-      .contact-hero h1 { font-size: 2.5rem; }
+    @media (max-width: 700px) {
+      body { padding: 0 1rem; }
+      .contact-hero { padding: 1.8rem; }
+      .contact-hero h1 { font-size: 2.2rem; }
+      .nav-links { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
     }
-    @media (max-width: 500px) {
-      .container { padding: 0 0.8rem; }
-      .contact-form { padding: 1.8rem; }
-      .newsletter { flex-direction: column; align-items: start; gap: 1.2rem; }
-    }
-
-    .badge {
-      background: #b45f3b10;
-      color: #b45f3b;
-      font-weight: 600;
-      padding: 0.1rem 1rem;
-      border-radius: 40px;
-      border: 1px solid #b45f3b30;
-      font-size: 0.8rem;
-      display: inline-block;
-    }
-    .mt-2 { margin-top: 2rem; }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- header (same as main) -->
-  <header class="top-bar">
-    <div class="logo">Eastwind <span>Kitchen Press</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" style="border-bottom-color:#b45f3b;">Contact</a></li>
-      <li><a href="terms.html">Terms Of Privacy</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="cookies.html">Cookies Policy</a></li>
-    </ul>
+  <!-- header (exactly as main) -->
+  <header class="site-header">
+    <div class="logo">Elderberry<span>Oven</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" style="color:var(--accent); border-bottom:2px solid var(--accent);">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+    </nav>
   </header>
 
-  <!-- CONTACT HERO -->
+  <!-- contact hero -->
   <section class="contact-hero">
-    <div>
-      <h1>Let’s talk <span class="serif-italic">food & technique</span></h1>
-      <p class="subhead">Have a question about a recipe? Want to collaborate? Or just want to say hello — we’d love to hear from you.</p>
-      <div style="display: flex; gap: 0.6rem 1.2rem; flex-wrap: wrap; border-top: 1px solid #ddd0c2; padding-top: 1.4rem;">
-        <span class="badge">✉️ hello@eastwindkitchen.com</span>
-        <span class="badge">📞 +1 (212) 555‑0199</span>
-      </div>
-    </div>
-    <div>
-      <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=600&h=400&fit=crop&crop=center&auto=format" alt="contact hero - kitchen scene">
-    </div>
+    <h1>Let’s share a loaf</h1>
+    <div class="subhead">we’d love to hear from you — questions, stories, or a baking triumph</div>
+    <p style="margin-top:0.8rem; max-width:600px;">Reach out for collaborations, workshop inquiries, or just to say hello. We reply to every message within 48 hours (unless we’re deep in a sourdough fold).</p>
   </section>
 
-  <!-- CONTACT GRID: FORM + INFO -->
+  <!-- two‑column: form + info -->
   <div class="contact-grid">
-    <!-- form -->
-    <div class="contact-form">
-      <h2 style="margin-top:0; font-size:1.8rem;">Send a message</h2>
-      <p style="color:#5e4b3c;">We’ll get back to you within 24 hours.</p>
-      <form>
-        <label for="name">Full name</label>
-        <input type="text" id="name" placeholder="e.g. Mei Lin" required>
+    <!-- left: form -->
+    <div class="contact-card">
+      <h2>📬 send a message</h2>
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Hazel" required>
 
-        <label for="email">Email address</label>
-        <input type="email" id="email" placeholder="you@example.com" required>
+        <label for="email">E‑mail address</label>
+        <input type="email" id="email" name="email" placeholder="hazel@example.com" required>
 
         <label for="subject">Subject</label>
-        <input type="text" id="subject" placeholder="Recipe question, collaboration, etc.">
+        <input type="text" id="subject" name="subject" placeholder="Workshop inquiry / recipe question…">
 
         <label for="message">Message</label>
-        <textarea id="message" placeholder="Tell us what’s on your mind..."></textarea>
+        <textarea id="message" name="message" placeholder="Tell us about your baking journey, a question, or just share your favourite elderberry memory…" required></textarea>
 
-        <button type="submit" class="submit-btn">Send message →</button>
+        <button type="submit">Send →</button>
       </form>
     </div>
 
-    <!-- info -->
-    <div class="contact-info">
-      <h3>📍 Connect</h3>
-      <div class="info-item">
-        <strong>Email</strong>
-        <span>hello@eastwindkitchen.com</span>
-      </div>
-      <div class="info-item">
-        <strong>Phone</strong>
-        <span>+1 (212) 555‑0199</span>
-      </div>
-      <div class="info-item">
-        <strong>Kitchen studio</strong>
-        <span>42 Spice Street, NYC 10013</span>
-        <span style="display:block; font-size:0.9rem; color:#5e4b3c;">By appointment only</span>
-      </div>
-      <div class="info-item" style="border-top:1px solid #d9cdc0; padding-top:1.2rem;">
-        <strong>Social</strong>
+    <!-- right: contact info + map -->
+    <div>
+      <div class="contact-card" style="margin-bottom:1.8rem;">
+        <h2>📍 reach us</h2>
+        <ul class="info-list">
+          <li><span class="info-icon">📮</span> Elderberry Oven, Rose Cottage, Somerset, UK</li>
+          <li><span class="info-icon">✉️</span> <a href="mailto:hello@elderberryoven.com">hello@elderberryoven.com</a></li>
+          <li><span class="info-icon">📞</span> <a href="tel:+441234567890">+44 1234 567 890</a></li>
+          <li><span class="info-icon">🕊️</span> Pigeon post (carrier preferred)</li>
+        </ul>
         <div class="social-links">
           <a href="#">Instagram</a>
-          <a href="#">YouTube</a>
+          <a href="#">Pinterest</a>
           <a href="#">Substack</a>
         </div>
       </div>
-      <div style="margin-top:1.5rem; background:#e3d7cc; padding:0.8rem 1.2rem; border-radius:60px; display:inline-block;">
-        <span style="font-weight:600;">📬 Open for pitches</span>
+
+      <!-- map placeholder (visual, not interactive) -->
+      <div class="map-placeholder">
+        <svg viewBox="0 0 400 180" style="display:block; width:100%; height:auto; background:#dccfc2; border-radius:1.2rem;">
+          <rect width="400" height="180" fill="#dccfc2" rx="16" />
+          <path d="M80,100 Q150,40 220,100 T360,100" stroke="#3d2b1f" stroke-width="2" fill="none" opacity="0.3"/>
+          <circle cx="200" cy="90" r="20" fill="#3d2b1f" opacity="0.4" />
+          <circle cx="120" cy="70" r="10" fill="#b27a5a" opacity="0.5" />
+          <circle cx="290" cy="110" r="14" fill="#b27a5a" opacity="0.4" />
+          <text x="140" y="150" font-family="'EB Garamond', serif" font-size="18" fill="#3d2b1f" opacity="0.7">Elderberry Oven · Somerset</text>
+        </svg>
+        <p style="margin-top:0.6rem; font-size:0.9rem; font-family:'Inter',sans-serif;">— wild hedgerows &amp; warm hearths —</p>
       </div>
     </div>
   </div>
 
-  <!-- FAQ / quick answers -->
-  <div style="margin: 3rem 0 2rem;">
-    <h2>🙋 Frequently asked</h2>
-    <div class="faq-item"><h4>Do you accept guest articles?</h4><p>Yes, we welcome pitches from food writers and chefs. Please send a brief outline to our editorial team.</p></div>
-    <div class="faq-item"><h4>Can I reproduce a recipe?</h4><p>We encourage sharing, but please credit Eastwind Kitchen Press and link back to the original article.</p></div>
-    <div class="faq-item"><h4>How do I report an issue with the site?</h4><p>Drop us a line using the form above — we’ll fix it as soon as possible.</p></div>
+  <!-- compact FAQ (extra touch) -->
+  <div class="faq-compact">
+    <h2 style="font-family:'EB Garamond',serif; font-size:1.8rem; margin-bottom:0.8rem;">Quick answers</h2>
+    <details>
+      <summary>Do you offer baking workshops?</summary>
+      <p>Yes! We host seasonal workshops at our cottage from April to October. Drop us a message and we’ll send you the schedule.</p>
+    </details>
+    <details>
+      <summary>Can I send you a recipe idea?</summary>
+      <p>Absolutely — we love hearing from fellow bakers. Share your elderberry creations and we might feature them in a future post.</p>
+    </details>
+    <details>
+      <summary>How quickly do you reply?</summary>
+      <p>We aim for 24–48 hours. If you don’t hear back, please check your spam folder or nudge us again.</p>
+    </details>
   </div>
 
-  <!-- NEWSLETTER (same as main) -->
-  <div class="newsletter">
-    <div>
-      <h3>📬 The Eastwind Dispatch</h3>
-      <p>Weekly insights, seasonal recipes, and fermentation logs.</p>
-    </div>
-    <form>
-      <input type="email" placeholder="your email" aria-label="email">
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-
-  <!-- FOOTER -->
+  <!-- footer -->
   <footer class="footer">
-    <div>
-      <div class="logo" style="font-size:1.2rem;">Eastwind <span>Kitchen Press</span></div>
-      <small>© 2026 · content‑first kitchen library</small>
-    </div>
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
+    <span>© 2026 Elderberry Oven Tales · rustic baking journal</span>
+    <span style="display:flex; gap:1.5rem;"><a href="about.html">about</a> <a href="contact.html">contact</a> <a href="privacy.html">privacy</a></span>
   </footer>
 
-</div>
+</div><!-- /.container -->
 </body>
 </html>

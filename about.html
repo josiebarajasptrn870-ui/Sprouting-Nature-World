@@ -3,537 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About · Eastwind Kitchen Press</title>
-  <!-- fonts & reset -->
+  <title>About · Elderberry Oven Tales</title>
+  <!-- EB Garamond + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&family=EB+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
-    /* ===== RESET & BASE ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* ----- reset & base (mirror) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #faf7f2;
-      color: #1e1b18;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
+      background: #fbf7f0;
+      color: #1e1c1a;
+      font-family: 'Inter', sans-serif;
       font-weight: 400;
-      padding: 0 1rem;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
+      line-height: 1.7;
       padding: 0 1.5rem;
     }
-
-    a {
-      color: #1e1b18;
-      text-decoration: none;
-      transition: color 0.15s ease;
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.8rem 0 3rem;
     }
-    a:hover {
-      color: #b45f3b;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 6px;
-    }
-
     h1, h2, h3, h4 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-    }
-    h2 {
-      font-size: 2rem;
-      margin: 2.8rem 0 1.2rem;
-    }
-    h3 {
-      font-size: 1.4rem;
-      margin: 2rem 0 0.8rem;
-    }
-
-    p {
-      margin-bottom: 1.4rem;
-    }
-
-    /* ===== UNIQUE TYPOGRAPHY & SPACING ===== */
-    .serif-italic {
       font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-    }
-
-    .small-caps {
-      font-variant: small-caps;
-      letter-spacing: 0.04em;
       font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    a { color: #3f2e1e; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #7a4f2b; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 0.5rem; }
+
+    :root {
+      --elder: #3d2b1f;
+      --clay: #b27a5a;
+      --cream: #f2e7da;
+      --light-bg: #faf3ea;
+      --accent: #8f5e3c;
+      --border-soft: #ded1c2;
+      --card-bg: #ffffff;
+      --shadow: 0 12px 30px -12px rgba(60, 40, 25, 0.10);
     }
 
-    hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(90deg, #d9cdc0, #c0a48a, #d9cdc0);
-      margin: 3rem 0;
-    }
-
-    /* ===== HEADER / NAV ===== */
-    .top-bar {
-      padding: 1.5rem 0 0.8rem;
-      border-bottom: 1px solid #e3d7cc;
+    /* ----- header (exact) ----- */
+    .site-header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2.5rem;
+      padding: 1.2rem 0 0.8rem;
+      border-bottom: 2px solid var(--border-soft);
+      margin-bottom: 2.8rem;
     }
-
     .logo {
-      font-size: 1.6rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: -0.03em;
+      color: var(--elder);
+      letter-spacing: -0.02em;
     }
-    .logo span {
-      color: #b45f3b;
-      font-weight: 300;
-    }
-
+    .logo span { color: var(--clay); font-weight: 400; }
     .nav-links {
       display: flex;
       gap: 2.2rem;
       font-size: 0.95rem;
       font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
-    .nav-links a {
-      padding: 0.4rem 0;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-links a:hover {
-      border-bottom-color: #b45f3b;
-      color: #1e1b18;
+    .nav-links a { color: #2b201a; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links .active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
     }
 
-    /* ===== HERO (about) ===== */
+    /* ----- about hero (story) ----- */
     .about-hero {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
-      align-items: center;
-      margin: 1rem 0 3.5rem;
-    }
-
-    .about-hero-content h1 {
-      font-size: 3.2rem;
-      font-weight: 650;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-    }
-    .about-hero-content .subhead {
-      font-size: 1.2rem;
-      color: #3f352e;
-      max-width: 90%;
-      margin-bottom: 1.8rem;
-    }
-    .hero-tags {
+      background: var(--cream);
+      padding: 2.8rem 3rem;
+      border-radius: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow);
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem 1.2rem;
-      font-size: 0.95rem;
-      color: #5e4b3c;
-      border-top: 1px solid #ddd0c2;
-      padding-top: 1.4rem;
-      margin-top: 0.5rem;
-    }
-    .hero-tags span {
-      background: #ede6de;
-      padding: 0.2rem 1rem;
-      border-radius: 40px;
-      font-weight: 450;
-    }
-
-    .about-hero-img img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 18px;
-      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.12);
-    }
-
-    /* ===== MISSION / VALUES ===== */
-    .mission-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      align-items: center;
       gap: 2rem;
-      margin: 2.5rem 0;
     }
-    .mission-card {
-      background: white;
-      padding: 1.8rem 1.5rem;
-      border-radius: 28px;
-      border: 1px solid #ece2d9;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    .about-hero-text { flex: 2; min-width: 260px; }
+    .about-hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--elder);
+      margin-bottom: 0.5rem;
     }
-    .mission-card h3 {
-      margin-top: 0;
-      font-size: 1.3rem;
+    .about-hero-text .subhead {
+      font-size: 1.2rem;
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      color: #5f4635;
+      border-left: 4px solid var(--clay);
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 0.8rem;
     }
-    .mission-card p {
-      font-size: 0.98rem;
-      color: #2d2823;
-      margin-bottom: 0;
+    .about-hero-text p { max-width: 600px; }
+    .about-hero-media {
+      flex: 1;
+      min-width: 180px;
+      background: #dccfc2;
+      border-radius: 1.8rem;
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+    }
+    .about-hero-media svg { width: 100%; height: auto; border-radius: 1.2rem; }
+
+    /* ----- story grid (two columns) ----- */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.8rem;
+      margin: 2.5rem 0 3rem;
+    }
+    @media (max-width: 760px) {
+      .story-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
 
-    /* ===== TEAM ===== */
+    .story-card {
+      background: white;
+      padding: 2rem 2.2rem;
+      border-radius: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .story-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid var(--border-soft);
+      padding-bottom: 0.4rem;
+    }
+    .story-card ul, .story-card p { margin-bottom: 0.8rem; }
+    .story-card ul { list-style: none; }
+    .story-card ul li {
+      padding: 0.4rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .story-card ul li::before { content: "✦"; color: var(--clay); }
+
+    /* team mini */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 2.2rem;
-      margin: 2rem 0 1rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 1rem;
     }
-    .team-card {
-      background: white;
-      border-radius: 28px;
-      padding: 1.8rem 1.5rem 1.5rem;
-      border: 1px solid #ece2d9;
+    .team-item {
+      background: var(--light-bg);
+      padding: 1rem 1.2rem;
+      border-radius: 2rem;
+      border: 1px solid var(--border-soft);
+    }
+    .team-item strong { display: block; font-family: 'EB Garamond', serif; font-size: 1.2rem; }
+
+    /* quote */
+    .quote-block {
+      background: #f5ede4;
+      padding: 2rem 2.5rem;
+      border-radius: 2.5rem;
+      margin: 2.5rem 0 1.5rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.4rem;
+      font-style: italic;
       text-align: center;
+      color: var(--elder);
+      box-shadow: var(--shadow);
+      border-left: 6px solid var(--clay);
     }
-    .team-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1rem;
-      background: #ede6de;
-    }
-    .team-card h4 {
-      font-size: 1.2rem;
-      margin-bottom: 0.2rem;
-    }
-    .team-card .role {
-      font-size: 0.85rem;
-      color: #b45f3b;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-    .team-card p {
-      font-size: 0.95rem;
-      color: #3f352e;
-      margin: 0.8rem 0 0;
-    }
+    .quote-block span { display: block; font-style: normal; font-size: 1rem; margin-top: 0.4rem; opacity: 0.8; }
 
-    /* ===== TIMELINE ===== */
-    .timeline {
-      margin: 2rem 0 1rem;
-      padding-left: 0.5rem;
-    }
-    .timeline-item {
-      display: flex;
-      gap: 1.8rem;
-      border-left: 3px solid #cbb7a6;
-      padding: 0 0 1.8rem 1.8rem;
-      position: relative;
-    }
-    .timeline-item:last-child {
-      border-left-color: transparent;
-      padding-bottom: 0;
-    }
-    .timeline-item .year {
-      font-weight: 700;
-      font-size: 1.2rem;
-      min-width: 70px;
-      color: #b45f3b;
-    }
-    .timeline-item .desc {
-      font-size: 0.98rem;
-    }
-
-    /* ===== STATS / BADGE ===== */
-    .badge {
-      background: #b45f3b10;
-      color: #b45f3b;
-      font-weight: 600;
-      padding: 0.1rem 1rem;
-      border-radius: 40px;
-      border: 1px solid #b45f3b30;
-      font-size: 0.8rem;
-      display: inline-block;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
-      gap: 1.5rem;
-      background: #f3ede7;
-      padding: 2rem 2.2rem;
-      border-radius: 40px;
-      margin: 2.5rem 0;
-      text-align: center;
-    }
-    .stat-grid .stat-number {
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #1e1b18;
-    }
-    .stat-grid .stat-label {
-      font-size: 0.85rem;
-      color: #5e4b3c;
-      letter-spacing: 0.02em;
-    }
-
-    /* ===== NEWSLETTER ===== */
-    .newsletter {
-      background: #1e1b18;
-      color: #f0ebe5;
-      padding: 3rem 2.5rem;
-      border-radius: 40px;
-      margin: 3.5rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .newsletter h3 {
-      font-size: 1.8rem;
-      margin: 0;
-      color: #f0ebe5;
-    }
-    .newsletter p {
-      margin: 0.2rem 0 0;
-      opacity: 0.8;
-      max-width: 400px;
-    }
-    .newsletter form {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-    .newsletter input {
-      padding: 0.9rem 1.4rem;
-      border-radius: 60px;
-      border: none;
-      background: #2f2a25;
-      color: #f0ebe5;
-      min-width: 220px;
-      font-size: 0.95rem;
-    }
-    .newsletter input::placeholder {
-      color: #a59586;
-    }
-    .newsletter button {
-      background: #b45f3b;
-      border: none;
-      padding: 0 2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      color: white;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .newsletter button:hover {
-      background: #9f4f30;
-    }
-
-    /* ===== FOOTER ===== */
+    /* footer */
     .footer {
-      border-top: 1px solid #ddd0c2;
-      padding: 2.5rem 0 1.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--border-soft);
+      font-size: 0.9rem;
+      color: #3d322a;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 2rem;
-      color: #3f352e;
-    }
-    .footer-links {
-      display: flex;
-      gap: 2.5rem;
-      font-weight: 450;
-    }
-    .footer small {
-      opacity: 0.7;
     }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 860px) {
-      .about-hero {
-        grid-template-columns: 1fr;
-      }
-      .top-bar {
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 1.2rem;
-      }
-      h1 { font-size: 2.4rem; }
-      .about-hero-content h1 { font-size: 2.5rem; }
-    }
-    @media (max-width: 500px) {
-      .container { padding: 0 0.8rem; }
+    @media (max-width: 700px) {
+      body { padding: 0 1rem; }
+      .about-hero { padding: 1.8rem; }
+      .about-hero-text h1 { font-size: 2.2rem; }
+      .nav-links { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
       .team-grid { grid-template-columns: 1fr; }
-      .newsletter { flex-direction: column; align-items: start; gap: 1.2rem; }
-      .stat-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- header (same as main) -->
-  <header class="top-bar">
-    <div class="logo">Eastwind <span>Kitchen Press</span></div>
-    <div class="nav-links">
+  <!-- header (exact same) -->
+  <header class="site-header">
+    <div class="logo">Elderberry<span>Oven</span></div>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="about.html" style="border-bottom-color:#b45f3b;">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms Of Privacy</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="cookies.html">Cookies Policy</a>
-    </div>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+    </nav>
   </header>
 
-  <!-- ABOUT HERO -->
+  <!-- about hero -->
   <section class="about-hero">
-    <div class="about-hero-content">
-      <h1>More than a cookbook.<br><span class="serif-italic">We’re a kitchen library.</span></h1>
-      <p class="subhead">Eastwind Kitchen Press was founded to preserve, interpret, and celebrate the deep culinary traditions of Asia — with rigour, curiosity, and a sense of wonder.</p>
-      <div class="hero-tags">
-        <span>📖 Since 2018</span>
-        <span>🌏 12 regions</span>
-        <span>🧑‍🍳 45+ contributors</span>
-        <span>🔥 300+ recipes</span>
-      </div>
+    <div class="about-hero-text">
+      <h1>From hedgerow to hearth</h1>
+      <div class="subhead">a small-bakery journal rooted in wild foraging &amp; slow fermentation</div>
+      <p>Elderberry Oven Tales began in a Somerset cottage, where the scent of woodsmoke and sourdough lingers. We believe in flour-dusted hands, seasonal fruit, and the quiet magic of baking with what the land gives.</p>
+      <p style="margin-top:0.6rem;">Every recipe is shaped by the hedgerows we wander, the neighbours we break bread with, and the rhythm of the wood-fired oven.</p>
     </div>
-    <div class="about-hero-img">
-      <img src="https://images.unsplash.com/photo-1507048331197-13d4aae23dc2?w=600&h=400&fit=crop&crop=center&auto=format" alt="cooking scene">
+    <div class="about-hero-media">
+      <svg viewBox="0 0 200 160" style="display:block; width:100%; height:auto; background:#dccfc2; border-radius:1.2rem;">
+        <rect width="200" height="160" fill="#dccfc2" rx="20" />
+        <circle cx="100" cy="70" r="38" fill="#3d2b1f" opacity="0.25" />
+        <circle cx="70" cy="50" r="12" fill="#b27a5a" opacity="0.5" />
+        <circle cx="130" cy="55" r="16" fill="#b27a5a" opacity="0.4" />
+        <path d="M40,120 L160,120 L140,140 L60,140 Z" fill="#3d2b1f" opacity="0.15" />
+        <text x="36" y="148" font-family="'EB Garamond', serif" font-size="16" fill="#3d2b1f" opacity="0.7">wild &amp; warm</text>
+      </svg>
+      <p style="margin-top:0.4rem; font-size:0.8rem; font-family:'Inter',sans-serif;">— the old stone oven, always ready —</p>
     </div>
   </section>
 
-  <!-- MISSION & VALUES -->
-  <div style="margin: 2rem 0 0.5rem;">
-    <h2>Our mission</h2>
-    <p style="font-size:1.1rem; max-width: 80%;">To bring authentic Asian cooking into every kitchen — not through shortcuts, but through understanding. We believe that technique, ingredient knowledge, and cultural context are the true foundations of flavour.</p>
-  </div>
+  <!-- two‑column story: values + team -->
+  <div class="story-grid">
+    <!-- left: what we believe -->
+    <div class="story-card">
+      <h2>🌾 what we hold dear</h2>
+      <ul>
+        <li>Foraging with respect — elderberries, crab apples, wild plums</li>
+        <li>Long, cool ferments for depth and digestibility</li>
+        <li>Recipes that welcome both beginners and seasoned bakers</li>
+        <li>Community over competition — we share everything we learn</li>
+        <li>Every bake tells a story: of place, season, and memory</li>
+      </ul>
+      <p style="margin-top:0.8rem; font-style:italic; color:#5f4635;">“We don’t just bake bread — we tend a tradition.”</p>
+    </div>
 
-  <div class="mission-grid">
-    <div class="mission-card">
-      <h3>🌾 Ingredient-first</h3>
-      <p>We explore the why behind each ingredient — from heirloom rice to fermented bean pastes.</p>
-    </div>
-    <div class="mission-card">
-      <h3>🔥 Technique matters</h3>
-      <p>Knife skills, wok heat, steaming, braising — we break down every method with clarity.</p>
-    </div>
-    <div class="mission-card">
-      <h3>🌏 Regional depth</h3>
-      <p>We map flavours across China, Japan, Korea, Southeast Asia, and beyond.</p>
-    </div>
-    <div class="mission-card">
-      <h3>📚 Always learning</h3>
-      <p>Our library grows with each article, guided by chefs, farmers, and home cooks.</p>
-    </div>
-  </div>
-
-  <!-- STATS -->
-  <div class="stat-grid">
-    <div><div class="stat-number">312</div><div class="stat-label">Recipes</div></div>
-    <div><div class="stat-number">46</div><div class="stat-label">Contributors</div></div>
-    <div><div class="stat-number">14</div><div class="stat-label">Regions covered</div></div>
-    <div><div class="stat-number">8.2k</div><div class="stat-label">Newsletter readers</div></div>
-  </div>
-
-  <!-- TEAM -->
-  <h2>🧑‍🍳 The team</h2>
-  <div class="team-grid">
-    <div class="team-card">
-      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=200&h=200&fit=crop&crop=face&auto=format" alt="Maya Chen">
-      <h4>Maya Chen</h4>
-      <div class="role">Editor-in-Chief</div>
-      <p>Former restaurant chef, now devoted to documenting regional Chinese cooking.</p>
-    </div>
-    <div class="team-card">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&auto=format" alt="Hiro Tanaka">
-      <h4>Hiro Tanaka</h4>
-      <div class="role">Fermentation Lead</div>
-      <p>Koji, miso, and shoyu specialist. Trained in Japan and California.</p>
-    </div>
-    <div class="team-card">
-      <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&h=200&fit=crop&crop=face&auto=format" alt="Leila Okafor">
-      <h4>Leila Okafor</h4>
-      <div class="role">Regional Editor</div>
-      <p>Explores the intersection of West African and Southeast Asian flavours.</p>
-    </div>
-    <div class="team-card">
-      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face&auto=format" alt="David Kim">
-      <h4>David Kim</h4>
-      <div class="role">Kitchen Director</div>
-      <p>Recipe tester and knife skills instructor with a passion for Korean banchan.</p>
+    <!-- right: the people -->
+    <div class="story-card">
+      <h2>🧑‍🌾 the oven keepers</h2>
+      <div class="team-grid">
+        <div class="team-item">
+          <strong>Marjorie</strong>
+          <span style="font-size:0.9rem;">Head baker · elderberry guardian</span>
+          <p style="font-size:0.85rem; margin-top:0.2rem;">40 years of sourdough, wild yeast whisperer.</p>
+        </div>
+        <div class="team-item">
+          <strong>Ellis</strong>
+          <span style="font-size:0.9rem;">Forager &amp; storyteller</span>
+          <p style="font-size:0.85rem; margin-top:0.2rem;">Knows every hedgerow within 10 miles.</p>
+        </div>
+        <div class="team-item">
+          <strong>Ruth</strong>
+          <span style="font-size:0.9rem;">Recipe developer</span>
+          <p style="font-size:0.85rem; margin-top:0.2rem;">Turns wild harvests into rustic poetry.</p>
+        </div>
+        <div class="team-item">
+          <strong>Otis</strong>
+          <span style="font-size:0.9rem;">Oven master &amp; wood splitter</span>
+          <p style="font-size:0.85rem; margin-top:0.2rem;">Keeps the fire breathing just right.</p>
+        </div>
+      </div>
+      <p style="margin-top:1rem; font-size:0.95rem;">We’re a small crew, but we dream big — and bake even bigger.</p>
     </div>
   </div>
 
-  <!-- TIMELINE -->
-  <h2 style="margin-top:3rem;">📅 Our journey</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="year">2018</div>
-      <div class="desc"><strong>Eastwind launched</strong> — a small newsletter sharing family recipes from Shanghai and Seoul.</div>
+  <!-- quote block (extra warmth) -->
+  <div class="quote-block">
+    “Bread is the oldest comfort — and elderberries, the wildest sweetness.”
+    <span>— from the kitchen notebook, 2026</span>
+  </div>
+
+  <!-- a little more about the journal (unique) -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0 0.5rem;">
+    <div style="background: white; border-radius: 2rem; padding: 1.8rem; box-shadow: var(--shadow);">
+      <h3 style="font-family:'EB Garamond',serif; font-size:1.4rem;">📖 the journal</h3>
+      <p>We publish seasonal recipes, foraging notes, and stories from the cottage. No ads, no algorithms — just flour, fruit, and fire.</p>
     </div>
-    <div class="timeline-item">
-      <div class="year">2020</div>
-      <div class="desc"><strong>The library grew</strong> — we added regional deep-dives, fermentation guides, and a knife skills series.</div>
-    </div>
-    <div class="timeline-item">
-      <div class="year">2022</div>
-      <div class="desc"><strong>First print edition</strong> — a limited-run zine on wok technique, sold out in 3 weeks.</div>
-    </div>
-    <div class="timeline-item">
-      <div class="year">2024</div>
-      <div class="desc"><strong>Eastwind Kitchen Press</strong> becomes a full‑time publication with a global contributor network.</div>
+    <div style="background: white; border-radius: 2rem; padding: 1.8rem; box-shadow: var(--shadow);">
+      <h3 style="font-family:'EB Garamond',serif; font-size:1.4rem;">🌿 join the circle</h3>
+      <p>Subscribe to our newsletter for a monthly letter from the oven — plus a recipe you won’t find anywhere else.</p>
     </div>
   </div>
 
-  <!-- NEWSLETTER (same as main) -->
-  <div class="newsletter">
-    <div>
-      <h3>📬 The Eastwind Dispatch</h3>
-      <p>Weekly insights, seasonal recipes, and fermentation logs — straight to your inbox.</p>
-    </div>
-    <form>
-      <input type="email" placeholder="your email" aria-label="email">
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-
-  <!-- FOOTER -->
+  <!-- footer -->
   <footer class="footer">
-    <div>
-      <div class="logo" style="font-size:1.2rem;">Eastwind <span>Kitchen Press</span></div>
-      <small>© 2026 · content‑first kitchen library</small>
-    </div>
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
+    <span>© 2026 Elderberry Oven Tales · rustic baking journal</span>
+    <span style="display:flex; gap:1.5rem;"><a href="about.html">about</a> <a href="contact.html">contact</a> <a href="privacy.html">privacy</a></span>
   </footer>
 
-</div>
+</div><!-- /.container -->
 </body>
 </html>

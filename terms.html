@@ -1,382 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms · Eastwind Kitchen Press</title>
-  <!-- fonts & reset -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&family=EB+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms · Elderberry Oven Tales</title>
+  <!-- EB Garamond + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
-    /* ===== RESET & BASE ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* ----- reset & base (mirror) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #faf7f2;
-      color: #1e1b18;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
+      background: #fbf7f0;
+      color: #1e1c1a;
+      font-family: 'Inter', sans-serif;
       font-weight: 400;
-      padding: 0 1rem;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
+      line-height: 1.7;
       padding: 0 1.5rem;
     }
-
-    a {
-      color: #1e1b18;
-      text-decoration: none;
-      transition: color 0.15s ease;
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.8rem 0 3rem;
     }
-    a:hover {
-      color: #b45f3b;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 6px;
-    }
-
     h1, h2, h3, h4 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-    }
-    h2 {
-      font-size: 2rem;
-      margin: 2.8rem 0 1.2rem;
-    }
-    h3 {
-      font-size: 1.4rem;
-      margin: 2rem 0 0.8rem;
-    }
-
-    p {
-      margin-bottom: 1.4rem;
-    }
-
-    /* ===== UNIQUE TYPOGRAPHY & SPACING ===== */
-    .serif-italic {
       font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-    }
-
-    .small-caps {
-      font-variant: small-caps;
-      letter-spacing: 0.04em;
       font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    a { color: #3f2e1e; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #7a4f2b; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 0.5rem; }
+
+    :root {
+      --elder: #3d2b1f;
+      --clay: #b27a5a;
+      --cream: #f2e7da;
+      --light-bg: #faf3ea;
+      --accent: #8f5e3c;
+      --border-soft: #ded1c2;
+      --card-bg: #ffffff;
+      --shadow: 0 12px 30px -12px rgba(60, 40, 25, 0.10);
     }
 
-    hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(90deg, #d9cdc0, #c0a48a, #d9cdc0);
-      margin: 3rem 0;
-    }
-
-    /* ===== HEADER / NAV ===== */
-    .top-bar {
-      padding: 1.5rem 0 0.8rem;
-      border-bottom: 1px solid #e3d7cc;
+    /* ----- header (exact) ----- */
+    .site-header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2.5rem;
+      padding: 1.2rem 0 0.8rem;
+      border-bottom: 2px solid var(--border-soft);
+      margin-bottom: 2.8rem;
     }
-
     .logo {
-      font-size: 1.6rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: -0.03em;
+      color: var(--elder);
+      letter-spacing: -0.02em;
     }
-    .logo span {
-      color: #b45f3b;
-      font-weight: 300;
-    }
-
+    .logo span { color: var(--clay); font-weight: 400; }
     .nav-links {
       display: flex;
       gap: 2.2rem;
       font-size: 0.95rem;
       font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
-    .nav-links a {
-      padding: 0.4rem 0;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-links a:hover {
-      border-bottom-color: #b45f3b;
-      color: #1e1b18;
-    }
-    .nav-links a.active {
-      border-bottom-color: #b45f3b;
+    .nav-links a { color: #2b201a; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links .active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
     }
 
-    /* ===== TERMS SPECIFIC ===== */
+    /* ----- terms hero (story) ----- */
     .terms-hero {
-      margin: 1rem 0 2.5rem;
+      background: var(--cream);
+      padding: 2.8rem 3rem;
+      border-radius: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
     }
-    .terms-hero h1 {
-      font-size: 3.2rem;
-      font-weight: 650;
-      margin-bottom: 0.25rem;
+    .terms-hero-text { flex: 2; min-width: 260px; }
+    .terms-hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--elder);
+      margin-bottom: 0.5rem;
     }
-    .terms-hero .subhead {
+    .terms-hero-text .subhead {
       font-size: 1.2rem;
-      color: #3f352e;
-      max-width: 70%;
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      color: #5f4635;
+      border-left: 4px solid var(--clay);
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 0.8rem;
+    }
+    .terms-hero-text p { max-width: 600px; }
+    .terms-hero-media {
+      flex: 1;
+      min-width: 180px;
+      background: #dccfc2;
+      border-radius: 1.8rem;
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+    }
+    .terms-hero-media svg { width: 100%; height: auto; border-radius: 1.2rem; }
+
+    /* ----- terms content (two columns) ----- */
+    .terms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.8rem;
+      margin: 2.5rem 0 3rem;
+    }
+    @media (max-width: 760px) {
+      .terms-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
 
     .terms-card {
       background: white;
-      border-radius: 28px;
-      padding: 2.5rem 3rem;
-      border: 1px solid #ece2d9;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
-      margin: 2rem 0 3.5rem;
+      padding: 2rem 2.2rem;
+      border-radius: 2rem;
+      box-shadow: var(--shadow);
     }
     .terms-card h2 {
-      margin-top: 0;
       font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid var(--border-soft);
+      padding-bottom: 0.4rem;
     }
-    .terms-card h3 {
-      font-size: 1.3rem;
-      margin: 1.8rem 0 0.6rem;
-    }
-    .terms-card p,
-    .terms-card li {
-      color: #2d2823;
-    }
-    .terms-card ul {
-      padding-left: 1.5rem;
-      margin-bottom: 1.4rem;
-    }
-    .terms-card li {
-      margin-bottom: 0.5rem;
-    }
-    .terms-card .badge-legal {
-      background: #b45f3b10;
-      color: #b45f3b;
-      font-weight: 600;
-      padding: 0.1rem 1.2rem;
-      border-radius: 40px;
-      border: 1px solid #b45f3b30;
-      font-size: 0.75rem;
-      display: inline-block;
-      letter-spacing: 0.03em;
-      margin-bottom: 0.5rem;
-    }
-    .terms-card .highlight-box {
-      background: #f3ede7;
-      padding: 1.2rem 2rem;
-      border-radius: 20px;
-      margin: 1.8rem 0;
-      border-left: 6px solid #b45f3b;
-    }
-
-    /* ===== NEWSLETTER ===== */
-    .newsletter {
-      background: #1e1b18;
-      color: #f0ebe5;
-      padding: 3rem 2.5rem;
-      border-radius: 40px;
-      margin: 3.5rem 0;
+    .terms-card ul, .terms-card p { margin-bottom: 0.8rem; }
+    .terms-card ul { list-style: none; }
+    .terms-card ul li {
+      padding: 0.4rem 0;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
+      gap: 0.6rem;
     }
-    .newsletter h3 {
-      font-size: 1.8rem;
-      margin: 0;
-      color: #f0ebe5;
-    }
-    .newsletter p {
-      margin: 0.2rem 0 0;
-      opacity: 0.8;
-      max-width: 400px;
-    }
-    .newsletter form {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-    .newsletter input {
-      padding: 0.9rem 1.4rem;
-      border-radius: 60px;
-      border: none;
-      background: #2f2a25;
-      color: #f0ebe5;
-      min-width: 220px;
-      font-size: 0.95rem;
-    }
-    .newsletter input::placeholder {
-      color: #a59586;
-    }
-    .newsletter button {
-      background: #b45f3b;
-      border: none;
-      padding: 0 2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      color: white;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .newsletter button:hover {
-      background: #9f4f30;
-    }
+    .terms-card ul li::before { content: "✦"; color: var(--clay); }
 
-    /* ===== FOOTER ===== */
+    /* extra blocks */
+    .terms-highlight {
+      background: var(--light-bg);
+      padding: 1.8rem 2rem;
+      border-radius: 2rem;
+      border-left: 6px solid var(--clay);
+      margin: 1.2rem 0;
+    }
+    .terms-highlight p { margin-bottom: 0.4rem; }
+
+    /* footer */
     .footer {
-      border-top: 1px solid #ddd0c2;
-      padding: 2.5rem 0 1.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--border-soft);
+      font-size: 0.9rem;
+      color: #3d322a;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 2rem;
-      color: #3f352e;
-    }
-    .footer-links {
-      display: flex;
-      gap: 2.5rem;
-      font-weight: 450;
-    }
-    .footer small {
-      opacity: 0.7;
     }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 860px) {
-      .top-bar {
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 1.2rem;
-      }
-      h1 { font-size: 2.4rem; }
-      .terms-hero h1 { font-size: 2.5rem; }
-      .terms-hero .subhead { max-width: 100%; }
-      .terms-card { padding: 1.8rem; }
-    }
-    @media (max-width: 500px) {
-      .container { padding: 0 0.8rem; }
-      .newsletter { flex-direction: column; align-items: start; gap: 1.2rem; }
+    @media (max-width: 700px) {
+      body { padding: 0 1rem; }
+      .terms-hero { padding: 1.8rem; }
+      .terms-hero-text h1 { font-size: 2.2rem; }
+      .nav-links { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
     }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- header (same as main) -->
-  <header class="top-bar">
-    <div class="logo">Eastwind <span>Kitchen Press</span></div>
-    <div class="nav-links">
+  <!-- header (exact same) -->
+  <header class="site-header">
+    <div class="logo">Elderberry<span>Oven</span></div>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="terms.html" class="active">Terms</a>
       <a href="privacy.html">Privacy</a>
       <a href="cookies.html">Cookies</a>
-    </div>
+    </nav>
   </header>
 
-  <!-- TERMS HERO -->
+  <!-- terms hero -->
   <section class="terms-hero">
-    <h1>Terms of Use</h1>
-    <p class="subhead">Welcome to Eastwind Kitchen Press. By using our site, you agree to these terms — we keep them clear and fair.</p>
+    <div class="terms-hero-text">
+      <h1>Terms &amp; conditions</h1>
+      <div class="subhead">baking by the book — with honesty and a little wildness</div>
+      <p>Welcome to Elderberry Oven Tales. By using our site, you agree to these terms. They’re written with the same care we give our dough: straightforward, fair, and made to be shared.</p>
+      <p style="margin-top:0.6rem;">If you have any questions, just reach out — we’re always happy to chat over a slice of sourdough.</p>
+    </div>
+    <div class="terms-hero-media">
+      <svg viewBox="0 0 200 160" style="display:block; width:100%; height:auto; background:#dccfc2; border-radius:1.2rem;">
+        <rect width="200" height="160" fill="#dccfc2" rx="20" />
+        <circle cx="100" cy="70" r="38" fill="#3d2b1f" opacity="0.25" />
+        <circle cx="70" cy="50" r="12" fill="#b27a5a" opacity="0.5" />
+        <circle cx="130" cy="55" r="16" fill="#b27a5a" opacity="0.4" />
+        <path d="M40,120 L160,120 L140,140 L60,140 Z" fill="#3d2b1f" opacity="0.15" />
+        <text x="30" y="148" font-family="'EB Garamond', serif" font-size="16" fill="#3d2b1f" opacity="0.7">read, bake, enjoy</text>
+      </svg>
+      <p style="margin-top:0.4rem; font-size:0.8rem; font-family:'Inter',sans-serif;">— our terms are as warm as our oven —</p>
+    </div>
   </section>
 
-  <!-- TERMS CONTENT -->
-  <div class="terms-card">
-    <span class="badge-legal">Last updated: June 2026</span>
-    <h2>1. Acceptance of Terms</h2>
-    <p>By accessing or using Eastwind Kitchen Press (the “Site”), you agree to be bound by these Terms of Use and all applicable laws and regulations. If you do not agree with any part of these terms, please do not use the Site.</p>
-
-    <h2>2. Intellectual Property</h2>
-    <p>All content on this Site — including recipes, articles, photographs, illustrations, and trademarks — is the property of Eastwind Kitchen Press or its contributors and is protected by copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works without explicit written permission.</p>
-    <div class="highlight-box">
-      <strong>📌 Personal use:</strong> You are welcome to print recipes for personal cooking, share links to our articles, and quote brief excerpts with attribution. For commercial use, please <a href="contact.html" style="color:#b45f3b; text-decoration:underline;">contact us</a>.
+  <!-- two‑column terms: main clauses -->
+  <div class="terms-grid">
+    <!-- left: use & content -->
+    <div class="terms-card">
+      <h2>📜 using our journal</h2>
+      <ul>
+        <li>All recipes, stories, and photographs are our own (or used with love).</li>
+        <li>You’re welcome to bake, share, and print for personal use.</li>
+        <li>If you republish or adapt our content, please credit Elderberry Oven Tales.</li>
+        <li>We reserve the right to update or remove content as the seasons change.</li>
+        <li>Comments and feedback are cherished — but keep them kind.</li>
+      </ul>
+      <div class="terms-highlight" style="margin-top:1.2rem;">
+        <p style="font-style:italic; color:#3d2b1f;">“Our recipes are tested with patience, but every oven is different. Adjust with intuition.”</p>
+      </div>
     </div>
 
-    <h2>3. User Conduct</h2>
-    <p>You agree to use the Site only for lawful purposes and in a way that does not infringe the rights of others. Specifically, you agree <strong>not</strong> to:</p>
-    <ul>
-      <li>Post or transmit any harmful, defamatory, or obscene material.</li>
-      <li>Attempt to gain unauthorised access to our systems or interfere with the Site’s functionality.</li>
-      <li>Use any automated system (e.g., bots) to scrape or harvest content without prior consent.</li>
-    </ul>
-
-    <h2>4. Comments & User Contributions</h2>
-    <p>We welcome thoughtful comments and contributions. By submitting content (comments, recipe feedback, etc.), you grant Eastwind Kitchen Press a non‑exclusive, royalty‑free license to use, modify, and display that content in connection with the Site. We reserve the right to moderate or remove any contribution we deem inappropriate.</p>
-
-    <h2>5. Disclaimer of Warranties</h2>
-    <p>The Site and all content are provided on an “as is” basis. Eastwind Kitchen Press makes no representations or warranties of any kind, express or implied, regarding the accuracy, reliability, or completeness of any content. Recipes and techniques are for informational purposes; we are not responsible for any culinary mishaps or allergic reactions.</p>
-
-    <h2>6. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, Eastwind Kitchen Press shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Site. Our total liability for any claim related to the Site shall not exceed the amount you have paid (if any) to access the Site.</p>
-
-    <h2>7. External Links</h2>
-    <p>Our Site may contain links to third‑party websites. We are not responsible for the content, privacy practices, or terms of those sites, and inclusion of a link does not imply endorsement.</p>
-
-    <h2>8. Changes to These Terms</h2>
-    <p>We may update these Terms of Use from time to time. The “Last updated” date at the top of this page indicates when changes were made. Continued use of the Site after changes constitutes acceptance of the revised terms.</p>
-
-    <h2>9. Governing Law</h2>
-    <p>These terms are governed by the laws of the State of California, without regard to conflict of law principles. Any disputes arising out of these terms shall be resolved in the state or federal courts located in California.</p>
-
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions about these Terms, please <a href="contact.html" style="color:#b45f3b; text-decoration:underline;">reach out to us</a>.</p>
-  </div>
-
-  <!-- NEWSLETTER (same as main) -->
-  <div class="newsletter">
-    <div>
-      <h3>📬 The Eastwind Dispatch</h3>
-      <p>Weekly insights, seasonal recipes, and fermentation logs — straight to your inbox.</p>
+    <!-- right: user obligations & disclaimer -->
+    <div class="terms-card">
+      <h2>⚖️ your part &amp; ours</h2>
+      <ul>
+        <li>You agree to use the site for lawful, wholesome purposes only.</li>
+        <li>We are not liable for baking mishaps — though we’ll cheer you on regardless.</li>
+        <li>Foraging advice is given in good faith; always double‑check local rules and plant identification.</li>
+        <li>We never share your personal data (see our Privacy page).</li>
+        <li>These terms are governed by the hedgerow code: respect, reciprocity, and a little wildness.</li>
+      </ul>
+      <p style="margin-top:0.8rem; font-style:italic; color:#5f4635;">“We’re a small team, but we stand behind every word and every loaf.”</p>
     </div>
-    <form>
-      <input type="email" placeholder="your email" aria-label="email" />
-      <button type="submit">Subscribe</button>
-    </form>
   </div>
 
-  <!-- FOOTER -->
+  <!-- extra terms blocks: intellectual property & updates -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0 0.5rem;">
+    <div style="background: white; border-radius: 2rem; padding: 1.8rem; box-shadow: var(--shadow);">
+      <h3 style="font-family:'EB Garamond',serif; font-size:1.4rem;">🍞 intellectual property</h3>
+      <p>All content — including text, photos, and original recipes — is the property of Elderberry Oven Tales. You may not sell, republish, or claim our work as your own. But you may definitely bake our bread and gift it to everyone you love.</p>
+    </div>
+    <div style="background: white; border-radius: 2rem; padding: 1.8rem; box-shadow: var(--shadow);">
+      <h3 style="font-family:'EB Garamond',serif; font-size:1.4rem;">🔄 updates &amp; changes</h3>
+      <p>We may update these terms occasionally to reflect new practices or regulations. The current version will always be posted here. By continuing to use the site, you accept any changes — and we’ll always give you a heads‑up if we make a significant shift.</p>
+    </div>
+  </div>
+
+  <!-- quote block (extra warmth) -->
+  <div class="quote-block" style="background: #f5ede4; padding: 2rem 2.5rem; border-radius: 2.5rem; margin: 2.5rem 0 1.5rem; font-family: 'EB Garamond', serif; font-size: 1.4rem; font-style: italic; text-align: center; color: var(--elder); box-shadow: var(--shadow); border-left: 6px solid var(--clay);">
+    “Good bread, good terms, good company — that’s the whole of the law.”
+    <span style="display: block; font-style: normal; font-size: 1rem; margin-top: 0.4rem; opacity: 0.8;">— from the cottage kitchen, 2026</span>
+  </div>
+
+  <!-- footer -->
   <footer class="footer">
-    <div>
-      <div class="logo" style="font-size:1.2rem;">Eastwind <span>Kitchen Press</span></div>
-      <small>© 2026 · content‑first kitchen library</small>
-    </div>
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
+    <span>© 2026 Elderberry Oven Tales · rustic baking journal</span>
+    <span style="display:flex; gap:1.5rem;"><a href="about.html">about</a> <a href="contact.html">contact</a> <a href="privacy.html">privacy</a></span>
   </footer>
 
-</div>
+</div><!-- /.container -->
 </body>
 </html>

@@ -1,475 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookies · Eastwind Kitchen Press</title>
-  <!-- fonts & reset -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&family=EB+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy · Elderberry Oven Tales</title>
+  <!-- EB Garamond + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
   <style>
-    /* ===== RESET & BASE (same as main) ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* ----- reset & base (same as main) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #faf7f2;
-      color: #1e1b18;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
+      background: #fbf7f0;
+      color: #1e1c1a;
+      font-family: 'Inter', sans-serif;
       font-weight: 400;
-      padding: 0 1rem;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
+      line-height: 1.7;
       padding: 0 1.5rem;
     }
-
-    a {
-      color: #1e1b18;
-      text-decoration: none;
-      transition: color 0.15s ease;
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.8rem 0 3rem;
     }
-    a:hover {
-      color: #b45f3b;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 6px;
-    }
-
     h1, h2, h3, h4 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-    }
-    h2 {
-      font-size: 2rem;
-      margin: 2.8rem 0 1.2rem;
-    }
-    h3 {
-      font-size: 1.4rem;
-      margin: 2rem 0 0.8rem;
-    }
-
-    p {
-      margin-bottom: 1.4rem;
-    }
-
-    /* ===== UNIQUE TYPOGRAPHY ===== */
-    .serif-italic {
       font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-    }
-
-    .small-caps {
-      font-variant: small-caps;
-      letter-spacing: 0.04em;
       font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    a { color: #3f2e1e; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #7a4f2b; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 0.5rem; }
+
+    :root {
+      --elder: #3d2b1f;
+      --clay: #b27a5a;
+      --cream: #f2e7da;
+      --light-bg: #faf3ea;
+      --accent: #8f5e3c;
+      --border-soft: #ded1c2;
+      --card-bg: #ffffff;
+      --shadow: 0 12px 30px -12px rgba(60, 40, 25, 0.10);
     }
 
-    hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(90deg, #d9cdc0, #c0a48a, #d9cdc0);
-      margin: 3rem 0;
-    }
-
-    /* ===== HEADER / NAV ===== */
-    .top-bar {
-      padding: 1.5rem 0 0.8rem;
-      border-bottom: 1px solid #e3d7cc;
+    /* ----- header (mirror) ----- */
+    .site-header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2.5rem;
+      padding: 1.2rem 0 0.8rem;
+      border-bottom: 2px solid var(--border-soft);
+      margin-bottom: 2.8rem;
     }
-
     .logo {
-      font-size: 1.6rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: -0.03em;
+      color: var(--elder);
+      letter-spacing: -0.02em;
     }
-    .logo span {
-      color: #b45f3b;
-      font-weight: 300;
-    }
-
+    .logo span { color: var(--clay); font-weight: 400; }
     .nav-links {
       display: flex;
       gap: 2.2rem;
       font-size: 0.95rem;
       font-weight: 500;
-      list-style: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
-    .nav-links a {
-      padding: 0.4rem 0;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-links a:hover {
-      border-bottom-color: #b45f3b;
-      color: #1e1b18;
-    }
-    .nav-links a.active {
-      border-bottom-color: #b45f3b;
-    }
+    .nav-links a { color: #2b201a; }
+    .nav-links a:hover { color: var(--accent); }
 
-    /* ===== PRIVACY HERO (cookies) ===== */
+    /* ----- privacy hero (content-first) ----- */
     .privacy-hero {
-      margin: 1rem 0 2.5rem;
+      background: var(--cream);
+      padding: 2.2rem 3rem;
+      border-radius: 2rem;
+      margin-bottom: 2.8rem;
+      box-shadow: var(--shadow);
     }
     .privacy-hero h1 {
-      font-size: 3.2rem;
-      font-weight: 650;
-      margin-bottom: 0.5rem;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--elder);
     }
     .privacy-hero .subhead {
       font-size: 1.2rem;
-      color: #3f352e;
-      max-width: 70%;
-      margin-bottom: 0.5rem;
-    }
-    .privacy-hero .meta {
-      color: #5e4b3c;
-      font-size: 0.95rem;
-      border-top: 1px solid #ddd0c2;
-      padding-top: 1rem;
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .badge {
-      background: #b45f3b10;
-      color: #b45f3b;
-      font-weight: 600;
-      padding: 0.1rem 1rem;
-      border-radius: 40px;
-      border: 1px solid #b45f3b30;
-      font-size: 0.8rem;
-      display: inline-block;
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      color: #5f4635;
+      border-left: 4px solid var(--clay);
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 0.2rem;
     }
 
-    /* ===== PRIVACY CONTENT (cookies) ===== */
-    .privacy-content {
+    /* ----- privacy content (card style) ----- */
+    .privacy-card {
       background: white;
-      padding: 2.5rem 3rem;
-      border-radius: 32px;
-      border: 1px solid #ece2d9;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
-      margin: 2rem 0 3rem;
+      padding: 2.2rem 2.8rem;
+      border-radius: 2rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2.5rem;
     }
-    .privacy-content h2 {
-      margin-top: 2.2rem;
-    }
-    .privacy-content h2:first-of-type {
-      margin-top: 0;
-    }
-    .privacy-content ul, .privacy-content ol {
-      margin: 0.8rem 0 1.4rem 1.8rem;
-    }
-    .privacy-content li {
-      margin-bottom: 0.5rem;
-    }
-    .privacy-content .highlight-box {
-      background: #f3ede7;
-      padding: 1.2rem 2rem;
-      border-radius: 24px;
-      margin: 1.5rem 0;
-      border-left: 4px solid #b45f3b;
-    }
-    .privacy-content .highlight-box p {
-      margin-bottom: 0.2rem;
-    }
-
-    /* cookie preference table */
-    .cookie-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0 2rem;
-      font-size: 0.95rem;
-    }
-    .cookie-table th {
-      text-align: left;
-      background: #f3ede7;
-      padding: 0.8rem 1rem;
-      font-weight: 600;
-    }
-    .cookie-table td {
-      padding: 0.8rem 1rem;
-      border-bottom: 1px solid #ece2d9;
-    }
-    .cookie-table tr:last-child td {
-      border-bottom: none;
-    }
-    .cookie-badge {
-      background: #e3d7cc;
-      padding: 0.2rem 0.8rem;
-      border-radius: 40px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #2f2a25;
-      display: inline-block;
-    }
-    .cookie-badge.essential { background: #d4c9be; }
-    .cookie-badge.analytics { background: #d1c4b5; }
-    .cookie-badge.preference { background: #dacfc3; }
-
-    /* ===== NEWSLETTER ===== */
-    .newsletter {
-      background: #1e1b18;
-      color: #f0ebe5;
-      padding: 3rem 2.5rem;
-      border-radius: 40px;
-      margin: 3.5rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .newsletter h3 {
+    .privacy-card h2 {
       font-size: 1.8rem;
-      margin: 0;
-      color: #f0ebe5;
+      margin-top: 1.8rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 2px solid var(--border-soft);
+      padding-bottom: 0.3rem;
     }
-    .newsletter p {
-      margin: 0.2rem 0 0;
-      opacity: 0.8;
-      max-width: 400px;
+    .privacy-card h2:first-of-type { margin-top: 0; }
+    .privacy-card p {
+      margin: 0.8rem 0;
+      color: #2b221c;
     }
-    .newsletter form {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
+    .privacy-card ul {
+      margin: 0.8rem 0 1.2rem 1.8rem;
     }
-    .newsletter input {
-      padding: 0.9rem 1.4rem;
-      border-radius: 60px;
-      border: none;
-      background: #2f2a25;
-      color: #f0ebe5;
-      min-width: 220px;
-      font-size: 0.95rem;
+    .privacy-card li {
+      margin-bottom: 0.3rem;
     }
-    .newsletter input::placeholder {
-      color: #a59586;
+    .privacy-card .highlight {
+      background: #faf3ea;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      display: inline-block;
+      font-size: 0.9rem;
+      border: 1px solid var(--border-soft);
     }
-    .newsletter button {
-      background: #b45f3b;
-      border: none;
-      padding: 0 2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      color: white;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .newsletter button:hover {
-      background: #9f4f30;
+    .privacy-card .update-date {
+      margin-top: 2rem;
+      font-style: italic;
+      color: #5f4d3b;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 1.2rem;
     }
 
-    /* ===== FOOTER ===== */
+    /* footer */
     .footer {
-      border-top: 1px solid #ddd0c2;
-      padding: 2.5rem 0 1.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--border-soft);
+      font-size: 0.9rem;
+      color: #3d322a;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 2rem;
-      color: #3f352e;
-    }
-    .footer-links {
-      display: flex;
-      gap: 2.5rem;
-      font-weight: 450;
-    }
-    .footer small {
-      opacity: 0.7;
     }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 860px) {
-      .top-bar {
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 1.2rem;
-      }
-      h1 { font-size: 2.4rem; }
-      .privacy-hero h1 { font-size: 2.5rem; }
-      .privacy-hero .subhead { max-width: 100%; }
-      .privacy-content { padding: 1.8rem; }
-      .cookie-table { font-size: 0.85rem; }
-      .cookie-table th, .cookie-table td { padding: 0.5rem 0.6rem; }
-    }
-    @media (max-width: 500px) {
-      .container { padding: 0 0.8rem; }
-      .privacy-content { padding: 1.2rem; }
-      .newsletter { flex-direction: column; align-items: start; gap: 1.2rem; }
-      .cookie-table, .cookie-table tbody, .cookie-table tr, .cookie-table td, .cookie-table th {
-        display: block;
-      }
-      .cookie-table tr {
-        margin-bottom: 0.8rem;
-        border-bottom: 1px solid #ddd0c2;
-        padding-bottom: 0.8rem;
-      }
-      .cookie-table th { display: none; }
-      .cookie-table td::before {
-        content: attr(data-label);
-        font-weight: 600;
-        display: inline-block;
-        width: 100px;
-        color: #3f352e;
-      }
-      .cookie-table td {
-        padding: 0.3rem 0.6rem;
-        border: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.2rem;
-      }
+    @media (max-width: 700px) {
+      body { padding: 0 1rem; }
+      .privacy-hero { padding: 1.8rem; }
+      .privacy-hero h1 { font-size: 2.2rem; }
+      .nav-links { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
+      .privacy-card { padding: 1.8rem; }
     }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- header (same as main, with active state for cookies) -->
-  <header class="top-bar">
-    <div class="logo">Eastwind <span>Kitchen Press</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="terms.html">Terms Of Privacy</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="cookies.html" class="active">Cookies Policy</a></li>
-    </ul>
-  </header>
-
-  <!-- COOKIES HERO -->
-  <section class="privacy-hero">
-    <h1>Cookies <span class="serif-italic">&amp; choices</span></h1>
-    <p class="subhead">We use cookies to keep things running smoothly and to understand how you interact with our kitchen.</p>
-    <div class="meta">
-      <span><span class="badge" style="background:transparent; border-color:#c0a48a; padding-left:0;">🍪</span> Last updated: June 30, 2026</span>
-      <span><span class="badge" style="background:transparent; border-color:#c0a48a; padding-left:0;">⚙️</span> Manage your preferences</span>
-    </div>
-  </section>
-
-  <!-- COOKIES CONTENT -->
-  <div class="privacy-content">
-    <h2>What are cookies?</h2>
-    <p>Cookies are tiny text files stored on your device when you visit a website. They help us remember your preferences, understand how you use the site, and improve your experience. We use them sparingly and transparently.</p>
-
-    <div class="highlight-box">
-      <p><strong>🍪 Our approach</strong> — we only use essential cookies by default. Analytics and preference cookies are optional and require your consent.</p>
-    </div>
-
-    <h2>Types of cookies we use</h2>
-    <p>Below is a clear breakdown of the cookies we set and what they do.</p>
-
-    <table class="cookie-table">
-      <thead>
-        <tr><th>Name</th><th>Purpose</th><th>Type</th><th>Duration</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Name"><code>eastwind_session</code></td>
-          <td data-label="Purpose">Maintains your session and site functionality.</td>
-          <td data-label="Type"><span class="cookie-badge essential">Essential</span></td>
-          <td data-label="Duration">Session</td>
-        </tr>
-        <tr>
-          <td data-label="Name"><code>cookie_consent</code></td>
-          <td data-label="Purpose">Stores your cookie preference choices.</td>
-          <td data-label="Type"><span class="cookie-badge essential">Essential</span></td>
-          <td data-label="Duration">1 year</td>
-        </tr>
-        <tr>
-          <td data-label="Name"><code>_ga</code> (Google Analytics)</td>
-          <td data-label="Purpose">Anonymized traffic analysis to improve content.</td>
-          <td data-label="Type"><span class="cookie-badge analytics">Analytics</span></td>
-          <td data-label="Duration">2 years</td>
-        </tr>
-        <tr>
-          <td data-label="Name"><code>_gid</code> (Google Analytics)</td>
-          <td data-label="Purpose">Distinguishes users for session metrics.</td>
-          <td data-label="Type"><span class="cookie-badge analytics">Analytics</span></td>
-          <td data-label="Duration">24 hours</td>
-        </tr>
-        <tr>
-          <td data-label="Name"><code>pref_theme</code></td>
-          <td data-label="Purpose">Remembers your preferred display settings.</td>
-          <td data-label="Type"><span class="cookie-badge preference">Preference</span></td>
-          <td data-label="Duration">6 months</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>Your control</h2>
-    <p>You can manage or disable cookies at any time through your browser settings. However, disabling essential cookies may affect the site’s functionality. For analytics and preference cookies, we ask for your explicit consent before placing them.</p>
-    <p><strong>Manage your consent:</strong> You can update your choices anytime by clicking the "Cookie Settings" link in the footer or by clearing your browser cookies and revisiting the site.</p>
-
-    <h2>Third‑party cookies</h2>
-    <p>We use Google Analytics (with IP anonymization) to collect anonymous usage data. These cookies are set by Google and are subject to their privacy policy. We also use external CDNs for fonts and images, which may set their own cookies — though we do not control them.</p>
-
-    <h2>More information</h2>
-    <p>If you have questions about our cookie usage, please see our <a href="privacy.html">Privacy Policy</a> or contact us at <a href="mailto:privacy@eastwindkitchen.com">privacy@eastwindkitchen.com</a>.</p>
-
-    <hr style="margin: 2.5rem 0;">
-
-    <p style="color:#5e4b3c; font-size:0.95rem;"><strong>📬 Prefer no cookies?</strong> You can set your browser to block all cookies, but please note that some parts of the site may not work as intended.</p>
-  </div>
-
-  <!-- NEWSLETTER (same as main) -->
-  <div class="newsletter">
-    <div>
-      <h3>📬 The Eastwind Dispatch</h3>
-      <p>Weekly insights, seasonal recipes, and fermentation logs.</p>
-    </div>
-    <form>
-      <input type="email" placeholder="your email" aria-label="email">
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div>
-      <div class="logo" style="font-size:1.2rem;">Eastwind <span>Kitchen Press</span></div>
-      <small>© 2026 · content‑first kitchen library</small>
-    </div>
-    <div class="footer-links">
+  <!-- header (exactly as main) -->
+  <header class="site-header">
+    <div class="logo">Elderberry<span>Oven</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
-      <a href="#0" style="color:#b45f3b;">Cookie Settings</a>
+      <a href="privacy.html" style="color:var(--accent); border-bottom:2px solid var(--accent);">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+    </nav>
+  </header>
+
+  <!-- privacy hero -->
+  <section class="privacy-hero">
+    <h1>Your privacy matters</h1>
+    <div class="subhead">how we handle your data with the same care as a slow‑rise sourdough</div>
+    <p style="margin-top:0.8rem; max-width:650px;">We believe in transparency, warmth, and never over‑proofing your trust. This policy explains what information we collect, why we collect it, and how we keep it safe.</p>
+  </section>
+
+  <!-- privacy content (cards) -->
+  <div class="privacy-card">
+    <h2>🍞 Information we collect</h2>
+    <p>We collect only the information you voluntarily share with us, such as:</p>
+    <ul>
+      <li><strong>Contact details</strong> — name, email address, and any message you send via our contact form.</li>
+      <li><strong>Newsletter sign‑ups</strong> — if you subscribe, we store your email to send you our occasional baking notes.</li>
+      <li><strong>Usage data</strong> — basic analytics (like page views) to help us understand what our readers enjoy most. We use anonymised data only.</li>
+    </ul>
+    <p>We never sell, rent, or trade your personal information. It stays between us, like a secret family recipe.</p>
+
+    <h2>🕊️ How we use your data</h2>
+    <ul>
+      <li>To reply to your messages and inquiries.</li>
+      <li>To send you our newsletter (only if you’ve opted in).</li>
+      <li>To improve our website and content.</li>
+    </ul>
+    <p>We process your data on the lawful basis of <strong>legitimate interest</strong> — we want to bake a better experience for you. You can opt out anytime.</p>
+
+    <h2>🔒 Data security & retention</h2>
+    <p>We take security seriously. All data is stored on secure servers and accessed only by the Elderberry Oven team. We keep your information only as long as needed to provide our services or as required by law. If you’d like us to delete your data, just drop us a line.</p>
+
+    <h2>🍪 Cookies? Just a light dusting</h2>
+    <p>We use minimal cookies — only essential ones for functionality and a tiny pinch of analytics. We don’t use tracking cookies for advertising. You can manage your preferences in your browser settings. For more details, see our <a href="cookies.html" style="border-bottom:1px solid var(--clay);">Cookie Policy</a>.</p>
+
+    <h2>📬 Your rights</h2>
+    <p>Under UK and EU data protection law, you have the right to:</p>
+    <ul>
+      <li>Access the data we hold about you.</li>
+      <li>Correct any inaccuracies.</li>
+      <li>Request deletion of your data.</li>
+      <li>Withdraw consent at any time.</li>
+    </ul>
+    <p>To exercise these rights, simply email us at <a href="mailto:hello@elderberryoven.com" style="border-bottom:1px solid var(--clay);">hello@elderberryoven.com</a> — we’ll respond within 30 days.</p>
+
+    <h2>🌿 Updates to this policy</h2>
+    <p>We may update this page occasionally to reflect changes in our practices or for legal reasons. We’ll always post the latest version here, and if changes are significant, we’ll highlight them.</p>
+
+    <div class="update-date">
+      <span class="highlight">📅 Last updated: 30 June 2026</span>
+      <p style="margin-top:0.6rem;">This policy applies to all visitors and users of the Elderberry Oven Tales website.</p>
     </div>
+  </div>
+
+  <!-- extra: contact nudge -->
+  <div style="background: #f2e7da; padding: 1.5rem 2.2rem; border-radius: 2rem; margin: 1.2rem 0 0.5rem; text-align:center; box-shadow: var(--shadow);">
+    <p style="font-family:'EB Garamond',serif; font-size:1.3rem;">🍂 Have a question about privacy? <a href="contact.html" style="border-bottom:2px solid var(--clay); font-weight:600;">Reach out — we’re here to help.</a></p>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <span>© 2026 Elderberry Oven Tales · rustic baking journal</span>
+    <span style="display:flex; gap:1.5rem;"><a href="about.html">about</a> <a href="contact.html">contact</a> <a href="privacy.html">privacy</a></span>
   </footer>
 
-</div>
+</div><!-- /.container -->
 </body>
 </html>
