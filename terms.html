@@ -1,342 +1,1329 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service · Zelvora Plant Mosaic</title>
-  <!-- Font Awesome (subtle accents) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <style>
-    /* ----- RESET & VARIABLES (same as main/about) ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Thorniltyot - Terms of Service (TOS)</title>
+        <meta property="og:title" content="Thorniltyot - Terms of Service (TOS)" />
+        <meta property="og:image" content="main.svg"/>
+        
+        <meta property="og:description" content="Thorniltyot - Terms of Service (TOS)">
+        <meta name="description" content="Thorniltyot - Terms of Service (TOS)">
+        <link rel="stylesheet" href="public/style/slick.css">
+        <link rel="stylesheet" href="public/style/slick-theme.css">
+        <link rel="stylesheet" href="public/style/bootstrap.css">
+        <link rel="stylesheet" href="public/style/jquery.fancybox.css"> 
+        <link rel="stylesheet" href="public/style/bootstrap-icons.css">
+        
 
-    body {
-      background: #f7f4ed;
-      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
-      color: #2a2b26;
-      line-height: 1.7;
-    }
+        <link rel="shortcut icon" href="main.svg" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script src="public/script/jquery.min.js"></script>
 
-    :root {
-      --primary: #3a5e4c;
-      --primary-light: #5a7e6a;
-      --accent: #b68b6b;
-      --accent-light: #dac2ab;
-      --bg-soft: #f7f4ed;
-      --card-bg: #ffffff;
-      --text-dark: #1e2a24;
-      --text-muted: #4f5c54;
-      --border-light: #e2ddd4;
-      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02);
-      --shadow-card: 0 12px 28px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
-      --radius-card: 20px;
-      --font-serif: 'Georgia', 'Times New Roman', serif;
-    }
+      
+        
+        
+        </head>
 
-    h1, h2, h3 {
-      font-family: var(--font-serif);
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      color: var(--text-dark);
-      line-height: 1.25;
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-    }
+        <body>
 
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-    }
+            
 
-    h2 {
-      font-size: 2rem;
-      border-left: 5px solid var(--accent);
-      padding-left: 1rem;
-      margin-top: 2.8rem;
-    }
+            <header class="wrapFirst">
+                <div class="bgbox">
+                    <div class="container nav__container stock--cardby">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-4">
+                                <div class="wrapFirst--logo">
+                                    <img src="main.svg" alt="">
+                                    <h2>Thorniltyot</h2>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <ul class="navbar--box">
+                                    <li><a href="./#ab">About us</a></li>
+                                    <li><a href="./#bf">Our Advantages</a></li>
+                                    <li><a href="./#rw">Comments</a></li>
+                                     
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container header--block">
+                        <div class="row flex-row-reverse">
+                            <div class="col">
+                                <h3 class="fw-bolder">Welcome to Thorniltyot, your trusted partner for fresh flower delivery right to your doorstep. Whether it's a special occasion or just a thoughtful gesture, we ensure your flowers arrive beautifully arranged and on time. Experience the joy of gifting with ease and reliability through our seamless online ordering service.</h3>
+                                
+                            </div>
+                            <div class="col">
+                                <img src="assets/images/pattern-bg-1600x9000.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
 
-    h3 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-      font-weight: 500;
-    }
-
-    p {
-      margin-bottom: 1.4rem;
-      font-size: 1.05rem;
-      color: #2d332e;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border 0.15s, color 0.15s;
-    }
-
-    a:hover {
-      color: var(--accent);
-      border-bottom: 1px solid var(--accent);
-    }
-
-    .container {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* ----- HEADER (identical) ----- */
-    .site-header {
-      padding: 1.8rem 0 1.2rem;
-      border-bottom: 1px solid var(--border-light);
-      background: #fffcf8;
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-family: var(--font-serif);
-      font-size: 2.1rem;
-      font-weight: 600;
-      color: var(--primary);
-      letter-spacing: -0.02em;
-    }
-
-    .logo span {
-      font-weight: 300;
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.2rem;
-      font-size: 0.95rem;
-      font-weight: 450;
-      letter-spacing: 0.3px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      border-bottom: none;
-      color: var(--text-dark);
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-      border-bottom: 1px solid var(--primary);
-    }
-
-    /* ----- TERMS SPECIFIC ----- */
-    .terms-hero {
-      padding: 2.5rem 0 0.5rem;
-    }
-
-    .terms-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .terms-hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 720px;
-    }
-
-    .terms-card {
-      background: var(--card-bg);
-      border-radius: var(--radius-card);
-      padding: 2.5rem 2.8rem;
-      box-shadow: var(--shadow-card);
-      border: 1px solid #f0ece4;
-      margin: 2rem 0 3rem;
-    }
-
-    .terms-card h2 {
-      border-left: 5px solid var(--accent);
-      padding-left: 1rem;
-      margin-top: 2.2rem;
-    }
-
-    .terms-card h2:first-of-type {
-      margin-top: 0;
-    }
-
-    .terms-card p {
-      color: #2d332e;
-    }
-
-    .terms-card ul {
-      margin: 0.8rem 0 1.8rem 1.8rem;
-    }
-
-    .terms-card li {
-      margin-bottom: 0.5rem;
-      font-size: 1.02rem;
-      color: #2d332e;
-    }
-
-    .terms-card li i {
-      color: var(--accent);
-      margin-right: 0.6rem;
-      width: 1.2rem;
-    }
-
-    .highlight-box {
-      background: #f3efe8;
-      border-radius: 16px;
-      padding: 1.8rem 2rem;
-      margin: 2rem 0 0.5rem;
-      border-left: 6px solid var(--primary);
-    }
-
-    .highlight-box p {
-      margin-bottom: 0.2rem;
-    }
-
-    .small-meta {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-top: 2rem;
-      border-top: 1px solid var(--border-light);
-      padding-top: 1.8rem;
-    }
-
-    /* footer */
-    .site-footer {
-      border-top: 1px solid var(--border-light);
-      padding: 2.8rem 0 2rem;
-      margin-top: 3rem;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-
-    .footer-links a {
-      margin-right: 1.8rem;
-      border-bottom: none;
-    }
-
-    /* responsive */
-    @media (max-width: 700px) {
-      h1 { font-size: 2.4rem; }
-      .header-inner { flex-direction: column; gap: 0.8rem; }
-      .nav-links { flex-wrap: wrap; gap: 1.2rem; }
-      .terms-card { padding: 1.8rem; }
-    }
-  </style>
-</head>
-<body>
-
-<!-- HEADER (active "Terms" – adjust highlight) -->
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="logo">Zelvora Plant <span>✦</span> Mosaic</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="terms.html" style="color: var(--primary); border-bottom: 1px solid var(--primary);">Terms Of Privacy</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="cookies.html">Cookies Policy</a></li>
-    </ul>
+<div class="container pr--block">
+    <div class="content-block">
+        <div><div id="user-agreement-container" class="user-agreement-container">
+  <div id="intro-section" class="intro-section-block">
+    <p>Your engagement with the services offered by Thorniltyot is subject to the provisions of this User Agreement (referred to herein as the "Agreement"). By proceeding to access or utilize any aspect of our service, you signify your unreserved consent to adhere to the stipulations detailed within this document. A thorough review of this Agreement is essential, as it delineates critical aspects concerning your legal entitlements and responsibilities. Should you find any part of these terms unacceptable, we kindly request that you refrain from using our services.</p>
   </div>
-</header>
 
-<!-- TERMS HERO -->
-<section class="container terms-hero">
-  <h1>Terms of Service</h1>
-  <p><i class="fas fa-seedling" style="color: var(--accent); margin-right: 0.5rem;"></i> Last updated: June 30, 2026 — this agreement governs your use of the Zelvora Plant Mosaic website and community.</p>
-</section>
+  <section id="acceptance-of-terms" class="section-container-acceptance">
+    <h2>Acceptance of Terms</h2>
+    <p>Your decision to access and interact with the website and associated services provided by Thorniltyot constitutes an affirmation that you have reviewed, comprehended, and consent to be legally bound by this Agreement. The terms outlined herein extend to encompass all individuals who visit, utilize, or otherwise engage with the service. For those acting on behalf of a corporate entity or other organization, your acceptance of this Agreement serves as a declaration that you possess the requisite authority to commit said organization to these conditions.</p>
+  </section>
 
-<!-- MAIN TERMS CONTENT (card) -->
-<div class="container">
-  <div class="terms-card">
+  <section id="modification-of-terms" class="section-box-modification">
+    <h2>Modifications to Terms</h2>
+    <p>We retain the unilateral right to revise and update the provisions of this Agreement whenever deemed necessary. All such amendments shall become effective immediately upon their publication on our service platform. Your continued engagement with our service subsequent to any alterations shall be construed as your acceptance of, and agreement to, the revised terms. It remains your responsibility to periodically consult this Agreement to remain informed of any changes.</p>
+  </section>
 
-    <h2><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.6rem;"></i> Acceptance of Terms</h2>
-    <p>By accessing or using the Zelvora Plant Mosaic website (“we”, “us”, “our”), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any part of these terms, you must not use our site or services. We reserve the right to update these terms at any time; your continued use constitutes acceptance of the changes.</p>
+  <section id="description-of-services" class="section-wrap-description">
+    <h2>Service Overview</h2>
+    <p>Thorniltyot delivers a diverse array of services designed to assist users with various tasks and projects. Our service offerings are continuously developed and may encompass online utilities, informational resources, and related support. These services are furnished on an "as is" and "as available" basis, without any express or implied guarantees or declarations concerning their quality, dependability, or suitability for any specific purpose.</p>
+  </section>
 
-    <h2><i class="fas fa-leaf" style="color: var(--accent); margin-right: 0.6rem;"></i> Use of Content</h2>
-    <p>All content on this site — including articles, images, graphics, logos, and guides — is the property of Zelvora Plant Mosaic or its content suppliers and is protected by copyright and intellectual property laws. You may:</p>
-    <ul>
-      <li><i class="fas fa-check"></i> Access and read content for personal, non-commercial use.</li>
-      <li><i class="fas fa-check"></i> Share links to our content with proper attribution.</li>
-      <li><i class="fas fa-check"></i> Print or save a single copy for personal reference.</li>
+  <section id="user-eligibility" class="section-box-eligibility">
+    <h2>User Eligibility Requirements</h2>
+    <p>You affirm and warrant that you have attained at least 18 years of age and possess the legal capacity to enter into a binding contractual arrangement. If your access or use of the services is on behalf of an organization, you further represent and warrant that you hold the necessary authority to legally bind that organization to the stipulations of this Agreement. Any contravention of these terms may result in the immediate suspension or termination of your service access.</p>
+  </section>
+
+  <section id="user-account-and-security" class="section-wrap-account-security">
+    <h2>User Accounts and Security Measures</h2>
+    <p>To access particular functionalities of our service, the creation of an account may be required. You commit to supplying accurate, current, and comprehensive information during the registration process and to diligently update such information as needed. You bear sole responsibility for safeguarding the confidentiality of your account credentials, and you agree to promptly inform us of any unauthorized use of your account. We disclaim any liability for losses or damages stemming from your failure to uphold this obligation.</p>
+  </section>
+
+  <section id="prohibited-activities" class="section-block-prohibited">
+    <h2>Forbidden Conduct</h2>
+    <p>You undertake not to engage in any actions that might disrupt or impede the proper functioning of the services. Prohibited activities encompass, but are not confined to:</p>
+    <ul class="prohibited-activities-list">
+      <li>Unauthorized access, utilization, or alteration of our website's underlying systems.</li>
+      <li>The transmission of any malicious software, viruses, or other harmful digital code.</li>
+      <li>Employing our service to disseminate content that is illegal, detrimental, or infringes upon the rights of others.</li>
+      <li>Attempting to bypass any security protocols implemented to restrict or prevent access to our service.</li>
     </ul>
-    <p>You may <strong>not</strong> republish, distribute, or exploit any content for commercial purposes without our explicit written consent. For permissions, please <a href="contact.html">contact us</a>.</p>
+    <p>Any breach of these terms may lead to the immediate termination of your service access, in addition to any legal remedies that may be pursued.</p>
+  </section>
 
-    <h2><i class="fas fa-users" style="color: var(--accent); margin-right: 0.6rem;"></i> User Accounts & Community</h2>
-    <p>Some areas of our site may allow you to create an account, post comments, or participate in forums. When you do so, you agree to:</p>
-    <ul>
-      <li><i class="fas fa-check"></i> Provide accurate and current information.</li>
-      <li><i class="fas fa-check"></i> Maintain the security of your password and account.</li>
-      <li><i class="fas fa-check"></i> Not use the community to harass, abuse, or impersonate others.</li>
-      <li><i class="fas fa-check"></i> Not post spam, malware, or offensive material.</li>
+  <section id="payment-terms" class="section-container-payment">
+    <h2>Payment Provisions</h2>
+    <p>Certain services provided by Thorniltyot may incur fees and other charges. Unless explicitly stated otherwise, all payments are due in advance. You agree to settle all fees and charges associated with your account, including any applicable taxes. All fees are non-refundable unless otherwise specified. We maintain the right to modify our pricing and payment policies at any time, with notification provided on the website or, if necessary, via email.</p>
+  </section>
+
+  <section id="privacy-policy" class="section-box-privacy">
+    <h2>Privacy Policy and Data Safeguarding</h2>
+    <p>Your privacy is of paramount importance to us. We are dedicated to safeguarding your personal information in strict adherence to all pertinent laws, including the California Consumer Privacy Act (CCPA) and other relevant privacy and data protection statutes within the United States. This section delineates our methodologies for handling your personal data, alongside your rights concerning that data.</p>
+    <h3>Information Gathering</h3>
+    <p>We may collect various categories of information from and about you during your use of our services, including:</p>
+    <ul class="information-collection-list">
+      <li><strong>Personal Details:</strong> Data such as your name, email address, physical address, and any other information voluntarily supplied by you.</li>
+      <li><strong>Usage Metrics:</strong> Information pertaining to your interactions with our services, including the specific pages you visit, the links you click, and other actions performed on the website.</li>
+      
     </ul>
-    <p>We reserve the right to suspend or terminate accounts that violate these guidelines or our values of respectful, inclusive gardening discussion.</p>
+    <h3>Utilization of Information</h3>
+    <p>The information we gather is deployed for the subsequent objectives:</p>
+    <ul class="information-use-list">
+      <li>To deliver, maintain, and enhance our service offerings.</li>
+      <li>To address your inquiries and furnish customer support.</li>
+      <li>To customize your experience and refine the user interface and functionality.</li>
+      <li>To dispatch periodic communications pertaining to our service, including updates and promotional materials where legally permissible.</li>
+      <li>To analyze prevailing trends and compile aggregate demographic data.</li>
+    </ul>
+    <h3>Data Retention and Removal</h3>
+    <p>We will retain your personal data only for the duration necessary to fulfill the aforementioned purposes or as mandated by law. You may initiate a request for the deletion of your personal data at any juncture, subject to certain legal exceptions or our legitimate business requirements. To request deletion, please adhere to the instructions provided within your account settings or contact our support team via the designated channels.</p>
+    <h3>Data Security Measures</h3>
+    <p>We implement a range of security protocols to ensure the integrity and safety of your personal information. These measures encompass technical, administrative, and physical safeguards specifically designed to protect against unauthorized access, disclosure, modification, or destruction of data. Nevertheless, no method of transmission over the Internet or electronic storage can guarantee absolute security, and thus, we cannot provide an unequivocal assurance of complete security.</p>
+    <h3>Information Sharing and Disclosure</h3>
+    <p>We do not engage in the sale, trade, or otherwise transfer your personal information to external parties, except as explicitly outlined in this Agreement. We may share your information with:</p>
+    <ul class="sharing-disclosure-list">
+      <li>Service providers and business partners who assist us in operating our service, subject to stringent confidentiality obligations.</li>
+      <li>Law enforcement agencies, governmental bodies, or other third parties when legally compelled or in response to valid legal demands.</li>
+      <li>In connection with the acquisition, merger, or restructuring of our enterprise, provided that the acquiring or merging entity commits to upholding the confidentiality of your personal data.</li>
+    </ul>
+    <h3>Your Legal Rights</h3>
+    <p>Pursuant to applicable privacy legislation, such as the California Consumer Privacy Act (CCPA), you possess specific rights concerning your personal data. These rights include:</p>
+    <ul class="user-rights-list">
+      <li>The entitlement to access and obtain a copy of your personal information held by us.</li>
+      <li>The right to request the rectification of inaccurate or incomplete information.</li>
+      <li>The right to request the erasure of your personal information, subject to applicable statutory limitations.</li>
+      <li>The right to be informed about what personal information is being collected, how it is being utilized, and with whom it is being shared.</li>
+    </ul>
+    <p>Should you wish to exercise any of these rights, please consult the instructions available within your account settings or contact our support team as detailed in our contact section.</p>
+  </section>
 
-    <h2><i class="fas fa-seedling" style="color: var(--accent); margin-right: 0.6rem;"></i> Gardening Advice & Disclaimer</h2>
-    <p>All information, guides, and recommendations provided on Zelvora Plant Mosaic are for educational and informational purposes only. Gardening involves variables such as climate, soil, and plant health that are beyond our control. We make no guarantees about the success of any specific technique or product. Always consult with a local horticulture expert or agricultural extension service for advice tailored to your region.</p>
-    <div class="highlight-box">
-      <p><i class="fas fa-exclamation-triangle" style="color: var(--accent); margin-right: 0.8rem;"></i> <strong>No liability:</strong> To the fullest extent permitted by law, we are not liable for any damages arising from the use of our content, including but not limited to crop loss, property damage, or personal injury.</p>
+  <section id="intellectual-property" class="section-wrap-intellectual-property">
+    <h2>Intellectual Property Rights</h2>
+    <p>All content, functionalities, and features provided by the service, encompassing text, graphical elements, brand insignia, and software, constitute the exclusive proprietary assets of Thorniltyot or its respective licensors and are safeguarded by applicable intellectual property statutes. You are prohibited from using, altering, or disseminating any of this content without securing prior written consent from the appropriate rights holder, except as expressly permitted under this Agreement.</p>
+  </section>
+
+  <section id="limitation-of-liability" class="section-box-liability">
+    <h2>Limitation of Our Liability</h2>
+    <p>To the fullest extent permissible by governing law, Thorniltyot shall not be held accountable for any indirect, incidental, special, consequential, or punitive damages, or any damages whatsoever, even if Thorniltyot has been apprised of the potential for such damages. This limitation encompasses, without restriction, damages for loss of profits, usage, data, or other intangible losses, arising from or in connection with your access to or utilization of the service.</p>
+    <p>You acknowledge and concur that your use of the service is undertaken at your sole risk. The service is provided on an "as is" and "as available" basis, without any warranties of any kind, whether express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+  </section>
+
+  <section id="indemnification" class="section-wrap-indemnification">
+    <h2>Indemnification</h2>
+    <p>You agree to indemnify, defend, and hold harmless Thorniltyot, its affiliated entities, officers, directors, employees, agents, licensors, and suppliers from and against any claims, liabilities, damages, losses, costs, or expenditures, including reasonable legal fees and associated costs, arising from or in any way related to your use of the service, any violation of this Agreement, or your infringement of any intellectual property or other rights belonging to any individual or entity.</p>
+  </section>
+
+  <section id="termination" class="section-block-termination">
+    <h2>Termination of Service</h2>
+    <p>We reserve the prerogative to terminate or suspend your access to our services at any time, with or without prior notification, for any reason, including, but not limited to, a breach of this Agreement. Upon termination, your authorization to use the services will immediately cease. All provisions of this Agreement that, by their inherent nature, should endure termination shall remain in full force and effect, including, without limitation, the clauses pertaining to intellectual property, indemnification, limitation of liability, and dispute resolution.</p>
+  </section>
+
+  <section id="dispute-resolution" class="section-block-dispute">
+    <h2>Dispute Resolution Mechanisms</h2>
+    <p>Any disagreements stemming from or relating to this Agreement or your utilization of our services shall first be addressed through good faith negotiations between the involved parties. Should a dispute prove unresolvable through informal means, it will be submitted to binding arbitration in accordance with the arbitration rules applicable in the United States. The arbitration proceedings shall be conducted in the English language, and the arbitrator's decision will be conclusive and binding upon both parties. Notwithstanding the foregoing, Thorniltyot retains the right to pursue injunctive or equitable relief in any court of competent jurisdiction to safeguard its intellectual property or other proprietary entitlements.</p>
+  </section>
+
+  <section id="governing-law" class="section-container-governing-law">
+    <h2>Governing Law and Jurisdiction</h2>
+    <p>This Agreement and any disputes arising from or connected to it shall be interpreted and enforced in accordance with the laws of the United States, without reference to its conflict of laws principles. You consent to the personal jurisdiction of the courts situated within the United States for any legal actions or proceedings originating from or related to this Agreement.</p>
+  </section>
+
+  <section id="severability" class="section-container-severability">
+    <h2>Severability Clause</h2>
+    <p>Should any provision or portion of a provision within this Agreement be deemed unlawful, invalid, or unenforceable, the remaining provisions or parts thereof shall continue in full force and effect. In such an instance, the parties agree to negotiate a replacement, valid, and enforceable provision that most closely aligns with the economic, legal, and commercial objectives of the original provision.</p>
+  </section>
+
+  <section id="entire-agreement" class="section-container-entire-agreement">
+    <h2>Entire Agreement</h2>
+    <p>This Agreement represents the complete and exclusive understanding between you and Thorniltyot concerning your use of the services and supersedes all prior or contemporaneous communications, whether electronic, oral, or written, regarding the subject matter herein. Any waiver of any provision of this Agreement will be effective solely if documented in writing and signed by an authorized representative of Thorniltyot.</p>
+  </section>
+
+  <section id="miscellaneous" class="section-block-miscellaneous">
+    <h2>Miscellaneous Provisions</h2>
+    <p>You concur that any official notices or other communications issued by us under this Agreement will be considered delivered upon dispatch via regular mail, email, or by posting on our website. Any failure by either party to enforce any stipulation of this Agreement shall not be interpreted as a waiver of future enforcement of that provision or any other provision. The headings used in this Agreement are included purely for convenience and shall not influence its interpretation.</p>
+  </section>
+
+  
+
+  <section id="contact-and-feedback" class="section-block-contact">
+    <h2>Contact Information and Feedback</h2>
+    <p>We welcome your inquiries, comments, and suggestions regarding this Agreement and the services provided by Thorniltyot. While direct contact details such as email addresses or telephone numbers are not included within this document, all correspondence concerning this Agreement should be submitted through the appropriate channels made available within your account interface or on the website. Your feedback is highly valued and instrumental in helping us refine our service offerings and policies.</p>
+  </section>
+
+  <div id="final-remarks" class="final-remarks">
+    <p>This Agreement was last updated on 06.04.2026. By continuing to access or utilize our services, you acknowledge that you have thoroughly read, understood, and consented to all the terms and conditions outlined above. We thank you for choosing Thorniltyot. Our commitment is to provide you with a safe, secure, and intuitive service experience.</p>
+  </div>
+</div></div>
     </div>
+</div>
 
-    <h2><i class="fas fa-handshake" style="color: var(--accent); margin-right: 0.6rem;"></i> Third-Party Links & Affiliates</h2>
-    <p>Our site may contain links to external websites, seed suppliers, or affiliate partners. We do not endorse or assume responsibility for the content, privacy practices, or products of any third-party sites. Your interactions with these sites are governed by their own terms and policies.</p>
 
-    <h2><i class="fas fa-gavel" style="color: var(--accent); margin-right: 0.6rem;"></i> Governing Law</h2>
-    <p>These Terms are governed by the laws of the state of [Your State/Country], without regard to its conflict of law provisions. Any dispute arising from or relating to these Terms or your use of the site shall be resolved exclusively in the courts of [Your County/Region].</p>
+ 
 
-    <h2><i class="fas fa-envelope" style="color: var(--accent); margin-right: 0.6rem;"></i> Contact & Questions</h2>
-    <p>If you have any questions about these Terms, please reach out to us via our <a href="contact.html">Contact page</a> or email us at <a href="mailto:legal@zelvora.com">legal@zelvora.com</a>. We aim to respond within 3 business days.</p>
 
-    <div class="small-meta">
-      <i class="far fa-calendar-alt" style="margin-right: 0.5rem;"></i> Version 2.1 – effective June 30, 2026
-    </div>
 
-  </div> <!-- /terms-card -->
+            <div class="contact--box paddFirst bnw" id="ct">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="contacting promo-galleryog">
+                                
+                                <div class="prbvb" >
+                                    <div><a href="privacyPolicy.html" target="_blank">Privacy policy</a></div>
+                                    <div><a href="terms.html" target="_blank">Terms & Conditions</a></div>
+                                    <div><a href="legal-disclaimer.html" target="_blank">Disclaimer</a></div>
+                                </div>
 
-  <!-- optional consistent newsletter block (like about) -->
-  <div class="newsletter" style="background: #eae7df; border-radius: 40px; padding: 3rem 2.5rem; margin: 2.5rem 0; text-align: center;">
-    <h2 style="border-left: none; margin-top: 0;">🌱 The weekly mosaic</h2>
-    <p style="max-width: 600px; margin: 0 auto 1.5rem;">Seasonal insights, cultivar spotlights, and soil science — free in your inbox.</p>
-    <input type="email" placeholder="gardener@example.com" aria-label="email" style="padding: 0.8rem 1.2rem; border-radius: 40px; border: 1px solid #ccc; min-width: 260px; font-size: 1rem; background: white;" />
-    <button style="background: var(--primary); color: white; border: none; padding: 0.8rem 2.2rem; border-radius: 40px; font-size: 1rem; font-weight: 500; margin-left: 0.5rem; cursor: pointer; transition: 0.15s;">Subscribe</button>
-  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- resource hub (same as about) -->
-  <h2>📚 Connect with our work</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
-    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-leaf"></i> Journal</span>
-    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-seedling"></i> Guides</span>
-    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-hand-sparkles"></i> Workshops</span>
-    <span style="background: white; padding: 0.6rem 1.5rem; border-radius: 40px; box-shadow: var(--shadow-sm);"><i class="fas fa-envelope"></i> Newsletter</span>
-  </div>
 
-</div> <!-- /container -->
 
-<!-- FOOTER (identical) -->
-<footer class="container site-footer">
-  <div>© 2026 Zelvora Plant Mosaic · crafted with soil & spirit</div>
-  <div class="footer-links">
-    <a href="#">Journal</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="#">RSS</a>
-  </div>
-</footer>
+        <span id="randomColor" class="#ffffff"></span>
+        <span id="randomShadow" class="8px"></span>
+
+
+            <style>
+                li{
+                    list-style: none;
+                }
+                body{
+                    font-family: 'Tajawal', sans-serif !important;
+                    font-size: 1em;
+                    margin: 0;
+                    padding: 0;
+                    direction: {publicction-white};
+                    box-sizing: border-box;
+                }
+                .pr--block {
+                    padding: 104px 0px;
+                }
+                .content-block p {
+                    padding: 6px 0;
+                }
+                .content-block li {
+                    list-style: dist;
+                    padding: 6px 0;
+                    margin: 0 19px;
+                }
+                .wrapFirst{
+                    background-image: linear-gradient(to top, #810c3c, #7d1445, #781b4d, #722255, #6b285b);
+                    min-height: 513px;
+                }
+                .bgbox{
+                    width: 100%;
+                    min-height: 513px;
+                    background: url(assets/images/mask-2026-06-30_09-17-060.png);
+                    background-position: center;
+                    background-size: cover;
+                    color: #ffffff;
+                }
+                .bgbox2{
+                    width: 100%;
+                    background: url(assets/images/mask-2026-06-30_09-17-061.png);
+                    background-position: center;
+                    background-size: cover;
+                    color: #ffffff;
+                }
+                .bgbox3{
+                    width: 100%;
+                    background: url(assets/images/mask-2026-06-30_09-17-062.png);
+                    background-position: center;
+                    background-size: cover;
+                    color: #ffffff;
+                }
+                .wrapFirst--logo{
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+                .wrapFirst--logo img{
+                    width: 40px;
+                }
+                .wrapFirst--logo h2{
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin: 0px;
+    
+                }
+                .form-forma {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                }
+                
+                .input-custom__component_item{
+                    display: block;
+                    width: 100%;
+                    padding: 14px 19px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 1.2;
+                    color: #212529;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #ced4da;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border-radius: 0.25rem;
+                    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                }
+                .textarea-custom__component_item{
+                    width: 100%;
+                    font-size: 18px;
+                    border: 1px solid #ced4da;
+                    border-radius: 0.25rem;
+                    padding: 14px 19px;
+                }
+                .nav__container{
+                    padding-top: 31px;
+                    padding-bottom: 51px;
+                }
+                .navbar--box{
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 14px;
+                    justify-content: space-between;
+                }
+                .navbar--box li{
+                    list-style: none;
+                    font-weight: bold;
+                    text-transform: inherit;
+                    font-size: 18px;
+                    line-height: calc(18px - 1px);
+                }
+                .navbar--box a{
+                    text-decoration: none;
+                    color: inherit;
+                    opacity: 0.9;
+                }
+                .navbar--box a:hover{
+                    opacity: 0.7;
+                }
+                .header--block{
+                    padding-top: 100px;
+                    padding-bottom: 51px;
+                }
+                .header--block h3{
+                    font-size: 40px;
+                }
+                .header--block img{
+                    height: 374px;
+                    width: 100%;
+                    object-fit: cover;
+                    border: 6px solid #810C3C;
+                    border-radius: 15px;
+                }
+                .header--block .row{
+                    align-items: center;
+                    position: relative;
+                }
+                .head-button{
+                    padding: 18px;
+                    text-decoration: none;
+                    max-width: 500px;
+                    width: 100%;
+                    margin: 18px auto;
+                }
+                .head-button:hover{
+                    color: inherit;
+                }
+                .flexBlock, .main--box{
+                    display: flex;
+                   flex-direction:  column;
+                }
+                .bnw{
+                    background: #3F070A;
+                    color: #ffffff;
+                }
+                .paddFirst{
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                }
+                .margFirst{
+                    margin-top: 100px;
+                    margin-bottom: 100px;
+                }
+                .comm--box{
+                    background: #810C3C;
+                }
+               
+                .testom--box{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+  }
+  .testom--box__item{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      width: 47%;
+      background: #fad586;
+      padding: 18px;
+      border-radius: 15px;
+      color: #222;
+      border-bottom: 1px solid #0D7377;
+      border-top: 1px solid #0D7377;
+  }
+  .testom--box__item img{
+      width: 67px;
+      border-radius: 0%;
+  }
+  .testom--box__item-info{
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+  }
+  .nameDate{
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .nameDate div{
+      font-size: 18px;
+  }
+  .nameDate span{
+      font-size: 16px;
+      opacity: 0.8;
+      display: none;
+  }
+  @media(max-width:768px){
+      .testom--box{
+          flex-direction: column;
+      }
+      .testom--box__item{
+          width: 100%;
+      }
+  }
+    
+                .benefitBlock{
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+  }
+  .benefitBlock--item{
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      background: rgba(255,255,255,0.5); color: #222;;
+      padding: 18px;
+      border-radius: 15px;
+      box-shadow: 1px 1px 8px #00000021;
+      flex: 2 1;
+  }
+  .benefitBlock--item i{
+      font-size: 59px;
+  }
+  .benefitBlock--item p{
+      margin-bottom: 0;
+      font-size: 19px;
+  }
+  @media(max-width: 992px){
+      .benefitBlock{
+          flex-direction: column !important;
+      }
+  }
+    
+                .gallery {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(6, 5vw);
+      grid-gap: 1.5rem;
+    }
+
+    .gallery__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery__item--1 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    .gallery__item--2 {
+      grid-column-start: 4;
+      grid-column-end: 7;
+      grid-row-start: 1;
+      grid-row-end: 4;
+
+    }
+
+    .gallery__item--3 {
+      grid-column-start: 7;
+      grid-column-end: 10;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    .gallery__item--4 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 4;
+      grid-row-end: 7;
+    }
+
+    .gallery__item--5 {
+      grid-column-start: 4;
+      grid-column-end: 7;
+      grid-row-start: 4;
+      grid-row-end: 7;
+    }
+
+    .gallery__item--6 {
+      grid-column-start: 7;
+      grid-column-end: 10;
+      grid-row-start: 4;
+      grid-row-end: 7;
+    }
+    
+                .mainPic--box img{
+                    max-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                figure{
+                    margin: 0;
+                }
+          
+                .partners--box h3{
+                    font-size: 40px;
+                    font-weight: 700;
+                    margin-bottom: 31px;
+                    text-align: start;
+                }
+                .partBlk {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 18px;
+                }
+    
+                .partBlk--item{
+                    margin: 0px 25px;
+                }
+                .partBlk--item img{
+                    max-width: 249px;
+                    width: 100%;
+                    height: 100px;
+                    object-fit: contain;
+                    margin: 0 auto;
+                }
+                .prc--box{
+                    font-size: 40px;
+                    margin-bottom: 0;
+                    font-weight: 700;
+                    color: #810C3C;
+                }
+
+                .formhere{
+                    display: flex;
+                    gap: 25px;
+                }
+                .formhere form > div{
+                    margin: 18px 0px;
+                }
+                .formhere button{
+                    padding: 14px;
+                    width: 100%;
+                }
+
+                .benefitBlock{
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+  }
+  .benefitBlock--item{
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      background: rgba(255,255,255,0.5); color: #222;;
+      padding: 18px;
+      border-radius: 15px;
+      box-shadow: 1px 1px 8px #00000021;
+      flex: 2 1;
+  }
+  .benefitBlock--item i{
+      font-size: 59px;
+  }
+  .benefitBlock--item p{
+      margin-bottom: 0;
+      font-size: 19px;
+  }
+  @media(max-width: 992px){
+      .benefitBlock{
+          flex-direction: column !important;
+      }
+  }
+
+                
+                .slick-dots li.slick-active button:before, .slick-dots li button:before{
+                    color: #ffffff;
+                }
+                .callout--box .row{
+                    flex-direction: row-reverse;
+                }
+                .mntbn{
+                    text-decoration: none;
+                    width: 100%;
+                    max-width: 600px;
+                    margin: 24px auto 0px auto;
+                    padding: 18px;
+                    color: inherit;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .mntbn:hover{
+                    color: inherit;
+                }
+                .contact--box .row{
+                    flex-direction: row-reverse;
+                }
+                .contacting{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 18px;
+                    font-weight: 700;
+                }
+                .contacting__item{
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+    
+                .contacting__item a{
+                    text-decoration: none;
+                    color: inherit;
+                }
+    
+                .prbvb{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    align-items: center;
+                }
+                .prbvb a{
+                    color: inherit;
+                }
+                .prbvb a:hover{
+                    text-decoration: none;
+                }
+                .contact--box form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                }
+                .contact--box form > div{
+                    display: flex;
+                    gap: 6px;
+                }
+                .contact--box h4{
+                    margin-bottom: 14px;
+                }
+                .contact--box form button{
+                    padding: 6px;
+                    width: 100%;
+                }
+                .contact--box form a{
+                    color: inherit;
+                    opacity: 0.8;
+                }
+                
+                .review--item__ibox img {
+                    width: 85px !important;
+                }
+                .imgLike {
+                    object-fit: contain;
+                    height: 499px;
+                    width: 100%;
+                }
+                @media (max-width: 575px){
+                    .imgLike {
+                        height: auto;
+                    }
+                    button{
+                        width: 100%;
+                    }
+                }
+                .partBlk{
+                    direction: ltr;
+                }
+                @media (max-width: 992px){
+       
+                    .header-logo h1{
+                        font-size: 22px;
+                    }
+                    .header--block .row{
+                        flex-direction: column-reverse !important;
+                        text-align: center;
+                    }
+                    .header--block h3{
+                        margin-top: 30px;
+                    }
+                }
+                @media(max-width: 760px){
+                    .contact--box .row{
+                        flex-direction: column !important;
+                        gap: 30px;
+                    }
+                    .nav__container .row{
+                        flex-direction: column !important;
+                        gap: 30px;
+                    }
+                    .navbar--box{
+                        flex-wrap: wrap;
+                    }
+                    .nav__container .col-4, .nav__container .col-8{
+                        width: 100% !important;
+                    }
+                    .wrapFirst--logo{
+                        justify-content: center;
+                    }
+                    .header--block img{
+                        height: auto;
+                    }
+                    .header--block h3{
+                        font-size: 28px;
+                    }
+                
+                }
+                @media(max-width: 480px){
+                    .navbar--box{
+                        flex-direction: column;
+                    }
+                
+                }
+    
+
+    .bt-1 {
+        align-items: center;
+        appearance: none;
+        background-clip: padding-box;
+        background-color: initial;
+        background-image: none;
+        border-style: none;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        flex-direction: row;
+        flex-shrink: 0;
+        font-size: 16px;
+        font-weight: 800;
+        justify-content: center;
+        line-height: 24px;
+        margin: 0;
+        min-height: 64px;
+        outline: none;
+        overflow: visible;
+        padding: 19px 26px;
+        pointer-events: auto;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        width: auto;
+        word-break: keep-all;
+        z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+        .bt-1 {
+            padding: 19px 32px;
+        }
+        }
+
+        .bt-1:before,
+        .bt-1:after {
+        border-radius: 80px;
+        }
+
+        .bt-1:before {
+        background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -2;
+        }
+
+        .bt-1:after {
+        background-color: initial;
+        background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+        bottom: 4px;
+        content: "";
+        display: block;
+        left: 4px;
+        overflow: hidden;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        transition: all 100ms ease-out;
+        z-index: -1;
+        }
+
+        .bt-1:hover:not(:disabled):before {
+        background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
+        }
+
+        .bt-1:hover:not(:disabled):after {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        transition-timing-function: ease-in;
+        opacity: 0;
+        }
+
+        .bt-1:active:not(:disabled) {
+        color: #ccc;
+        }
+
+        .bt-1:active:not(:disabled):before {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+        }
+
+        .bt-1:active:not(:disabled):after {
+        background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+        bottom: 4px;
+        left: 4px;
+        right: 4px;
+        top: 4px;
+        }
+
+        .bt-1:disabled {
+        cursor: default;
+        opacity: .24;
+        }
+        .bt-2 {
+        align-items: center;
+        background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+        border: 0;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: 700;
+        justify-content: center;
+        letter-spacing: .4px;
+        line-height: 1;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 3px;
+        text-decoration: none;
+        text-transform: uppercase;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        .bt-2:active {
+        outline: 0;
+        }
+
+        .bt-2:hover {
+        outline: 0;
+        }
+
+        .bt-2 span {
+        transition: all 200ms;
+        }
+
+        .bt-2:hover span {
+        transform: scale(.9);
+        opacity: .75;
+        }
+
+        @media screen and (max-width: 991px) {
+        .bt-2 {
+            font-size: 15px;
+            height: 50px;
+        }
+
+        .bt-2 span {
+            line-height: 50px;
+        }
+        }
+
+        .bt-3 {
+        align-items: center;
+        background-color: #06f;
+        border: 2px solid #06f;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        fill: #000;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        letter-spacing: -.8px;
+        line-height: 24px;
+        min-width: 140px;
+        outline: 0;
+        padding: 0 17px;
+        text-align: center;
+        text-decoration: none;
+        transition: all .3s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        .bt-3:focus {
+        color: #171e29;
+        }
+
+        .bt-3:hover {
+        background-color: #3385ff;
+        border-color: #3385ff;
+        fill: #06f;
+        }
+
+        .bt-3:active {
+        background-color: #3385ff;
+        border-color: #3385ff;
+        fill: #06f;
+        }
+
+        @media (min-width: 768px) {
+        .bt-3 {
+            min-width: 170px;
+        }
+        }
+
+        .bt-4 {
+        background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+        border: 0;
+        border-radius: 12px;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 2.5;
+        outline: transparent;
+        padding: 0 1rem;
+        text-align: center;
+        text-decoration: none;
+        transition: box-shadow .2s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        }
+
+        .bt-4:not([disabled]):focus {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+        }
+
+        .bt-4:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+        }
+
+        .bt-5 {
+        align-items: center;
+        background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+        border: 0;
+        border-radius: 8px;
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 140px;
+        padding: 19px 24px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        cursor: pointer;
+        }
+
+        .bt-5:active,
+        .bt-5:hover {
+        outline: 0;
+        }
+
+        @media (min-width: 768px) {
+        .bt-5 {
+            font-size: 24px;
+            min-width: 196px;
+        }
+        }
+
+        .bt-6 {
+        align-items: center;
+        background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+        border: 0;
+        border-radius: 8px;
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 140px;
+        padding: 3px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        cursor: pointer;
+        }
+
+        .bt-6:active,
+        .bt-6:hover {
+        outline: 0;
+        }
+
+        .bt-6 span {
+        background-color: rgb(5, 6, 45);
+        padding: 16px 24px;
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+        transition: 300ms;
+        }
+
+        .bt-6:hover span {
+        background: none;
+        }
+
+        @media (min-width: 768px) {
+        .bt-6 {
+            font-size: 24px;
+        }
+        }
+
+        .bt-7 {
+        appearance: none;
+        backface-visibility: hidden;
+        background-color: #2f80ed;
+        border-radius: 10px;
+        border-style: none;
+        box-shadow: none;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: normal;
+        line-height: 1.5;
+        outline: none;
+        overflow: hidden;
+        padding: 14px 30px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transform: translate3d(0, 0, 0);
+        transition: all .3s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: top;
+        white-space: nowrap;
+        }
+
+        .bt-7:hover {
+        background-color: #1366d6;
+        box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+        opacity: 1;
+        transform: translateY(0);
+        transition-duration: .35s;
+        }
+
+        .bt-7:hover:after {
+        opacity: .5;
+        }
+
+        .bt-7:active {
+        box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+        transform: translateY(2px);
+        transition-duration: .35s;
+        }
+
+        .bt-7:active:after {
+        opacity: 1;
+        }
+
+        @media (min-width: 768px) {
+        .bt-7 {
+            padding: 14px 22px;
+        }
+        }
+
+        .bt-8 {
+        appearance: none;
+        backface-visibility: hidden;
+        background-color: #27ae60;
+        border-radius: 8px;
+        border-style: none;
+        box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: normal;
+        line-height: 1.5;
+        outline: none;
+        overflow: hidden;
+        padding: 13px 20px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transform: translate3d(0, 0, 0);
+        transition: all .3s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: top;
+        white-space: nowrap;
+        }
+
+        .bt-8:hover {
+        background-color: #1e8449;
+        opacity: 1;
+        transform: translateY(0);
+        transition-duration: .35s;
+        }
+
+        .bt-8:active {
+        transform: translateY(2px);
+        transition-duration: .35s;
+        }
+
+        .bt-8:hover {
+        box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+        }
+
+        .bt-9 {
+        background-color: initial;
+        background-image: linear-gradient(#8614f8 0, #760be0 100%);
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-left: -4px;
+        outline: 0;
+        text-align: center;
+        transition: all .3s cubic-bezier(.05, .03, .35, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: bottom;
+        }
+
+        .bt-9:hover {
+        opacity: .7;
+        }
+
+        @media screen and (max-width: 1000px) {
+        .bt-9 {
+            font-size: 14px;
+            height: 55px;
+            line-height: 55px;
+        }
+        }
+
+        .bt-10 {
+        background-color: #0078d0;
+        border: 0;
+        border-radius: 56px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        outline: 0;
+        padding: 16px 21px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: all .3s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        .bt-10:before {
+        background-color: initial;
+        background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+        border-radius: 125px;
+        content: "";
+        height: 50%;
+        left: 4%;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        transition: all .3s;
+        width: 92%;
+        }
+
+        .bt-10:hover {
+        box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+        transform: scale(1.05);
+        }
+
+        @media (min-width: 768px) {
+        .bt-10 {
+            padding: 16px 48px;
+        }
+        }
+
+            </style>
+
+
+
+
+
+        
+        
+        
+
+
+       
+        <script>
+            let count = 4;
+
+            $('.partBlk').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: count,
+                arrows: false,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    } 
+                    
+                ]
+                });
+        </script>
+
+<script defer type="text/javascript" src="public/script/slick.min.js"></script>
+<script defer type="text/javascript" src="public/script/main.js"></script>
+<script defer type="text/javascript" src="public/script/bootstrap.js"></script>
+<script defer type="text/javascript" src="public/script/jquery.fancybox.js"></script>
+
+            
 
 </body>
 </html>
